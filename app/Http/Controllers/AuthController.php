@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function processLogin()
     {
         if (Auth::check()) {
-            return redirect(route('home'));
+            return redirect(route('admin-home'));
         }
         return view('auth.login');
     }

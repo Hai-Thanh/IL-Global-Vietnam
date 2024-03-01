@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
@@ -28,6 +29,10 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('/register', [AuthController::class, 'processRegister'])->name('auth.processRegister');
     Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
     Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+});
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('home',[AdminHomeController::class, 'homeAdmin'])->name('admin-home');
 });
 
 Route::group(['prefix' => 'error'], function () {
