@@ -148,6 +148,49 @@
     left: 2px;
     bottom: 2px;
   }
+  .il-header .il-header-main .il-sub-header .il-tab-header ::selection {
+    background-color: rgb(0, 0, 255);
+    color: rgb(0, 255, 255);
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .box {
+    position: relative;
+    cursor: pointer;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .box:hover div.box-child {
+    display: block;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header div.box-child {
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 100%;
+    display: none;
+    overflow: auto;
+    border-top: 2px solid #EC5938;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header ul {
+    float: inline-start;
+    width: 200px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header ul > li > a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header ul > li > a:hover {
+    border-left: 35px solid #EC5938;
+    background-color: #ffffff;
+    color: #EC5938;
+    transition: all 0.1s ease-in-out;
+  }
 }
 
 /*# sourceMappingURL=style-header.css.map */

@@ -78,59 +78,6 @@
             <div class="il-tab-header d-md-flex">
                 <div class="col il-home"><a href="">Home</a></div>
                 <div class="col il-about-us"><a href="">About us</a></div>
-                <style>
-                    ::selection {
-                        background-color: rgb(0, 0, 255);
-                        color: rgb(0, 255, 255);
-                    }
-
-                    .box {
-                        position: relative;
-                        cursor: pointer;
-                    }
-
-                    .box:hover div.box-child {
-                        display: block;
-                    }
-
-                    div.box-child {
-                        background-color: #FFFFFF;
-                        position: absolute;
-                        top: 100%;
-                        display: none;
-                        overflow: auto;
-                        border-top: 2px solid #EC5938;
-                    }
-
-                    ul {
-                        float: inline-start;
-                        width: 200px;
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    ul > li > a {
-                        color: #000000;
-                        text-decoration: none;
-                        display: block;
-                        padding: 16px;
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 17px;
-                        letter-spacing: 0;
-                        text-align: left;
-
-                    }
-
-                    ul > li > a:hover {
-                        border-left: 35px solid #EC5938;
-                        background-color: #ffffff;
-                        color: #EC5938;
-                        transition: all 0.1s ease-in-out;
-                    }
-
-                </style>
                 <div class="col il-service">
                     <div class="box">
                         <span>Service
@@ -282,9 +229,6 @@
                         }
                     </script>
                 </div>
-                <style>
-
-                </style>
                 <div class="col il-track-order"><div class="triangle-bottom-right"></div><a href="">Track order</a></div>
             </div>
         </div>
