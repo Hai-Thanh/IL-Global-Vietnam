@@ -76,8 +76,8 @@
                 </div>
             </div>
             <div class="il-tab-header d-md-flex">
-                <div class="col il-home">Home</div>
-                <div class="col il-about-us">About us</div>
+                <div class="col il-home"><a href="">Home</a></div>
+                <div class="col il-about-us"><a href="">About us</a></div>
                 <style>
                     ::selection {
                         background-color: rgb(0, 0, 255);
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col il-contact">Contact</div>
+                <div class="col il-contact"><a href="">Contact</a></div>
                 <div class="col il-language">
                     <div class="dropdown float-right ">
                         <button class="btn krm-select-national dropdown-toggle btn-outline-dark" type="button"
@@ -282,7 +282,10 @@
                         }
                     </script>
                 </div>
-                <div class="col il-track-order">Track order</div>
+                <style>
+
+                </style>
+                <div class="col il-track-order"><div class="triangle-bottom-right"></div><a href="">Track order</a></div>
             </div>
         </div>
     </div>

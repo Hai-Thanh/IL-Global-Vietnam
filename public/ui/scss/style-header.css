@@ -59,6 +59,9 @@
   .il-header .il-header-main .il-sub-header .il-link-and-date .il-link-social svg {
     margin: 0 12px;
   }
+  .il-header .il-header-main .il-sub-header .il-link-and-date .il-link-social svg:hover path {
+    fill: #EC5938;
+  }
   .il-header .il-header-main .il-sub-header .il-tab-header {
     height: 48px;
     align-items: center;
@@ -66,6 +69,9 @@
     font-weight: 600;
     line-height: 23px;
     letter-spacing: 0;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-home a:hover, .il-header .il-header-main .il-sub-header .il-tab-header .il-about-us a:hover, .il-header .il-header-main .il-sub-header .il-tab-header .il-blog a:hover, .il-header .il-header-main .il-sub-header .il-tab-header .il-contact a:hover {
+    color: #EC5938;
   }
   .il-header .il-header-main .il-sub-header .il-tab-header .il-language .dropdown #dropdownMenuButton {
     background: #EBEBEB;
@@ -111,6 +117,9 @@
     opacity: 1;
     transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-track-order:hover .triangle-bottom-right {
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+  }
   .il-header .il-header-main .il-sub-header .il-tab-header .il-track-order:before {
     content: "";
     position: absolute;
@@ -125,6 +134,19 @@
     transition: transform 0.42s, opacity 1.42s;
     border-radius: inherit;
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-track-order a {
+    color: #FFFFFF;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-track-order .triangle-bottom-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 0 0 16px;
+    border-color: transparent transparent transparent #ffffff;
+    left: 2px;
+    bottom: 2px;
   }
 }
 
