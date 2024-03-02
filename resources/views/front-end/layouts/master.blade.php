@@ -14,8 +14,11 @@
     <link href="{{ asset('ui/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/montserrat">
+
+
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('ui/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -25,6 +28,8 @@
     <link href="{{ asset('ui/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('ui/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('ui/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('ui/css/style.css') }}" rel="stylesheet">
@@ -34,7 +39,7 @@
 <body>
 
 <!-- ======= Header ======= -->
-@include('ui.layouts.header')
+@include('front-end.layouts.header')
 <!-- End Header -->
 
 @include('sweetalert::alert')
@@ -48,10 +53,11 @@
 <!-- End #main -->
 
 <!-- ======= Footer ======= -->
-@include('ui.layouts.footer')
+@include('front-end.layouts.footer')
 <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="{{ asset('ui/vendor/apexcharts/apexcharts.min.js') }}"></script>
@@ -62,6 +68,8 @@
 <script src="{{ asset('ui/vendor/simple-datatables/simple-datatables.js') }}"></script>
 <script src="{{ asset('ui/vendor/tinymce/tinymce.min.js') }}"></script>
 <script src="{{ asset('ui/vendor/php-email-form/validate.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <!-- Template Main JS File -->
 <script src="{{ asset('ui/js/main.js') }}"></script>

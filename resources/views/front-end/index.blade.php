@@ -1,6 +1,6 @@
-@extends('ui.layouts.master')
+@extends('front-end.layouts.master')
 @section('title')
-    Homepage
+    IL Global Việt Nam
 @endsection
 @section('content')
 
