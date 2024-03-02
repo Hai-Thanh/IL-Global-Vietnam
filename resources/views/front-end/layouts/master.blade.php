@@ -28,6 +28,8 @@
     <link href="{{ asset('ui/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
     <link href="{{ asset('ui/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
     <link href="{{ asset('ui/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('ui/css/style.css') }}" rel="stylesheet">
