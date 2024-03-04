@@ -4,53 +4,24 @@
     IL Global Việt Nam
 @endsection
 @section('content')
+    <div class="container">
+       <div class="il-title-what-we-do">
+           <div class="d-flex justify-content-center align-content-center">
+               <svg width="49" height="34" viewBox="0 0 49 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <rect x="2.16624" y="17" width="21" height="21" transform="rotate(-45 2.16624 17)" stroke="#EC5938" stroke-width="3"/>
+                   <rect x="31.9863" y="2.12132" width="21" height="21" transform="rotate(45 31.9863 2.12132)" stroke="#122E38" stroke-width="3"/>
+               </svg>
+               <div class="d-flex align-items-center title-what-we-do">What we do</div>
+           </div>
 
-    <script>
-        let slideIndex = 1;
-        const slides = document.getElementsByClassName("slide");
-        const dots = document.getElementsByClassName("dot");
+           <div class="d-flex align-items-center title-what-we-do--2">Logistic & Transport</div>
+       </div>
+        <div class="il-card-what-we-do d-flex">
+            <div class="card-what-we-do--1 col-md-3">11</div>
+            <div class="card-what-we-do--2 col-md-3">11</div>
+            <div class="card-what-we-do--3 col-md-3">11</div>
+            <div class="card-what-we-do--4 col-md-3">11</div>
+        </div>
+    </div>
 
-        // Function to show a specific slide
-        function showSlides(n) {
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            // Remove the "active" class from all dots
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            // Display the current slide and mark its corresponding dot as active
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-        // Function to advance to the next slide
-        function plusSlides(n) {
-            console.log(n)
-            showSlides((slideIndex += n));
-        }
-
-        // Function to navigate to a specific slide
-        function currentSlide(n) {
-            showSlides((slideIndex = n));
-        }
-
-        // Automatically advance to the next slide every 3 seconds (3000 milliseconds)
-        setInterval(function () {
-            plusSlides(1);
-        }, 50000);
-
-        // Initialize the slider
-        showSlides(slideIndex);
-    </script>
 @endsection

@@ -593,12 +593,6 @@
     </div>
 </div>
 
-<script src="{{asset('ui/js/header.js')}}">
-    let slideIndex = 1;
-    const slides = document.getElementsByClassName("slide");
-    const dots = document.getElementsByClassName("dot");
-    // Initialize the slider
-    showSlides(slideIndex);
-</script>
+<script src="{{asset('ui/js/header.js')}}"></script>
 
 

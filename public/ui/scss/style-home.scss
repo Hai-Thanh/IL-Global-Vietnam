@@ -1,0 +1,48 @@
+@media all {
+
+}
+
+@media (min-width: 768px) {
+    .il-title-what-we-do {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .title-what-we-do {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #EC5938;
+
+            &--2 {
+                margin-top: 16px;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 49px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: black;
+            }
+        }
+    }
+    .il-card-what-we-do {
+        .card-what-we-do {
+            &--1 {
+                background-image: url(../img/card-what-we-do/card-may-bay.png);
+            }
+            &--2 {
+                background-image: url(../img/card-what-we-do/card-tau-thuy.png);
+            }
+            &--3 {
+                background-image: url(../img/card-what-we-do/card-xe-tai.png);
+            }
+            &--4 {
+                background-image: url(../img/card-what-we-do/card-tau-hoa.png);
+            }
+        }
+    }
+}
