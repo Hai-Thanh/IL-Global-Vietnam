@@ -4,72 +4,53 @@
     IL Global Việt Nam
 @endsection
 @section('content')
-    <div class="slide-container">
-        <div class="slide fade">
-            <img src='https://images.unsplash.com/photo-1590595978583-3967cf17d2ea?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-        </div>
-        <div class="slide fade">
-            <img src='https://images.unsplash.com/photo-1588807308097-fb6e5047df8c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-        </div>
-        <div class="slide fade">
-            <img src='https://images.unsplash.com/photo-1589808710416-24cf7ac026f2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-        </div>
-        <div class="slide fade">
-            <img src='https://images.unsplash.com/photo-1588796388882-a4d533c47e5e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-        </div>
 
-        <a href="#" class="prev" title="Previous">&#10094</a>
-        <a href="#" class="next" title="Next">&#10095</a>
-    </div>
-    <div class="dots-container">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll(".slide")
-        const dots = document.querySelectorAll('.dot')
+        let slideIndex = 1;
+        const slides = document.getElementsByClassName("slide");
+        const dots = document.getElementsByClassName("dot");
 
-        const init = (n) => {
-            slides.forEach((slide, index) => {
-                slide.style.display = "none"
-                dots.forEach((dot, index) => {
-                    dot.classList.remove("active")
-                })
-            })
-            slides[n].style.display = "block"
-            dots[n].classList.add("active")
+        // Function to show a specific slide
+        function showSlides(n) {
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Remove the "active" class from all dots
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // Display the current slide and mark its corresponding dot as active
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
-        document.addEventListener("DOMContentLoaded", init(currentSlide))
-        const next = () => {
-            currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
-            init(currentSlide)
+
+        // Function to advance to the next slide
+        function plusSlides(n) {
+            console.log(n)
+            showSlides((slideIndex += n));
         }
 
-        const prev = () => {
-            currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
-            init(currentSlide)
+        // Function to navigate to a specific slide
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
         }
 
-        document.querySelector(".next").addEventListener('click', next)
+        // Automatically advance to the next slide every 3 seconds (3000 milliseconds)
+        setInterval(function () {
+            plusSlides(1);
+        }, 50000);
 
-        document.querySelector(".prev").addEventListener('click', prev)
-
-
-        setInterval(() => {
-            next()
-        }, 5000);
-
-        dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                console.log(currentSlide)
-                init(i)
-                currentSlide = i
-            })
-        })
-
-
+        // Initialize the slider
+        showSlides(slideIndex);
     </script>
 @endsection

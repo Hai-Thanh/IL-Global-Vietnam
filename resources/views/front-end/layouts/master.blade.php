@@ -10,7 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('ui/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('ui/img/logo/logo-ilglobalvietnam.png') }}" rel="icon">
     <link href="{{ asset('ui/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
