@@ -1,3 +1,9 @@
+
+
+let slideIndex = 1;
+const slides = document.getElementsByClassName("slide");
+const dots = document.getElementsByClassName("dot");
+
 // Function to show a specific slide
 function showSlides(n) {
     if (n > slides.length) {
@@ -24,7 +30,6 @@ function showSlides(n) {
 
 // Function to advance to the next slide
 function plusSlides(n) {
-    console.log(n)
     showSlides((slideIndex += n));
 }
 
@@ -36,7 +41,8 @@ function currentSlide(n) {
 // Automatically advance to the next slide every 3 seconds (3000 milliseconds)
 setInterval(function () {
     plusSlides(1);
-}, 5000);
+}, 50000);
 
-
+// Initialize the slider
+showSlides(slideIndex);
 

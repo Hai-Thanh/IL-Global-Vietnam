@@ -1,3 +1,282 @@
-
+@media (min-width: 768px) {
+  .il-title-left .title-left {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-left: 24px;
+    color: #EC5938;
+  }
+  .il-title-left .title-left-des {
+    margin-top: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  .il-title-left-mo-ta {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #FFFFFF;
+  }
+  .il-title-what-we-do {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .il-title-what-we-do .title-what-we-do {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #EC5938;
+  }
+  .il-title-what-we-do .title-what-we-do--2 {
+    margin-top: 16px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+  }
+  .il-card-what-we-do .card-what-we-do--1 {
+    background: url(../img/card-what-we-do/card-may-bay.png) no-repeat 100% 100%;
+    background-size: cover;
+  }
+  .il-card-what-we-do .card-what-we-do--2 {
+    background: url(../img/card-what-we-do/card-tau-thuy.png) no-repeat 100% 100%;
+    background-size: cover;
+  }
+  .il-card-what-we-do .card-what-we-do--3 {
+    background: url(../img/card-what-we-do/card-xe-tai.png) no-repeat 100% 100%;
+    background-size: cover;
+  }
+  .il-card-what-we-do .card-what-we-do--4 {
+    background: url(../img/card-what-we-do/card-tau-hoa.png) no-repeat 100% 100%;
+    background-size: cover;
+  }
+  .il-card-what-we-do .card-height {
+    height: 250px;
+    width: 100%;
+    border-radius: 8px;
+    color: #FFFFFF;
+  }
+  .il-card-what-we-do .card-height .title-card {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .il-card-what-we-do .card-height .describe-card {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    height: 16px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .il-card-what-we-do .card-height .icon-card {
+    right: 0;
+  }
+  .il-card-what-we-do .card-height .icon-card svg .circle-hover {
+    transition: transform 0.5s, fill 0.5s;
+    transform: scale(0);
+    position: absolute;
+    transform-origin: 50% 50%;
+  }
+  .il-card-what-we-do .card-height .title-hover {
+    transition: transform 0.5s;
+  }
+  .il-card-what-we-do .card-height:hover .icon-card svg .circle-hover {
+    fill: #EC5938;
+    transform: scale(1);
+  }
+  .il-card-what-we-do .card-height:hover .icon-card svg path {
+    fill: #FFFFFF;
+  }
+  .il-card-what-we-do .card-height:hover .title-hover {
+    transform: translateY(-15px);
+  }
+  .il-banner-best-services {
+    background: url(../img/banner-services/banner-bao-gia.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 37%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .il-banner-best-services .btn-banner-best-service {
+    height: 48px;
+    right: 0;
+  }
+  .il-transportation-company {
+    margin-top: 80px;
+    display: flex;
+  }
+  .il-transportation-company .il-content-tran-company {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #EC5938;
+  }
+  .il-transportation-company .il-title-tran-company .title-tran-company {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 16px;
+  }
+  .il-transportation-company .il-worldwide-service {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 32px;
+  }
+  .il-transportation-company .il-worldwide-service .worldwide-service svg {
+    margin-right: 16px;
+  }
+  .il-transportation-company .il-certified {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 24px;
+  }
+  .il-transportation-company .il-certified .certified svg {
+    margin-right: 16px;
+  }
+  .il-transportation-company .il-describe-tran-company {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 24px;
+  }
+  .il-transportation-company .btn-tran-company {
+    height: 48px;
+    width: 168px;
+  }
+  .il-transportation-company .il-satisfied-client {
+    position: relative;
+  }
+  .il-transportation-company .il-satisfied-client .il-satisfied {
+    border-top: 5px solid #EC5938;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.3490196078);
+    padding: 30px 10px;
+  }
+  .il-transportation-company .il-satisfied-client .il-satisfied .satisfied-quality {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 4px;
+  }
+  .il-transportation-company .il-satisfied-client .il-satisfied .Satisfied-Client {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #858585;
+  }
+  .il-transportation-company .il-satisfied-client .img-satisfied--1 {
+    background: url(../img/transportation-company/hinh-trong-suot.png) no-repeat 100% 100%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    height: 640px;
+    width: 341px;
+    z-index: -1;
+  }
+  .il-transportation-company .il-satisfied-client .img-satisfied--2 img {
+    position: absolute;
+    width: 335px;
+    height: 588px;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .il-transportation-company .il-satisfied-client .img-satisfied--3 {
+    height: 495px;
+  }
+  .il-transportation-company .il-satisfied-client .img-satisfied--3 img {
+    position: absolute;
+    width: 300px;
+    height: 495px;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+  }
+  .il-why-choose-us {
+    margin-top: 80px;
+    background: url(../img/banner-services/background-choose-us.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+  }
+  .il-why-choose-us .btn-choose-us {
+    margin-top: 64px;
+    border: 1px solid #EC5938;
+    border-radius: 4px;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: white;
+    background: #122E38;
+  }
+  .il-why-choose-us .btn-choose-us:hover {
+    background: #EC5938;
+  }
+  .il-why-choose-us .btn-choose-us:hover svg path {
+    fill: #FFFFFF;
+  }
+}
 
 /*# sourceMappingURL=style-home.css.map */
