@@ -30,7 +30,6 @@ function showSlides(n) {
 
 // Function to advance to the next slide
 function plusSlides(n) {
-    console.log(n)
     showSlides((slideIndex += n));
 }
 
