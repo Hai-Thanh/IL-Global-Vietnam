@@ -195,6 +195,7 @@
             </div>
         </div>
     </div>
+
     <div class="il-banner-best-services">
         <div class="container d-flex justify-content-center align-items-center position-relative">
             <div class="col-6">Would you Like to get The Best Transport Services?</div>
@@ -207,6 +208,11 @@
         </div>
 
     </div>
+
+    <div class="background-ban-do">
+        <img src="{{asset('ui/img/img-demo/Frame 3467619.png')}}" alt="11">
+    </div>
+
     <div class="container">
         <div class="il-transportation-company">
             <div class="col-md-6 position-relative">
@@ -342,6 +348,7 @@
             </div>
         </div>
     </div>
+
     <div class="il-why-choose-us">
         <div class="container d-md-flex align-items-center">
             <div class="col-md-6 d-md-flex flex-column align-items-center">
@@ -843,6 +850,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="il-title-center">
             <div class="title-center">
@@ -862,9 +870,11 @@
             @include('front-end.pages.slider-review-home')
         </div>
     </div>
+
     <div>
         @include('front-end.pages.Home-Infinite-Horizontal-Scroll')
     </div>
+
     <div class="container">
         <div class="il-title-center">
             <div class="title-center">
@@ -884,6 +894,7 @@
             @include('front-end.pages.news-and-blog')
         </div>
     </div>
+
     <script>
         const tabButtons = document.querySelectorAll('.tab-btn')
 

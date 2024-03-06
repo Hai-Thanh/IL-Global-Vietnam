@@ -27,6 +27,11 @@
     text-align: left;
     color: black;
   }
+  .il-title-center .background-ban-do {
+    background: url(../img/img-demo/technology-network-background.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 100%;
+  }
 }
 @media (min-width: 768px) {
   .il-title-left .title-left {
