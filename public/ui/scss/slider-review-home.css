@@ -1,0 +1,136 @@
+.uk-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: rgba(188, 188, 188, 0.4);
+  width: 24px;
+  height: 24px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #EC5938;
+}
+
+.owl-dot.active {
+  background: none;
+}
+
+.owl-carousel {
+  position: relative;
+  margin-top: 30px;
+}
+
+.owl-nav {
+  display: none;
+  position: absolute;
+  top: -60px;
+  left: 10px;
+}
+
+.uk-card-primary {
+  background: #FFFFFF;
+  border-radius: 8px;
+  color: black;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.uk-card > :last-child {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.owl-item {
+  background: #f6f9ff;
+}
+.owl-item .item {
+  margin: 20px 0;
+}
+
+.owl-next {
+  background: #3286f0;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  background: #383838;
+}
+
+.owl-dots {
+  margin-top: 30px;
+}
+
+.uk-card-title {
+  padding-bottom: 20px;
+}
+
+.img-cus-review {
+  position: absolute;
+  top: -16px;
+}
+.img-cus-review img {
+  object-fit: cover;
+}
+
+.star-cus-review {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 16px;
+  background: #EC5938;
+  border-radius: 0 4px 0 4px;
+}
+.star-cus-review .fa-solid {
+  color: yellow;
+  padding: 2px;
+}
+
+.uk-card-body {
+  padding: 16px;
+}
+
+.cmt-cus-review {
+  color: #606060 !important;
+  margin-top: 50px;
+}
+
+.uk-card-primary.uk-card-hover:hover {
+  background: none;
+}
+
+.name-cus-review {
+  padding-top: 20px;
+}
+.name-cus-review .name-cus {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #000000;
+}
+.name-cus-review .position-cus {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #EC5938;
+}
+
+/*# sourceMappingURL=slider-review-home.css.map */
