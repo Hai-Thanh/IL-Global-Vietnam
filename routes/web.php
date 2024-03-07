@@ -45,6 +45,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('about-us', [HomeController::class, 'aboutUs'])->name('about.us');
     Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+    Route::get('service-ari-transport', [HomeController::class, 'ariTransport'])->name('service.ari.transport');
 });
 
 Route::middleware(['auth'])->group(function () {

@@ -41,7 +41,7 @@ function currentSlide(n) {
 // Automatically advance to the next slide every 3 seconds (3000 milliseconds)
 setInterval(function () {
     plusSlides(1);
-}, 50000);
+}, 5000);
 
 // Initialize the slider
 showSlides(slideIndex);

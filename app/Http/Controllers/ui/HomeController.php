@@ -19,4 +19,8 @@ class HomeController extends Controller
     {
         return view('front-end.contact');
     }
+    public function ariTransport()
+    {
+        return view('front-end.service.air-transport');
+    }
 }

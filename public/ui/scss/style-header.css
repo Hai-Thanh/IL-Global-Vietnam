@@ -137,8 +137,8 @@
   }
   .dot {
     cursor: pointer;
-    height: 1rem;
-    width: 1rem;
+    height: 24px;
+    width: 24px;
     background-color: rgba(211, 211, 211, 0.226);
     border-radius: 50%;
     display: inline-block;
@@ -146,7 +146,7 @@
   }
   .active,
   .dot:hover {
-    background-color: white;
+    background-color: #EC5938;
   }
   .fade {
     animation-name: fade;
@@ -275,7 +275,7 @@
     background-size: cover;
     height: 700px;
   }
-  .background-about-us .content-about-us {
+  .content-about-us {
     font-size: 64px;
     font-weight: 700;
     line-height: 78px;
@@ -283,7 +283,7 @@
     text-align: left;
     color: #FFFFFF;
   }
-  .background-about-us #trapezoid {
+  #trapezoid {
     border-bottom: 64px solid #EC5938;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
@@ -296,7 +296,7 @@
     align-items: start;
     justify-content: start;
   }
-  .background-about-us #trapezoid .address-about-us {
+  #trapezoid .address-about-us {
     margin: 20px;
     font-size: 20px;
     font-weight: 700;
@@ -305,7 +305,7 @@
     text-align: left;
     color: white;
   }
-  .background-about-us #trapezoid .address-about-us a {
+  #trapezoid .address-about-us a {
     color: white;
   }
   /* end back ground header about us */
@@ -315,40 +315,12 @@
     background-size: cover;
     height: 700px;
   }
-  .background-contact .content-about-us {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 78px;
-    letter-spacing: 0;
-    text-align: left;
-    color: #FFFFFF;
-  }
-  .background-contact #trapezoid {
-    border-bottom: 64px solid #EC5938;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    height: 0;
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-  }
-  .background-contact #trapezoid .address-about-us {
-    margin: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0;
-    text-align: left;
-    color: white;
-  }
-  .background-contact #trapezoid .address-about-us a {
-    color: white;
-  }
   /* end background header contact*/
+  .background-service-air-transport {
+    background: url(../img/banner-services/service-air.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 550px;
+  }
 }
 @media (min-width: 768px) {
   .il-header {

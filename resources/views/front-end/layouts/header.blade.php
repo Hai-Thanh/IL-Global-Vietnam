@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="il-tab-header d-md-flex">
-                    <div class="col-1 il-home pl-0"><a href="{{route('home')}}">Home</a></div>
+                    <div class="col il-home pl-0"><a href="{{route('home')}}">Home</a></div>
                     <div class="col il-about-us"><a href="{{route('about.us')}}">About us</a></div>
                     <div class="col il-service">
                         <div class="box">
@@ -97,7 +97,7 @@
                         </span>
                             <div class="box-child">
                                 <ul>
-                                    <li><a href="#">Air Transport</a></li>
+                                    <li><a href="{{route('service.ari.transport')}}">Air Transport</a></li>
                                     <li><a href="#">Sea transport</a></li>
                                     <li><a href="#">Road transport</a></li>
                                     <li><a href="#">Rail transport</a></li>
@@ -414,7 +414,7 @@
     </div>
 
     <div class="slide fade">
-        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}">
+        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}" alt="xe tai">
         <div class="slide-content">
             <div class="container">
                 <h1 class="slide-title text-start">Rail transport</h1>
