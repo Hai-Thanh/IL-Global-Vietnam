@@ -414,7 +414,7 @@
     </div>
 
     <div class="slide fade">
-        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}">
+        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}" alt="xe tai">
         <div class="slide-content">
             <div class="container">
                 <h1 class="slide-title text-start">Rail transport</h1>

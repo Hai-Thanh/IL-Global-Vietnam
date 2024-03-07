@@ -145,8 +145,8 @@
     }
     .dot {
         cursor: pointer;
-        height: 1rem;
-        width: 1rem;
+        height: 24px;
+        width: 24px;
         background-color: rgba(211, 211, 211, 0.226);
         border-radius: 50%;
         display: inline-block;
@@ -154,7 +154,7 @@
     }
     .active,
     .dot:hover {
-        background-color: white;
+        background-color: #EC5938;
     }
 
     .fade {
