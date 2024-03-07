@@ -16,6 +16,12 @@ class MainController extends Controller
             case 'vi':
                 $lang = 'vi';
                 break;
+            case 'cn':
+                $lang = 'cn';
+                break;
+            case 'kr':
+                $lang = 'kr';
+                break;
             default:
                 $lang = 'en';
                 break;

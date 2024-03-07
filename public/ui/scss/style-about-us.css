@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.background-content-about-us {
+  background: url(../img/background-img/background-about-us.png) no-repeat 100% 100%;
+  background-size: cover;
+  height: 100%;
+  margin-top: 80px;
+}
+.background-content-about-us .title-about-us {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 49px;
+  letter-spacing: 0;
+  text-align: start;
+}
+.background-content-about-us .describe-about-us {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.text-container {
+  margin-top: 40px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.text-container .small-text {
+  position: absolute;
+  z-index: 1; /* Đảm bảo chữ nhỏ hiển thị trên chữ lớn */
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 49px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.text-container .big-text {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 117px;
+  letter-spacing: 0;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.0509803922);
+}
+
+.mo-ta-about-us {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left;
+  color: black;
+}
+
+/*# sourceMappingURL=style-about-us.css.map */
