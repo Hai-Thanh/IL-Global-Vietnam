@@ -1,10 +1,10 @@
 @extends('admin.layouts.master')
 @section('title')
-    Dashboard
+    Admin IL Global
 @endsection
 @section('content')
     <div class="pagetitle">
-        <h1>Dashboard</h1>
+        <h1>Admin IL Global</h1>
 
         <nav>
             <ol class="breadcrumb">
