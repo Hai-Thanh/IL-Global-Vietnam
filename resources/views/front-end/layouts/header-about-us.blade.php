@@ -11,7 +11,6 @@
             <div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ About us</div>
         </div>
     </div>
-
 </div>
 
 

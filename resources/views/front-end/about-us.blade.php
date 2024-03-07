@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset('ui/scss/style-about-us.css')}}">
 @extends('front-end.layouts.master')
 @section('title')
-    IL Global Việt Nam
+    About Us
 @endsection
 @section('content')
     @include('front-end.layouts.header-about-us')
