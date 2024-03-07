@@ -303,37 +303,40 @@
         background: url(../img/banner-services/about-us.png) no-repeat 100% 100%;
         background-size: cover;
         height: 700px;
-        .content-about-us {
-            font-size: 64px;
+    }
+    .content-about-us {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0;
+        text-align: left;
+        color: #FFFFFF;
+    }
+
+    #trapezoid {
+        border-bottom: 64px solid #EC5938;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        height: 0;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+
+        .address-about-us {
+            margin: 20px;
+            font-size: 20px;
             font-weight: 700;
-            line-height: 78px;
+            line-height: 24px;
             letter-spacing: 0;
             text-align: left;
-            color: #FFFFFF;
-        }
-        #trapezoid {
-            border-bottom: 64px solid #EC5938;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            height: 0;
-            width: 50%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: start;
-            justify-content: start;
-            .address-about-us {
-                margin: 20px;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 24px;
-                letter-spacing: 0;
-                text-align: left;
+            color: white;
+
+            a {
                 color: white;
-                a {
-                    color: white;
-                }
             }
         }
     }
@@ -343,41 +346,16 @@
         background: url(../img/banner-services/contact.png) no-repeat 100% 100%;
         background-size: cover;
         height: 700px;
-        .content-about-us {
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 78px;
-            letter-spacing: 0;
-            text-align: left;
-            color: #FFFFFF;
-        }
-        #trapezoid {
-            border-bottom: 64px solid #EC5938;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            height: 0;
-            width: 50%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: start;
-            justify-content: start;
-            .address-about-us {
-                margin: 20px;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 24px;
-                letter-spacing: 0;
-                text-align: left;
-                color: white;
-                a {
-                    color: white;
-                }
-            }
-        }
+
     }
+
     /* end background header contact*/
+
+    .background-service-air-transport {
+        background: url(../img/banner-services/service-air.png) no-repeat 100% 100%;
+        background-size: cover;
+        height: 550px;
+    }
 }
 
 @media (min-width: 768px) {
