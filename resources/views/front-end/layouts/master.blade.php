@@ -40,7 +40,7 @@
 <body>
 
 <!-- ======= Header ======= -->
-@include('front-end.layouts.header')
+
 <!-- End Header -->
 
 @include('sweetalert::alert')

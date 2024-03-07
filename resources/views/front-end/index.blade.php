@@ -4,6 +4,7 @@
     IL Global Việt Nam
 @endsection
 @section('content')
+    @include('front-end.layouts.header')
     <div class="container">
         <div class="il-title-what-we-do">
             <div class="d-flex justify-content-center align-content-center">

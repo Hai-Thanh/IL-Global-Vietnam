@@ -9,7 +9,7 @@
     .btn-outline-dark.focus, .btn-outline-dark:focus {
         box-shadow: none !important;
     }
-    .show>.btn-outline-dark.dropdown-toggle {
+    .show > .btn-outline-dark.dropdown-toggle {
         color: #000000;
         background-color: #ffffff;
         border-color: #ffffff;
@@ -193,19 +193,22 @@
         cursor: pointer;
         vertical-align: middle;
         user-select: none;
+
         &:hover {
             transition: background .4s .4s, border-color .4s 0s, color .2s 0s;
             font-weight: 600;
             color: black;
-            &::before{
+
+            &::before {
                 opacity: 1;
                 transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
             }
+
             .triangle-bottom-right {
-                border-color: transparent transparent transparent #8F8F8F33;
-            ;
+                border-color: transparent transparent transparent #8F8F8F33;;
             }
         }
+
         &:before {
             content: '';
             position: absolute;
@@ -222,9 +225,11 @@
             border-radius: inherit;
             transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
         }
+
         a {
             color: #FFFFFF;
         }
+
         .triangle-bottom-right {
             position: absolute;
             width: 0;
@@ -241,6 +246,7 @@
     /* button header shipping method */
     .il-form-shipping-method {
         z-index: 1;
+
         .il-btn-shipping-method {
             display: flex;
             flex-direction: column;
@@ -249,11 +255,14 @@
             background: #122E38;
             color: white;
             border-right: 1px solid #FFFFFF;
+
             .il-transaction {
                 transition: transform 0.5s;
+
                 svg {
                     margin: 16px;
                 }
+
                 .il-title-shipping-method {
                     font-size: 16px;
                     font-weight: 700;
@@ -262,18 +271,22 @@
 
                 }
             }
+
             .il-show-shipping-method {
                 display: none;
             }
 
             &:hover {
                 background-color: #EC5938;
+
                 .il-show-shipping-method {
                     display: block;
                     bottom: 30px;
                 }
+
                 .il-transaction {
-                        transform: translateY(-35px);
+                    transform: translateY(-35px);
+
                     svg {
                         path {
                             fill: #FFFFFF;
@@ -283,18 +296,60 @@
             }
         }
     }
-
-
     /* end button header shipping method */
+
+    /* back ground header about us */
+    .background-about-us {
+        background: url(../img/banner-services/about-us.png) no-repeat 100% 100%;
+        background-size: cover;
+        height: 700px;
+        .content-about-us {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 78px;
+            letter-spacing: 0;
+            text-align: left;
+            color: #FFFFFF;
+        }
+        #trapezoid {
+            border-bottom: 64px solid #EC5938;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            height: 0;
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            .address-about-us {
+                margin: 20px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0;
+                text-align: left;
+                color: white;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+    /* end back ground header about us */
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     .il-header {
         background: #FFFFFF;
         height: 100px;
         margin-top: 50px;
         z-index: 2;
+
         .il-header-main {
             height: 100%;
+
             .il-logo {
                 font-size: 32px;
                 font-weight: 700;
@@ -307,11 +362,13 @@
                 color: black;
                 padding-left: 16px;
             }
+
             .il-sub-header {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
                 .il-link-and-date {
                     height: 32px;
                     padding: 4px 16px 5px 16px;
@@ -329,16 +386,20 @@
                         .il-date-open {
 
                         }
+
                         .il-date-close {
 
                         }
+
                         .il-time {
 
                         }
                     }
+
                     .il-link-social {
                         svg {
                             margin: 0 12px;
+
                             &:hover {
                                 path {
                                     fill: #EC5938;
@@ -347,6 +408,7 @@
                         }
                     }
                 }
+
                 .il-tab-header {
                     height: 48px;
                     align-items: center;
@@ -354,6 +416,7 @@
                     font-weight: 600;
                     line-height: 23px;
                     letter-spacing: 0;
+
                     .il-home, .il-about-us, .il-blog, .il-contact {
                         a {
                             &:hover {
@@ -361,18 +424,23 @@
                             }
                         }
                     }
+
                     .il-about-us {
 
                     }
+
                     .il-service {
 
                     }
+
                     .il-blog {
 
                     }
+
                     .il-contact {
 
                     }
+
                     .il-language {
                         .dropdown {
                             #dropdownMenuButton {
@@ -387,6 +455,7 @@
                             }
                         }
                     }
+
                     .il-track-order {
                         position: relative;
                         height: 100%;
@@ -412,17 +481,21 @@
                         cursor: pointer;
                         vertical-align: middle;
                         user-select: none;
+
                         &:hover {
                             transition: background .4s .4s, border-color .4s 0s, color .2s 0s;
                             font-weight: 600;
-                            &::before{
+
+                            &::before {
                                 opacity: 1;
                                 transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
                             }
+
                             .triangle-bottom-right {
                                 border-color: transparent transparent transparent #FFFFFF33;
                             }
                         }
+
                         &:before {
                             content: '';
                             position: absolute;
@@ -438,9 +511,11 @@
                             border-radius: inherit;
                             transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
                         }
+
                         a {
                             color: #FFFFFF;
                         }
+
                         .triangle-bottom-right {
                             position: absolute;
                             width: 0;
@@ -452,6 +527,7 @@
                             bottom: 2px;
                         }
                     }
+
                     ::selection {
                         background-color: rgb(0, 0, 255);
                         color: rgb(0, 255, 255);

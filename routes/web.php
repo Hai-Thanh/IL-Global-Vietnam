@@ -43,6 +43,7 @@ Route::group(['prefix' => 'error'], function () {
 
 Route::group(['prefix' => ''], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('about-us', [HomeController::class, 'aboutUs'])->name('about.us');
 });
 
 Route::middleware(['auth'])->group(function () {
