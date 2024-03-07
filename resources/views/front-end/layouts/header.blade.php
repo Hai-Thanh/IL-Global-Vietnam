@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="il-tab-header d-md-flex">
-                    <div class="col-1 il-home pl-0"><a href="{{route('home')}}">Home</a></div>
+                    <div class="col il-home pl-0"><a href="{{route('home')}}">Home</a></div>
                     <div class="col il-about-us"><a href="{{route('about.us')}}">About us</a></div>
                     <div class="col il-service">
                         <div class="box">
