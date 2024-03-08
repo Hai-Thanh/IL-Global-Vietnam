@@ -35,6 +35,7 @@
                 text-align: left;
                 color: black;
             }
+
             .title-2-service {
                 font-size: 20px;
                 font-weight: 700;
@@ -44,6 +45,7 @@
                 color: black;
 
             }
+
             .describe-2-service {
                 font-size: 18px;
                 font-weight: 500;
@@ -53,6 +55,7 @@
                 color: black;
 
             }
+
             .true-service {
                 font-size: 18px;
                 font-weight: 600;
@@ -62,6 +65,30 @@
                 color: black;
 
             }
+
+            .mo-ta-service {
+                margin-top: 70px;
+
+                .title-3-service {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0;
+                    text-align: left;
+
+                }
+
+                .describe-3-service {
+                    margin-top: 12px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    letter-spacing: 0;
+                    text-align: left;
+
+                }
+            }
+
         }
     </style>
     <div class="container">
@@ -93,52 +120,66 @@
                         <div class="row">
                             <div class="title-2-service">Logistics Around the World</div>
                             <div class="describe-2-service mt-3">
-                                Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem
-                                ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui
+                                dolorem
+                                ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                explicabo.
                             </div>
                             <div class="true-service mt-2 d-flex">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
                                 </svg>
                                 <div class="ml-1">
                                     Those who do not know how to pursue
                                 </div>
                             </div>
                             <div class="true-service mt-2 d-flex">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
                                 </svg>
                                 <div class="ml-1">
                                     Pleasure rationally encounter
                                 </div>
                             </div>
                             <div class="true-service mt-2 d-flex">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
                                 </svg>
                                 <div class="ml-1">
                                     Consequences that are extremely painful.
                                 </div>
                             </div>
                             <div class="true-service mt-2 d-flex">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
                                 </svg>
                                 <div class="ml-1">
                                     Nor again is there anyone who loves or pursues
                                 </div>
                             </div>
                             <div class="true-service mt-2 d-flex">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
                                 </svg>
                                 <div class="ml-1">
                                     Service Guarantee
                                 </div>
                             </div>
                             <div class="true-service mt-2 d-flex">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#EC5938" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
                                 </svg>
                                 <div class="ml-1">
                                     Excellence in Healthcare every
@@ -147,9 +188,31 @@
                         </div>
 
                     </div>
+                    <div class="mo-ta-service">
+                        <div class="title-3-service">Communicate With Us</div>
+                        <div class="describe-3-service">
+                            Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est
+                            quidolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae
+                            dictasunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed
+                            sitamet finibus eros. Lorem IpsumLorem ipsum is simply free text used by copytyping
+                            refreshing. Neque porro est quidolorem ipsum quia quaed inventore veritatis et quasi
+                            architecto beatae vitae dictasunt explicabo. Aelltes port lacus quis enim var sed
+                            efficitur turpis gilla sed sitamet finibus eros. Lorem Ipsum
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <img src="{{asset('ui/img/img-demo/img-demo-service-1.png')}}" alt="demo1">
+                        </div>
+                        <div class="col-6">
+                            <img src="{{asset('ui/img/img-demo/img-demo-service-2.png')}}" alt="demo1">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-4"></div>
+            <div class="col-4">
+                @include('front-end.service.tab-nhan-bao-gia-va-dich-vu')
+            </div>
         </div>
     </div>
 @endsection
