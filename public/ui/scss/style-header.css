@@ -321,6 +321,31 @@
     background-size: cover;
     height: 550px;
   }
+  .background-service-sea-transport {
+    background: url(../img/banner-services/contact.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 550px;
+  }
+  .background-service-road-transport {
+    background: url(../img/banner-services/service-road.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 550px;
+  }
+  .background-service-rail-transport {
+    background: url(../img/banner-services/service-air.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 550px;
+  }
+  .background-express-delivery {
+    background: url(../img/banner-services/service-express-delivery.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 550px;
+  }
+  .background-customs-services {
+    background: url(../img/banner-services/customs-services.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 550px;
+  }
 }
 @media (min-width: 768px) {
   .il-header {

@@ -98,11 +98,11 @@
                             <div class="box-child">
                                 <ul>
                                     <li><a href="{{route('service.ari.transport')}}">Air Transport</a></li>
-                                    <li><a href="#">Sea transport</a></li>
-                                    <li><a href="#">Road transport</a></li>
-                                    <li><a href="#">Rail transport</a></li>
-                                    <li><a href="#">Express delivery</a></li>
-                                    <li><a href="#">Customs services</a></li>
+                                    <li><a href="{{route('service.sea.transport')}}">Sea transport</a></li>
+                                    <li><a href="{{route('service.road.transport')}}">Road transport</a></li>
+                                    <li><a href="{{route('service.rail.transport')}}">Rail transport</a></li>
+                                    <li><a href="{{route('service.express.delivery')}}">Express delivery</a></li>
+                                    <li><a href="{{route('customs.services')}}">Customs services</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -471,7 +471,7 @@
 </div>
 <div class="position-relative d-flex justify-content-end align-items-center">
     <div class="d-flex position-absolute container bottom-0 justify-content-center il-form-shipping-method">
-        <a href="#">
+        <a href="{{route('service.ari.transport')}}">
             <div class="il-btn-shipping-method">
                 <div class="il-transaction">
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -537,7 +537,7 @@
                 </div>
             </div>
         </a>
-        <a href="#">
+        <a href="{{route('service.sea.transport')}}">
             <div class="il-btn-shipping-method">
                 <div class="il-transaction">
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -585,7 +585,7 @@
                 </div>
             </div>
         </a>
-        <a href="#">
+        <a href="{{route('service.road.transport')}}">
             <div class="il-btn-shipping-method">
                 <div class="il-transaction">
                     <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -663,7 +663,7 @@
                 </div>
             </div>
         </a>
-        <a href="#">
+        <a href="{{route('service.rail.transport')}}">
             <div class="il-btn-shipping-method">
                 <div class="il-transaction">
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">

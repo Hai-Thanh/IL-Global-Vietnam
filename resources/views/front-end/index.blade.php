@@ -21,7 +21,7 @@
         </div>
         <div class="il-card-what-we-do d-flex mt-md-5">
             <div class="col-md-3">
-                <a href="">
+                <a href="{{route('service.ari.transport')}}">
                     <div class="card-what-we-do--1 card-height position-relative">
                         <div class="m-3 position-absolute bottom-0 title-hover">
                             <div class="title-card">Air Transport</div>
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="">
+                <a href="{{route('service.sea.transport')}}">
                     <div class="card-what-we-do--2 card-height position-relative">
                         <div class="m-3 position-absolute bottom-0 title-hover">
                             <div class="title-card">Sea transport</div>
@@ -107,7 +107,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="">
+                <a href="{{route('service.road.transport')}}">
                     <div class="card-what-we-do--3 card-height position-relative">
                         <div class="m-3 position-absolute bottom-0 title-hover">
                             <div class="title-card">Road transport</div>
@@ -163,7 +163,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="">
+                <a href="{{route('service.rail.transport')}}">
                     <div class="card-what-we-do--4 card-height position-relative">
                         <div class="m-3 position-absolute bottom-0 title-hover">
                             <div class="title-card">Rail transport</div>

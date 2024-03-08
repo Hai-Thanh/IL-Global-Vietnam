@@ -31,7 +31,7 @@
                     <div class="d-flex justify-content-center align-items-center">
                         <button class="il-btn-read-more-black" type="submit">
                             <div class="triangle-bottom-right"></div>
-                            submit
+                            Submit
                         </button>
                     </div>
 

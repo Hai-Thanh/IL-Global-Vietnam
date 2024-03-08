@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset('ui/scss/style-service.css')}}">
 @extends('front-end.layouts.master')
 @section('title')
-    Service Air Transport
+    Express delivery
 @endsection
 @section('content')
     @include('front-end.layouts.header-service.header-service-air-transport')

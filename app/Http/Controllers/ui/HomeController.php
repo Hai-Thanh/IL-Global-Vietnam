@@ -23,4 +23,24 @@ class HomeController extends Controller
     {
         return view('front-end.service.air-transport');
     }
+    public function seaTransport()
+    {
+        return view('front-end.service.sea-transport');
+    }
+    public function roadTransport()
+    {
+        return view('front-end.service.road-transport');
+    }
+    public function railTransport()
+    {
+        return view('front-end.service.rail-transport');
+    }
+    public function expressDelivery()
+    {
+        return view('front-end.service.express-delivery');
+    }
+    public function customsServices()
+    {
+        return view('front-end.service.customs-services');
+    }
 }

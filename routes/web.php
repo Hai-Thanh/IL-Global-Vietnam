@@ -46,6 +46,11 @@ Route::group(['prefix' => ''], function () {
     Route::get('about-us', [HomeController::class, 'aboutUs'])->name('about.us');
     Route::get('contact', [HomeController::class, 'contact'])->name('contact');
     Route::get('service-ari-transport', [HomeController::class, 'ariTransport'])->name('service.ari.transport');
+    Route::get('service-sea-transport', [HomeController::class, 'seaTransport'])->name('service.sea.transport');
+    Route::get('service-road-transport', [HomeController::class, 'roadTransport'])->name('service.road.transport');
+    Route::get('service-rail-transport', [HomeController::class, 'railTransport'])->name('service.rail.transport');
+    Route::get('express-delivery', [HomeController::class, 'expressDelivery'])->name('service.express.delivery');
+    Route::get('customs-services', [HomeController::class, 'customsServices'])->name('customs.services');
 });
 
 Route::middleware(['auth'])->group(function () {
