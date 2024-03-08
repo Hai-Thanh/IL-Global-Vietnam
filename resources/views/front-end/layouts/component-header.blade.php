@@ -94,12 +94,12 @@
                         </span>
                     <div class="box-child">
                         <ul>
-                            <li><a href="#">Air Transport</a></li>
-                            <li><a href="#">Sea transport</a></li>
-                            <li><a href="#">Road transport</a></li>
-                            <li><a href="#">Rail transport</a></li>
-                            <li><a href="#">Express delivery</a></li>
-                            <li><a href="#">Customs services</a></li>
+                            <li><a href="{{route('service.ari.transport')}}">Air Transport</a></li>
+                            <li><a href="{{route('service.sea.transport')}}">Sea transport</a></li>
+                            <li><a href="{{route('service.road.transport')}}">Road transport</a></li>
+                            <li><a href="{{route('service.rail.transport')}}">Rail transport</a></li>
+                            <li><a href="{{route('service.express.delivery')}}">Express delivery</a></li>
+                            <li><a href="{{route('customs.services')}}">Customs services</a></li>
                         </ul>
                     </div>
                 </div>

@@ -4,15 +4,15 @@
         <div class="border-bottom-service"></div>
     </div>
     <div class="d-flex flex-column">
-        <a href="">
-            <div class="tab-service-active d-flex justify-content-between align-items-center p-3">
+        <a href="{{route('service.ari.transport')}}">
+            <div class="tab-service d-flex justify-content-between align-items-center p-3">
                 <div>Air Transport</div>
                 <div>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{route('service.sea.transport')}}">
             <div class="tab-service d-flex justify-content-between align-items-center p-3">
                 <div>Sea transport</div>
                 <div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{route('service.road.transport')}}">
             <div class="tab-service d-flex justify-content-between align-items-center p-3">
                 <div>Road transport</div>
                 <div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{route('service.rail.transport')}}">
             <div class="tab-service d-flex justify-content-between align-items-center p-3">
                 <div>Rail transport</div>
                 <div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{route('service.express.delivery')}}">
             <div class="tab-service d-flex justify-content-between align-items-center p-3">
                 <div>Express delivery</div>
                 <div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{route('customs.services')}}">
             <div class="tab-service d-flex justify-content-between align-items-center p-3">
                 <div>Customs services</div>
                 <div>
@@ -98,4 +98,23 @@
 
     </div>
 </div>
-<div></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        var urls = ["{{route('service.ari.transport')}}",
+            "{{route('service.sea.transport')}}",
+            "{{route('service.road.transport')}}",
+            "{{route('service.rail.transport')}}",
+            "{{route('service.express.delivery')}}",
+            "{{route('customs.services')}}"
+        ];
+
+        urls.forEach(function(url){
+            if(window.location.href.indexOf(url) > -1){
+                console.log(url)
+                $('a[href*="' + url + '"] .tab-service').removeClass('tab-service').addClass('tab-service-active');
+            }
+        });
+    });
+</script>
