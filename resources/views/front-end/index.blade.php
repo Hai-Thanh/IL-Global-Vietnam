@@ -200,7 +200,7 @@
     <div class="il-banner-best-services">
         <div class="container d-flex justify-content-center align-items-center position-relative">
             <div class="col-6">Would you Like to get The Best Transport Services?</div>
-            <a href="#">
+            <a href="{{route('customs.services')}}">
                 <div class="il-btn-read-more position-absolute btn-banner-best-service">
                     <div class="triangle-bottom-right"></div>
                     Get a Quote
