@@ -33,6 +33,8 @@ Route::group(['prefix' => 'auth'], function () {
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('home',[AdminHomeController::class, 'homeAdmin'])->name('admin-home');
+    Route::get('header-settings',[AdminHomeController::class, 'adminHeaderSetting'])->name('admin-header-setting');
+    Route::post('header-settings-update',[AdminHomeController::class, 'adminHeaderSettingUpdate'])->name('admin-header-setting.update');
 });
 
 Route::group(['prefix' => 'error'], function () {

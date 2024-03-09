@@ -3,13 +3,21 @@
 namespace App\Http\Controllers\ui;
 
 use App\Http\Controllers\Controller;
+use App\Models\HeaderSetting;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('front-end.index');
+        $header_setting = HeaderSetting::first();
+
+        $time_in = Carbon::createFromFormat('H:i:s', $header_setting->time_in)->format('h:i A');
+        $time_out = Carbon::createFromFormat('H:i:s', $header_setting->time_out)->format('h:i A');
+
+
+        return view('front-end.index',compact('header_setting','time_in','time_out'));
     }
     public function aboutUs()
     {
