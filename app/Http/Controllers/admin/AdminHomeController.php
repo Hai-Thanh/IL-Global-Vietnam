@@ -58,4 +58,9 @@ class AdminHomeController extends Controller
         }
 
     }
+
+    public function adminTransportCompanySetting()
+    {
+        return view('admin.home-page-setting.transportation-company-setting');
+    }
 }

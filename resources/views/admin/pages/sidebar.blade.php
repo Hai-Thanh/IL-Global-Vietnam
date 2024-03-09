@@ -20,8 +20,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="components-accordion.html">
-                        <i class="bi bi-circle"></i><span>Accordion</span>
+                    <a href="{{route('admin-transportation-company-settings')}}">
+                        <i class="bi bi-circle"></i><span>Transportation company</span>
                     </a>
                 </li>
                 <li>
