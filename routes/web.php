@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('header-settings-update',[AdminHomeController::class, 'adminHeaderSettingUpdate'])->name('admin-header-setting.update');
 
     Route::get('transportation-company-settings',[AdminHomeController::class, 'adminTransportCompanySetting'])->name('admin-transportation-company-settings');
+    Route::post('transportation-company-settings-update',[AdminHomeController::class, 'adminTransportCompanySettingUpdate'])->name('admin-transportation-company-settings-update');
 });
 
 Route::group(['prefix' => 'error'], function () {

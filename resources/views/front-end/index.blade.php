@@ -230,12 +230,27 @@
                     </div>
                 </div>
                 <div class="il-title-tran-company">
-                    <div class="title-tran-company">We Provide Full Range Global Logistics</div>
-                    <div class="il-describe-tran-company">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                        1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged.
+                    <div class="title-tran-company">
+                        @if(locationHelper() == 'kr')
+                            {{ $transport_setting->title_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $transport_setting->title_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $transport_setting->title_zh_cn ?? ''}}
+                        @else
+                            {{ $transport_setting->title_vi ?? ''}}
+                        @endif
+                    </div>
+                    <div class="il-describe-tran-company">
+                        @if(locationHelper() == 'kr')
+                            {{ $transport_setting->describe_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $transport_setting->describe_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $transport_setting->describe_zh_cn ?? ''}}
+                        @else
+                            {{ $transport_setting->describe_vi ?? ''}}
+                        @endif
                     </div>
                 </div>
                 <div class="il-worldwide-service">
@@ -264,11 +279,26 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        Worldwide Service
+                        @if(locationHelper() == 'kr')
+                            {{ $transport_setting->title_service_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $transport_setting->title_service_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $transport_setting->title_service_zh_cn ?? ''}}
+                        @else
+                            {{ $transport_setting->title_service_vi ?? ''}}
+                        @endif
                     </div>
-                    <div class="il-describe-tran-company">Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                        1500s
+                    <div class="il-describe-tran-company">
+                        @if(locationHelper() == 'kr')
+                            {{ $transport_setting->describe_service_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $transport_setting->describe_service_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $transport_setting->describe_service_zh_cn ?? ''}}
+                        @else
+                            {{ $transport_setting->describe_service_vi ?? ''}}
+                        @endif
                     </div>
                 </div>
                 <div class="il-certified">
@@ -291,11 +321,26 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        Certified & Awward Winner
+                        @if(locationHelper() == 'kr')
+                            {{ $transport_setting->title_cert_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $transport_setting->title_cert_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $transport_setting->title_cert_zh_cn ?? ''}}
+                        @else
+                            {{ $transport_setting->title_cert_vi ?? ''}}
+                        @endif
                     </div>
                     <div class="il-describe-tran-company">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s
+                        @if(locationHelper() == 'kr')
+                            {{ $transport_setting->describe_cert_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $transport_setting->describe_cert_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $transport_setting->describe_cert_zh_cn ?? ''}}
+                        @else
+                            {{ $transport_setting->describe_cert_vi ?? ''}}
+                        @endif
                     </div>
                 </div>
                 <a href="#" class="position-absolute bottom-0">
@@ -448,7 +493,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="container">
+                <div class="container py-3">
                     <div class="il-form-submit-transport">
                         <div class="tab-buttons">
                             <button class="tab-btn active" content-id="air">

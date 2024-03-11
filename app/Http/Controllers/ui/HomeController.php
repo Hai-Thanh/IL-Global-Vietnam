@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ui;
 
 use App\Http\Controllers\Controller;
 use App\Models\HeaderSetting;
+use App\Models\TransportCompanySetting;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -12,12 +13,18 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $header_setting = HeaderSetting::first();
+        $transport_setting = TransportCompanySetting::first();
 
-        $time_in = Carbon::createFromFormat('H:i:s', $header_setting->time_in)->format('h:i A');
-        $time_out = Carbon::createFromFormat('H:i:s', $header_setting->time_out)->format('h:i A');
+        if ($header_setting) {
+            $time_in = Carbon::createFromFormat('H:i:s', $header_setting->time_in)->format('h:i A');
+            $time_out = Carbon::createFromFormat('H:i:s', $header_setting->time_out)->format('h:i A');
+        } else {
+            $time_in = '8 AM';
+            $time_out = '5 PM';
+        }
 
 
-        return view('front-end.index',compact('header_setting','time_in','time_out'));
+        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting'));
     }
     public function aboutUs()
     {
