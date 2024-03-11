@@ -687,7 +687,8 @@
                         <div class="tab-contents">
                             <div class="content show" id="air">
                                 <div class="content-info">
-                                    <form action="" method="post" class="m-0">
+                                    <form action="{{route('booking.form')}}" method="post" class="m-0">
+                                        @csrf
                                         <div class="row">
                                             <div class="d-flex flex-column">
                                                 <label for="air-name">Your name:</label>
@@ -713,22 +714,23 @@
                                         <div class="row">
                                             <div class="col-6">
                                                 <label for="air-weight">Weight *</label>
-                                                <input type="text" name="air-weight" id="air-weight">
+                                                <input type="text" name="air-weight" id="air-weight" required>
                                             </div>
                                             <div class="col-6">
                                                 <label for="air-size">Size *</label>
-                                                <input type="text" name="air-size" id="air-size">
+                                                <input type="text" name="air-size" id="air-size" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
                                                 <label for="air-destination">Destination *</label>
-                                                <input type="text" name="air-destination" id="air-destination">
+                                                <input type="text" name="air-destination" id="air-destination" required>
                                             </div>
                                             <div class="col-6">
                                                 <label for="air-departure">Departure point *</label>
-                                                <input type="text" name="air-departure" id="air-departure">
+                                                <input type="text" name="air-departure" id="air-departure" required>
                                             </div>
+                                            <input type="hidden" name="shipping_method" id="shipping_method" value="air_transport">
                                         </div>
                                         <div>
                                             <button type="submit" class="btn-form-transport">
@@ -742,48 +744,50 @@
                             </div>
                             <div class="content" id="sea">
                                 <div class="content-info">
-                                    <form action="" method="post" class="m-0">
+                                    <form action="{{route('booking.form')}}" method="post" class="m-0">
+                                        @csrf
                                         <div class="row">
                                             <div class="d-flex flex-column">
-                                                <label for="sea-name">Your name:</label>
-                                                <input type="text" id="sea-name" name="sea-name" required
+                                                <label for="air-name">Your name:</label>
+                                                <input type="text" id="air-name" name="air-name" required
                                                        placeholder="Your Name">
                                                 <small>Please fill out this field</small>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="sea-mail">Your email:</label>
-                                                <input type="email" id="sea-mail" name="sea-mail" required
+                                                <label for="air-mail">Your email:</label>
+                                                <input type="email" id="air-mail" name="air-mail" required
                                                        placeholder="Email">
                                                 <small>Please fill out this field</small>
                                             </div>
                                             <div class="col-6">
-                                                <label for="sea-phone">Your phone:</label>
-                                                <input type="number" id="sea-phone" name="sea-phone" required
+                                                <label for="air-phone">Your phone:</label>
+                                                <input type="number" id="air-phone" name="air-phone" required
                                                        placeholder="Phone">
                                                 <small>Please fill out this field</small>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="sea-weight">Weight *</label>
-                                                <input type="text" name="sea-weight" id="sea-weight">
+                                                <label for="air-weight">Weight *</label>
+                                                <input type="text" name="air-weight" id="air-weight" required>
                                             </div>
                                             <div class="col-6">
-                                                <label for="sea-size">Size *</label>
-                                                <input type="text" name="sea-size" id="sea-size">
+                                                <label for="air-size">Size *</label>
+                                                <input type="text" name="air-size" id="air-size" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="sea-destination">Destination *</label>
-                                                <input type="text" name="sea-destination" id="sea-destination">
+                                                <label for="air-destination">Destination *</label>
+                                                <input type="text" name="air-destination" id="air-destination" required>
                                             </div>
                                             <div class="col-6">
-                                                <label for="sea-departure">Departure point *</label>
-                                                <input type="text" name="sea-departure" id="sea-departure">
+                                                <label for="air-departure">Departure point *</label>
+                                                <input type="text" name="air-departure" id="air-departure" required>
                                             </div>
+                                            <input type="hidden" name="shipping_method" id="shipping_method" value="sea_transport">
                                         </div>
                                         <div>
                                             <button type="submit" class="btn-form-transport">
@@ -797,48 +801,50 @@
                             </div>
                             <div class="content" id="road">
                                 <div class="content-info">
-                                    <form action="" method="post" class="m-0">
+                                    <form action="{{route('booking.form')}}" method="post" class="m-0">
+                                        @csrf
                                         <div class="row">
                                             <div class="d-flex flex-column">
-                                                <label for="road-name">Your name:</label>
-                                                <input type="text" id="road-name" name="road-name" required
+                                                <label for="air-name">Your name:</label>
+                                                <input type="text" id="air-name" name="air-name" required
                                                        placeholder="Your Name">
                                                 <small>Please fill out this field</small>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="road-mail">Your email:</label>
-                                                <input type="email" id="road-mail" name="road-mail" required
+                                                <label for="air-mail">Your email:</label>
+                                                <input type="email" id="air-mail" name="air-mail" required
                                                        placeholder="Email">
                                                 <small>Please fill out this field</small>
                                             </div>
                                             <div class="col-6">
-                                                <label for="road-phone">Your phone:</label>
-                                                <input type="number" id="road-phone" name="road-phone" required
+                                                <label for="air-phone">Your phone:</label>
+                                                <input type="number" id="air-phone" name="air-phone" required
                                                        placeholder="Phone">
                                                 <small>Please fill out this field</small>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="road-weight">Weight *</label>
-                                                <input type="text" name="road-weight" id="road-weight">
+                                                <label for="air-weight">Weight *</label>
+                                                <input type="text" name="air-weight" id="air-weight" required>
                                             </div>
                                             <div class="col-6">
-                                                <label for="road-size">Size *</label>
-                                                <input type="text" name="road-size" id="road-size">
+                                                <label for="air-size">Size *</label>
+                                                <input type="text" name="air-size" id="air-size" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="road-destination">Destination *</label>
-                                                <input type="text" name="road-destination" id="road-destination">
+                                                <label for="air-destination">Destination *</label>
+                                                <input type="text" name="air-destination" id="air-destination" required>
                                             </div>
                                             <div class="col-6">
-                                                <label for="road-departure">Departure point *</label>
-                                                <input type="text" name="road-departure" id="road-departure">
+                                                <label for="air-departure">Departure point *</label>
+                                                <input type="text" name="air-departure" id="air-departure" required>
                                             </div>
+                                            <input type="hidden" name="shipping_method" id="shipping_method" value="road_transport">
                                         </div>
                                         <div>
                                             <button type="submit" class="btn-form-transport">
@@ -852,48 +858,50 @@
                             </div>
                             <div class="content" id="rail">
                                 <div class="content-info">
-                                    <form action="" method="post" class="m-0">
+                                    <form action="{{route('booking.form')}}" method="post" class="m-0">
+                                        @csrf
                                         <div class="row">
                                             <div class="d-flex flex-column">
-                                                <label for="rail-name">Your name:</label>
-                                                <input type="text" id="rail-name" name="rail-name" required
+                                                <label for="air-name">Your name:</label>
+                                                <input type="text" id="air-name" name="air-name" required
                                                        placeholder="Your Name">
                                                 <small>Please fill out this field</small>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="rail-mail">Your email:</label>
-                                                <input type="email" id="rail-mail" name="rail-mail" required
+                                                <label for="air-mail">Your email:</label>
+                                                <input type="email" id="air-mail" name="air-mail" required
                                                        placeholder="Email">
                                                 <small>Please fill out this field</small>
                                             </div>
                                             <div class="col-6">
-                                                <label for="rail-phone">Your phone:</label>
-                                                <input type="number" id="rail-phone" name="rail-phone" required
+                                                <label for="air-phone">Your phone:</label>
+                                                <input type="number" id="air-phone" name="air-phone" required
                                                        placeholder="Phone">
                                                 <small>Please fill out this field</small>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="rail-weight">Weight *</label>
-                                                <input type="text" name="rail-weight" id="rail-weight">
+                                                <label for="air-weight">Weight *</label>
+                                                <input type="text" name="air-weight" id="air-weight" required>
                                             </div>
                                             <div class="col-6">
-                                                <label for="rail-size">Size *</label>
-                                                <input type="text" name="rail-size" id="rail-size">
+                                                <label for="air-size">Size *</label>
+                                                <input type="text" name="air-size" id="air-size" required>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label for="rail-destination">Destination *</label>
-                                                <input type="text" name="rail-destination" id="rail-destination">
+                                                <label for="air-destination">Destination *</label>
+                                                <input type="text" name="air-destination" id="air-destination" required>
                                             </div>
                                             <div class="col-6">
-                                                <label for="rail-departure">Departure point *</label>
-                                                <input type="text" name="rail-departure" id="rail-departure">
+                                                <label for="air-departure">Departure point *</label>
+                                                <input type="text" name="air-departure" id="air-departure" required>
                                             </div>
+                                            <input type="hidden" name="shipping_method" id="shipping_method" value="rail_transport">
                                         </div>
                                         <div>
                                             <button type="submit" class="btn-form-transport">

@@ -58,6 +58,8 @@ Route::group(['prefix' => ''], function () {
     Route::get('service-rail-transport', [HomeController::class, 'railTransport'])->name('service.rail.transport');
     Route::get('express-delivery', [HomeController::class, 'expressDelivery'])->name('service.express.delivery');
     Route::get('customs-services', [HomeController::class, 'customsServices'])->name('customs.services');
+    Route::post('booking-form', [HomeController::class, 'BookingForm'])->name('booking.form');
+
 });
 
 Route::middleware(['auth'])->group(function () {

@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\ui;
 
 use App\Http\Controllers\Controller;
+use App\Models\BookingForm;
 use App\Models\HeaderSetting;
+use App\Models\OrderForm;
 use App\Models\TransportCompanySetting;
 use App\Models\WhyChooseUsSetting;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Mockery\Exception;
 
 class HomeController extends Controller
 {
@@ -27,6 +30,30 @@ class HomeController extends Controller
 
 
         return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting'));
+    }
+
+    public function BookingForm(Request $request)
+    {
+        try {
+            $bookingForm = new BookingForm();
+            $bookingForm->name = $request->input('air-name') ?? '';
+            $bookingForm->email = $request->input('air-mail') ?? '';
+            $bookingForm->phone = $request->input('air-phone') ?? '';
+            $bookingForm->weight = $request->input('air-weight') ?? '';
+            $bookingForm->size = $request->input('air-size') ?? '';
+            $bookingForm->diem_den = $request->input('air-destination') ?? '';
+            $bookingForm->diem_di = $request->input('air-departure') ?? '';
+            $bookingForm->shipping_method = $request->input('shipping_method') ?? '';
+            $success = $bookingForm->save();
+            if ($success) {
+                toast('Booking success!', 'success', 'top-left');
+                return back();
+            }
+            toast('Booking fail!', 'error', 'top-left');
+            return back();
+        } catch (\Exception $exception) {
+            return $exception;
+        }
     }
     public function aboutUs()
     {
