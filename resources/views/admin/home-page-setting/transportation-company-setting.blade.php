@@ -68,4 +68,45 @@
             </form>
         </div>
     </section>
+
+    <div class="pagetitle border-top">
+        <h1 class="mt-5">Why choose us</h1>
+
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">Home</a></li>
+                <li class="breadcrumb-item active">Cài Đặt why choose us</li>
+            </ol>
+        </nav>
+    </div>
+
+    <section class="section dashboard">
+        <div class="row">
+            <form action="{{route('admin-why-choose-us')}}" method="post">
+                @csrf
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <label for="titleWhy">Title Why choose us</label>
+                            <input type="text" name="titleWhy" id="titleWhy" value="{{$why_setting->titleWhy_vi ?? ''}}">
+                        </div>
+                        <div>
+                            <label for="describeWhy">Describe Why choose us</label>
+                            <textarea name="describeWhy" id="describeWhy">{{$why_setting->describeWhy_vi ?? ''}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <button class="il-btn-read-more-black" type="submit">
+                            <div class="triangle-bottom-right"></div>
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 @endsection

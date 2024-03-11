@@ -408,13 +408,28 @@
                         </svg>
                         <div class="d-flex align-items-center title-left">why choose us</div>
                     </div>
-                    <div class="d-flex align-items-center title-left-des">We are the Future of Cargo & Logistics</div>
+                    <div class="d-flex align-items-center title-left-des">
+                        @if(locationHelper() == 'kr')
+                            {{ $why_setting->titleWhy_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $why_setting->titleWhy_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $why_setting->titleWhy_zh_cn ?? ''}}
+                        @else
+                            {{ $why_setting->titleWhy_vi ?? ''}}
+                        @endif
+                    </div>
                 </div>
                 <div class="il-title-left-mo-ta">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.
+                    @if(locationHelper() == 'kr')
+                        {{ $why_setting->describeWhy_ko ?? ''}}
+                    @elseif(locationHelper() == 'en')
+                        {{ $why_setting->describeWhy_en ?? ''}}
+                    @elseif(locationHelper() == 'cn')
+                        {{ $why_setting->describeWhy_zh_cn ?? ''}}
+                    @else
+                        {{ $why_setting->describeWhy_vi ?? ''}}
+                    @endif
                 </div>
                 <div class="d-flex w-100">
                     <div class="col-md-4">

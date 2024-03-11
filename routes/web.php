@@ -38,6 +38,8 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('transportation-company-settings',[AdminHomeController::class, 'adminTransportCompanySetting'])->name('admin-transportation-company-settings');
     Route::post('transportation-company-settings-update',[AdminHomeController::class, 'adminTransportCompanySettingUpdate'])->name('admin-transportation-company-settings-update');
+    Route::post('why-choose-us-update',[AdminHomeController::class, 'adminWhyChooseUs'])->name('admin-why-choose-us');
+
 });
 
 Route::group(['prefix' => 'error'], function () {

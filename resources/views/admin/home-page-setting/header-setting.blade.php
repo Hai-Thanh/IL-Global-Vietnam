@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <div class="pagetitle">
-        <h1>Admin IL Global</h1>
+        <h1>Cài Đặt Header</h1>
 
         <nav>
             <ol class="breadcrumb">
