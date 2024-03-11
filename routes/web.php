@@ -40,6 +40,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('transportation-company-settings-update',[AdminHomeController::class, 'adminTransportCompanySettingUpdate'])->name('admin-transportation-company-settings-update');
     Route::post('why-choose-us-update',[AdminHomeController::class, 'adminWhyChooseUs'])->name('admin-why-choose-us');
 
+    Route::get('client-reviews',[AdminHomeController::class, 'adminClientReview'])->name('admin-client-review');
+    Route::get('create-client-reviews',[AdminHomeController::class, 'adminCreateClientReview'])->name('admin-creat-client-review');
+    Route::post('create-client-reviews-post',[AdminHomeController::class, 'adminCreateClientReviewPost'])->name('admin-creat-client-review-post');
+
+
 });
 
 Route::group(['prefix' => 'error'], function () {

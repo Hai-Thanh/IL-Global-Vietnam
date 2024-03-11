@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\TranslateController;
+use App\Models\ClientReview;
 use App\Models\HeaderSetting;
 use App\Models\TransportCompanySetting;
 use App\Models\WhyChooseUsSetting;
@@ -133,6 +135,53 @@ class AdminHomeController extends Controller
         } catch (\Exception $exception) {
             return $exception;
         }
+    }
+
+    public function adminClientReview()
+    {
+        $reviews = ClientReview::where('status', ReviewStatus::ACTIVE)->get();
+        return view('admin.home-page-setting.client-review.client-review',compact('reviews'));
+    }
+    public function adminCreateClientReview()
+    {
+
+        return view('admin.home-page-setting.client-review.create-review');
+    }
+    public function adminCreateClientReviewPost(Request $request)
+    {
+        try {
+
+            $translate = new TranslateController();
+            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+
+            $review = new ClientReview();
+            $review->name = $request->input('nameClient') ?? '';
+            $review->position = $request->input('position') ?? '';
+            $review->star_rate = $request->input('starRating') ?? '';
+            $review->status = $request->input('status') ?? '';
+            $describe = $request->input('describe');
+
+            foreach ($languages as $lang) {
+                $review->{'describe' . '_' . $lang} = $translate->translateText($describe, $lang) ?? '';
+            }
+            if ($request->hasFile('avtClient')) {
+                $item = $request->file('avtClient');
+                $itemPath = $item->store('img', 'public');
+                $thumbnail = asset('storage/' . $itemPath);
+                $review->Thumbnail = $thumbnail;
+            }
+
+            $success = $review->save();
+            if ($success) {
+                toast('Update success!', 'success', 'top-left');
+                return redirect()->route('admin-client-review');
+            }
+            toast('Update fail!', 'error', 'top-left');
+            return back();
+        } catch (\Exception $exception) {
+            return $exception;
+        }
+
     }
 
 }
