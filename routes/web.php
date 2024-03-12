@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AdminAboutUsController;
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
@@ -32,19 +33,23 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('home',[AdminHomeController::class, 'homeAdmin'])->name('admin-home');
-    Route::get('header-settings',[AdminHomeController::class, 'adminHeaderSetting'])->name('admin-header-setting');
-    Route::post('header-settings-update',[AdminHomeController::class, 'adminHeaderSettingUpdate'])->name('admin-header-setting.update');
+    Route::get('home', [AdminHomeController::class, 'homeAdmin'])->name('admin-home');
+    Route::get('header-settings', [AdminHomeController::class, 'adminHeaderSetting'])->name('admin-header-setting');
+    Route::post('header-settings-update', [AdminHomeController::class, 'adminHeaderSettingUpdate'])->name('admin-header-setting.update');
+    /* home */
+    Route::get('transportation-company-settings', [AdminHomeController::class, 'adminTransportCompanySetting'])->name('admin-transportation-company-settings');
+    Route::post('transportation-company-settings-update', [AdminHomeController::class, 'adminTransportCompanySettingUpdate'])->name('admin-transportation-company-settings-update');
+    Route::post('why-choose-us-update', [AdminHomeController::class, 'adminWhyChooseUs'])->name('admin-why-choose-us');
+    Route::get('client-reviews', [AdminHomeController::class, 'adminClientReview'])->name('admin-client-review');
+    Route::get('create-client-reviews', [AdminHomeController::class, 'adminCreateClientReview'])->name('admin-creat-client-review');
+    Route::post('create-client-reviews-post', [AdminHomeController::class, 'adminCreateClientReviewPost'])->name('admin-creat-client-review-post');
+    Route::get('update-client-reviews/{id}', [AdminHomeController::class, 'adminUpdateClientReview'])->name('admin-update-client-review');
+    Route::post('update-client-reviews-post/{id}', [AdminHomeController::class, 'adminUpdateClientReviewPost'])->name('admin-update-client-review-post');
 
-    Route::get('transportation-company-settings',[AdminHomeController::class, 'adminTransportCompanySetting'])->name('admin-transportation-company-settings');
-    Route::post('transportation-company-settings-update',[AdminHomeController::class, 'adminTransportCompanySettingUpdate'])->name('admin-transportation-company-settings-update');
-    Route::post('why-choose-us-update',[AdminHomeController::class, 'adminWhyChooseUs'])->name('admin-why-choose-us');
+    /* about us */
 
-    Route::get('client-reviews',[AdminHomeController::class, 'adminClientReview'])->name('admin-client-review');
-    Route::get('create-client-reviews',[AdminHomeController::class, 'adminCreateClientReview'])->name('admin-creat-client-review');
-    Route::post('create-client-reviews-post',[AdminHomeController::class, 'adminCreateClientReviewPost'])->name('admin-creat-client-review-post');
-    Route::get('update-client-reviews/{id}',[AdminHomeController::class, 'adminUpdateClientReview'])->name('admin-update-client-review');
-    Route::post('update-client-reviews-post/{id}',[AdminHomeController::class, 'adminUpdateClientReviewPost'])->name('admin-update-client-review-post');
+    Route::get('about-us', [AdminAboutUsController::class, 'adminAboutUs'])->name('admin-about-us');
+    Route::post('about-us-update', [AdminAboutUsController::class, 'adminAboutUsUpdate'])->name('admin-about-us-update');
 
 
 });
