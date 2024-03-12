@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\ui;
 
+use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
 use App\Models\BookingForm;
+use App\Models\ClientReview;
 use App\Models\HeaderSetting;
 use App\Models\OrderForm;
 use App\Models\TransportCompanySetting;
@@ -27,9 +29,10 @@ class HomeController extends Controller
             $time_in = '8 AM';
             $time_out = '5 PM';
         }
+        $reviews = ClientReview::where('status',ReviewStatus::ACTIVE)->get();
 
 
-        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting'));
+        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews'));
     }
 
     public function BookingForm(Request $request)
