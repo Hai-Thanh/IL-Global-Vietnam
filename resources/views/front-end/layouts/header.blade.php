@@ -10,10 +10,10 @@
                     <div class="il-open d-md-flex">
                         <div class="il-date-open">Mon - Sat</div>
                         <div class="il-time">; {{$time_in}} - {{$time_out}}</div>
-                        <div class="il-date-close">; {{$header_setting->day_off}}: Closed</div>
+                        <div class="il-date-close">; {{$header_setting->day_off ?? 'Sunday'}}: Closed</div>
                     </div>
                     <div class="il-link-social">
-                        <a href="{{$header_setting->link_linke_in}}">
+                        <a href="{{$header_setting->link_linke_in ?? ''}}">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_450_474)">
@@ -28,7 +28,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="{{$header_setting->link_fb}}">
+                        <a href="{{$header_setting->link_fb ?? ''}}">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -36,7 +36,7 @@
                                     fill="white"/>
                             </svg>
                         </a>
-                        <a href="{{$header_setting->link_tw}}">
+                        <a href="{{$header_setting->link_tw ?? ''}}">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_450_481)">
@@ -51,7 +51,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="{{$header_setting->link_ins}}">
+                        <a href="{{$header_setting->link_ins ?? ''}}">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_450_485)">
@@ -72,7 +72,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="{{$header_setting->link_yt}}">
+                        <a href="{{$header_setting->link_yt ?? ''}}">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path

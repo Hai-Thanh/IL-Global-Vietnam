@@ -25,8 +25,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="components-badges.html">
-                        <i class="bi bi-circle"></i><span>Badges</span>
+                    <a href="{{route('admin-client-review')}}">
+                        <i class="bi bi-circle"></i><span>Our Client Reviews</span>
                     </a>
                 </li>
                 <li>

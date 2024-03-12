@@ -1,7 +1,7 @@
 <style>
     .il-img-background-shipping {
         background: url({{asset('ui/img/banner-services/danh-sach-hang-tau.png')}}) no-repeat 100% 100%;
-        height: 50%;
+        min-height: 50%;
         background-size: cover;
     }
     .scroller__inner {

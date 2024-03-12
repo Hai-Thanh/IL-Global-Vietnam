@@ -37,6 +37,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('header-settings-update',[AdminHomeController::class, 'adminHeaderSettingUpdate'])->name('admin-header-setting.update');
 
     Route::get('transportation-company-settings',[AdminHomeController::class, 'adminTransportCompanySetting'])->name('admin-transportation-company-settings');
+    Route::post('transportation-company-settings-update',[AdminHomeController::class, 'adminTransportCompanySettingUpdate'])->name('admin-transportation-company-settings-update');
+    Route::post('why-choose-us-update',[AdminHomeController::class, 'adminWhyChooseUs'])->name('admin-why-choose-us');
+
+    Route::get('client-reviews',[AdminHomeController::class, 'adminClientReview'])->name('admin-client-review');
+    Route::get('create-client-reviews',[AdminHomeController::class, 'adminCreateClientReview'])->name('admin-creat-client-review');
+    Route::post('create-client-reviews-post',[AdminHomeController::class, 'adminCreateClientReviewPost'])->name('admin-creat-client-review-post');
+
+
 });
 
 Route::group(['prefix' => 'error'], function () {
@@ -55,6 +63,8 @@ Route::group(['prefix' => ''], function () {
     Route::get('service-rail-transport', [HomeController::class, 'railTransport'])->name('service.rail.transport');
     Route::get('express-delivery', [HomeController::class, 'expressDelivery'])->name('service.express.delivery');
     Route::get('customs-services', [HomeController::class, 'customsServices'])->name('customs.services');
+    Route::post('booking-form', [HomeController::class, 'BookingForm'])->name('booking.form');
+
 });
 
 Route::middleware(['auth'])->group(function () {
