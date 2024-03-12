@@ -122,6 +122,7 @@
                                     success: function(response) {
                                         $(`#review_${id}`).addClass('d-none');
                                         alert('Delete successfully!');
+                                        toast('Delete success!', 'success', 'top-left');
                                     },
                                 });
                                 // toast('Delete successfully!', 'success', 'top-left');

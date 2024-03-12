@@ -204,6 +204,7 @@ class AdminHomeController extends Controller
             if ($request->status == ReviewStatus::DELETED) {
                 $clReview->status = 0;
                 $clReview->save();
+
                 return back();
             }
             $clReview->name = $request->input('nameClient') ?? '';
