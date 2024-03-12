@@ -18,11 +18,13 @@ class AdminHomeController extends Controller
     {
         return view('admin.index');
     }
+
     public function adminHeaderSetting()
     {
         $header_setting = HeaderSetting::first();
-        return view('admin.home-page-setting.header-setting',compact('header_setting'));
+        return view('admin.home-page-setting.header-setting', compact('header_setting'));
     }
+
     public function adminHeaderSettingUpdate(Request $request)
     {
 
@@ -68,7 +70,7 @@ class AdminHomeController extends Controller
     {
         $transport_setting = TransportCompanySetting::first();
         $why_setting = WhyChooseUsSetting::first();
-        return view('admin.home-page-setting.transportation-company-setting',compact('transport_setting','why_setting'));
+        return view('admin.home-page-setting.transportation-company-setting', compact('transport_setting', 'why_setting'));
     }
 
     public function adminTransportCompanySettingUpdate(Request $request)
@@ -140,13 +142,15 @@ class AdminHomeController extends Controller
     public function adminClientReview()
     {
         $reviews = ClientReview::where('status', ReviewStatus::ACTIVE)->get();
-        return view('admin.home-page-setting.client-review.client-review',compact('reviews'));
+        return view('admin.home-page-setting.client-review.client-review', compact('reviews'));
     }
+
     public function adminCreateClientReview()
     {
 
         return view('admin.home-page-setting.client-review.create-review');
     }
+
     public function adminCreateClientReviewPost(Request $request)
     {
         try {
@@ -162,7 +166,7 @@ class AdminHomeController extends Controller
             $describe = $request->input('describe');
 
             foreach ($languages as $lang) {
-                $review->{'describe' . '_' . $lang} = $translate->translateText($describe, $lang) ?? '';
+                $review->{'describe_' . $lang} = $translate->translateText($describe, $lang) ?? '';
             }
             if ($request->hasFile('avtClient')) {
                 $item = $request->file('avtClient');
@@ -173,13 +177,61 @@ class AdminHomeController extends Controller
 
             $success = $review->save();
             if ($success) {
-                toast('Update success!', 'success', 'top-left');
+                toast('Create success!', 'success', 'top-left');
                 return redirect()->route('admin-client-review');
             }
-            toast('Update fail!', 'error', 'top-left');
+            toast('Create fail!', 'error', 'top-left');
             return back();
         } catch (\Exception $exception) {
-            return $exception;
+            toast('An error occurred!', 'error', 'top-left');
+            return back()->withInput();
+        }
+
+    }
+
+    public function adminUpdateClientReview($id)
+    {
+        $clReview = ClientReview::find($id);
+        return view('admin.home-page-setting.client-review.edit-review', compact('clReview'));
+    }
+
+    public function adminUpdateClientReviewPost(Request $request, $id)
+    {
+        try {
+            $translate = new TranslateController();
+            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $clReview = ClientReview::find($id);
+            if ($request->status == ReviewStatus::DELETED) {
+                $clReview->status = 0;
+                $clReview->save();
+
+                return back();
+            }
+            $clReview->name = $request->input('nameClient') ?? '';
+            $clReview->position = $request->input('position') ?? '';
+            $clReview->star_rate = $request->input('starRating') ?? '';
+            $clReview->status = $request->input('status') ?? '';
+            $describe = $request->input('describe');
+
+            foreach ($languages as $lang) {
+                $clReview->{'describe_' . $lang} = $translate->translateText($describe, $lang) ?? '';
+            }
+            if ($request->hasFile('avtClient')) {
+                $item = $request->file('avtClient');
+                $itemPath = $item->store('img', 'public');
+                $thumbnail = asset('storage/' . $itemPath);
+                $clReview->Thumbnail = $thumbnail;
+            }
+            $success = $clReview->save();
+            if ($success) {
+                toast('Create success!', 'success', 'top-left');
+                return redirect()->route('admin-client-review');
+            }
+            toast('Create fail!', 'error', 'top-left');
+            return back();
+        } catch (\Exception $exception) {
+            toast('An error occurred!', 'error', 'top-left');
+            return back()->withInput();
         }
 
     }

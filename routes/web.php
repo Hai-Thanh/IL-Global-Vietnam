@@ -43,6 +43,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('client-reviews',[AdminHomeController::class, 'adminClientReview'])->name('admin-client-review');
     Route::get('create-client-reviews',[AdminHomeController::class, 'adminCreateClientReview'])->name('admin-creat-client-review');
     Route::post('create-client-reviews-post',[AdminHomeController::class, 'adminCreateClientReviewPost'])->name('admin-creat-client-review-post');
+    Route::get('update-client-reviews/{id}',[AdminHomeController::class, 'adminUpdateClientReview'])->name('admin-update-client-review');
+    Route::post('update-client-reviews-post/{id}',[AdminHomeController::class, 'adminUpdateClientReviewPost'])->name('admin-update-client-review-post');
 
 
 });
