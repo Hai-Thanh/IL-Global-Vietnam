@@ -1,306 +1,10 @@
 <link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
+<link rel="stylesheet" href="{{asset('ui/scss/client-review.css')}}">
 @extends('admin.layouts.master')
 @section('title')
     Admin IL Global
 @endsection
 @section('content')
-    <style>
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap');
-
-        :root {
-            --color-black: #41423d;
-            --color-neutral-100: #f5f4f0;
-            --color-neutral: #dfddd0;
-            --color-primary-100: #f0f7f5;
-            --color-primary-200: #e0eeeb;
-            --color-primary-300: #cfe5e0;
-            --color-primary: #3f9783;
-            --color-primary-500: #327969;
-            --color-white: #fbfcfa;
-            --text-font-family: 'Inter', sans-serif;
-            --title-font-family: 'Lora', serif;
-            --title-font-weight: 500;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { font: normal 16px/1.5 sans-serif; }
-
-        body {
-            background: var(--color-neutral-100);
-            color: var(--color-black);
-            font-family: var(--text-font-family);
-        }
-
-        h1 {
-            color: var(--color-primary);
-            font-family: var(--title-font-family);
-            font-size: 2.5rem;
-            font-weight: var(--title-font-weight);
-            margin: 0;
-        }
-
-        a {
-            color: var(--color-primary);
-            font-size: .875rem;
-            font-weight: 500;
-            text-decoration: none;
-        }
-        a:hover { color: var(--color-primary-500); }
-
-        /*
-          main
-        */
-
-        main {
-            align-items: center;
-            display: grid;
-            /*min-height: 100vh;*/
-            padding: 2.5rem;
-        }
-
-        main .content {
-            margin: 0 auto;
-            max-width: 1400px;
-        }
-
-        .main-header { margin: 0 0 2.5rem; }
-        .main-header.grid {
-            align-items: center;
-            display: grid;
-            grid-auto-flow: column;
-            justify-content: space-between;
-        }
-
-        /*
-          buttons
-        */
-
-        .button {
-            background: var(--color-primary);
-            border: 0;
-            border-radius: .25rem;
-            color: var(--color-white);
-            cursor: pointer;
-            font: inherit;
-            font-weight: 500;
-            height: 3rem;
-            line-height: 3rem;
-            padding: 0 2rem;
-
-            /* grid */
-            align-items: center;
-            display: grid;
-            gap: .75rem;
-            grid-auto-flow: column;
-        }
-        .button:hover { background: var(--color-primary-500); }
-        .button i { font-size: 1.25rem; }
-
-        .button.icon {
-            border-radius: 50%;
-            justify-content: center;
-            overflow: hidden;
-            padding: 0;
-            width: 3rem;
-        }
-
-        .button.link {
-            background: none;
-            color: var(--color-primary);
-            justify-content: start;
-            padding: 0;
-        }
-        .button.link:hover { color: var(--color-primary-500); }
-        .button.link i { font-size: inherit; }
-
-        /*
-          cards
-        */
-
-        .card {
-            border: 1px solid var(--color-neutral);
-            border-radius: .25rem;
-            background: var(--color-white);
-            margin: 0 0 2.5rem;
-            overflow: auto;
-            padding: 1.5rem 1.5rem 2.5rem;
-            width: 100%;
-        }
-
-        /*
-          inputs
-        */
-
-        .checkbox {
-            background: var(--color-white);
-            border: 1px solid var(--color-neutral);
-            border-radius: .25rem;
-            cursor: pointer;
-            height: 1.5rem;
-            position: relative;
-            width: 1.5rem;
-        }
-
-        .checkbox input[type="checkbox"] {
-            cursor: pointer;
-            height: 0;
-            opacity: 0;
-            position: relative;
-            width: 0;
-        }
-
-        .checkbox .checkmark::after {
-            background: var(--color-primary);
-            border: 0;
-            border-radius: .25rem;
-            color: var(--color-white);
-            content: "\f00c";
-            display: block;
-            font-family: "Font Awesome 6 Free";
-            font-size: .75rem;
-            font-weight: 900;
-            height: 1.5rem;
-            width: 1.5rem;
-
-            /* grid */
-            display: grid;
-            align-items: center;
-            justify-content: center;
-
-            /* position */
-            position: absolute;
-            left: -1px;
-            top: -1px;
-        }
-        .checkbox .checkmark.minus::after { content: "\f068"; }
-        .checkbox .checkmark { display: none; }
-        .checkbox input[type="checkbox"]:checked ~ .checkmark { display: block; }
-
-        .select {
-            background: var(--color-white);
-            border: 1px solid var(--color-neutral);
-            border-radius: .25rem;
-            color: var(--color-black);
-            display: inline-block;
-            font: inherit;
-            height: 3rem;
-            margin: 0 1rem 0 0;
-            padding: 0 1rem;
-            position: relative;
-            width: 12rem;
-        }
-
-        .select::after {
-            content: "\f107";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            height: 3rem;
-            line-height: 3rem;
-            padding: 0 1rem;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        select {
-            appearance: none;
-            background-color: transparent;
-            border: 0;
-            cursor: inherit;
-            font: inherit;
-            height: 3rem;
-            margin: 0;
-            padding: 0 1rem 0 0;
-            width: 100%;
-        }
-
-        input[type="number"],
-        input[type="text"] {
-            background: var(--color-white);
-            border: 1px solid var(--color-neutral);
-            border-radius: .25rem;
-            color: var(--color-black);
-            display: inline-block;
-            font: inherit;
-            height: 3rem;
-            margin: 0 .5rem;
-            padding: 0 1rem;
-            width: 5rem;
-        }
-
-        /*
-          colors
-        */
-
-        .colors {
-            display: grid;
-            justify-content: start;
-            gap: 1.5rem;
-            grid-auto-flow: column;
-            margin: 2.5rem 0;
-        }
-
-        .color { border-radius: 50%; height: 4rem; width: 4rem; }
-        .color.black { background: var(--color-black); }
-        .color.neutral-100 { background: var(--color-neutral-100); border: 1px solid var(--color-neutral); }
-        .color.neutral { background: var(--color-neutral); }
-        .color.primary-100 { background: var(--color-primary-100); border: 1px solid var(--color-primary-300); }
-        .color.primary-200 { background: var(--color-primary-200); border: 1px solid var(--color-primary-300); }
-        .color.primary-300 { background: var(--color-primary-300); }
-        .color.primary { background: var(--color-primary); }
-        .color.primary-500 { background: var(--color-primary-500); }
-        .color.white { background: var(--color-white); border: 1px solid var(--color-neutral); }
-
-        /*
-          paging
-        */
-
-        .paging.grid {
-            align-items: center;
-            display: grid;
-            gap: .75rem;
-            grid-auto-flow: column;
-        }
-
-        .paging span { margin: 0 .75rem; }
-
-        /*
-          table
-        */
-
-        table { border-collapse: collapse; width: 100%; }
-        td, th {
-            border-bottom: 1px solid var(--color-primary-300);
-            font-size: 1rem;
-            text-align: left;
-            /*white-space: nowrap;*/
-        }
-        th { padding: 1.5rem 1rem; }
-        td { padding: 1rem; }
-
-        tbody tr { cursor: pointer; }
-        tbody tr.selected td { background: var(--color-primary-200); }
-        tbody tr:hover:not(.selected) td,
-        tbody tr.hover:not(.selected) td {
-            background: var(--color-primary-100);
-        }
-
-        .table-footer, .table-header { font-size: .875rem; }
-        .table-footer { margin: -1.5rem 0 0; }
-        .table-header { margin: 0 0 1rem; }
-
-        .table-footer.grid,
-        .table-header.grid {
-            align-items: center;
-            display: grid;
-            grid-auto-flow: column;
-            justify-content: space-between;
-        }
-
-    </style>
-
 
     <div class="pagetitle">
         <h1>Our Client Reviews</h1>
@@ -315,9 +19,9 @@
 
     <section class="section dashboard">
         <main>
-            <div class="content">
+            <div class="content w-100">
                 <section class="main-header grid">
-                    <h1>Users</h1>
+                    <h1>Client Review</h1>
                     <a href="{{route('admin-creat-client-review')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
@@ -327,21 +31,21 @@
 
                 </section>
 
-{{--                <section class="table-header grid">--}}
-{{--                    <div>--}}
-{{--                        <div class="select">--}}
-{{--                            <select>--}}
-{{--                                <option>Choose action</option>--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
-{{--                        <span>Selected 4 of 123 items</span>--}}
-{{--                    </div>--}}
+                {{--                <section class="table-header grid">--}}
+                {{--                    <div>--}}
+                {{--                        <div class="select">--}}
+                {{--                            <select>--}}
+                {{--                                <option>Choose action</option>--}}
+                {{--                            </select>--}}
+                {{--                        </div>--}}
+                {{--                        <span>Selected 4 of 123 items</span>--}}
+                {{--                    </div>--}}
 
-{{--                    <a class="button link">--}}
-{{--                        <span>Filters</span>--}}
-{{--                        <i class="fa-solid fa-angle-down"></i>--}}
-{{--                    </a>--}}
-{{--                </section>--}}
+                {{--                    <a class="button link">--}}
+                {{--                        <span>Filters</span>--}}
+                {{--                        <i class="fa-solid fa-angle-down"></i>--}}
+                {{--                    </a>--}}
+                {{--                </section>--}}
 
                 <div class="card">
                     <table>
@@ -350,7 +54,7 @@
                             <th>
                                 <div class="test"></div>
                                 <div class="checkbox">
-                                    <input type="checkbox" checked />
+                                    <input type="checkbox" checked/>
                                     <span class="checkmark minus"></span>
                                 </div>
                             </th>
@@ -360,22 +64,23 @@
                             <th>Position</th>
                             <th>Describe</th>
                             <th>Star rating</th>
+                            <th>Custom</th>
                         </tr>
                         </thead>
 
                         <tbody>
                         @foreach($reviews as $review)
-{{--                            @dd($review)--}}
-                            <tr class="selected">
+                            <tr id="review_{{$review->id}}" class="selected border">
                                 <td>
                                     <div class="checkbox">
-                                        <input type="checkbox" checked />
+                                        <input type="checkbox" checked/>
                                         <span class="checkmark"></span>
                                     </div>
                                 </td>
                                 <td>{{$review->id ?? ''}}</td>
                                 <td>{{$review->name ?? ''}}</td>
-                                <td><img src="{{asset($review->Thumbnail) ?? ''}}" alt="Thumbnail"></td>
+                                <td><img class="thumbnail-review" src="{{$review->Thumbnail ?? ''}}" alt="Thumbnail">
+                                </td>
                                 <td>{{$review->position}}</td>
                                 <td>
                                     @if(locationHelper() == 'kr')
@@ -389,30 +94,61 @@
                                     @endif
                                 </td>
                                 <td>{{$review->star_rate}}</td>
+                                <td>
+                                    <a href="#" onclick="toggleStatus({{$review->id}})"><i
+                                            class="fas fa-trash color-red p-3"></i></a> |
+                                    <a href="{{route('admin-update-client-review',$review->id)}}"><i class="fa-solid fa-screwdriver-wrench p-3"></i></a>
+                                </td>
                             </tr>
                         @endforeach
 
 
                         </tbody>
                     </table>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script>
+                        async function toggleStatus(id) {
+                            let status = `{{\App\Enums\ReviewStatus::DELETED}}`;
+                            let url = `{{ route('admin-update-client-review-post', ['id' => ':id']) }}`;
+                            url = url.replace(':id', id);
+                            try {
+                                await $.ajax({
+                                    url: url,
+                                    type: 'POST',
+                                    headers: {
+                                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                    },
+                                    data: {status: status, id: id},
+                                    success: function(response) {
+                                        $(`#review_${id}`).addClass('d-none');
+                                        alert('Delete successfully!');
+                                    },
+                                });
+                                // toast('Delete successfully!', 'success', 'top-left');
+                            } catch (error) {
+                                console.error(error);
+                            }
+                        }
+                    </script>
                 </div>
 
-{{--                <section class="table-footer grid">--}}
-{{--                    <span>Displaying 1-10 of 123 items</span>--}}
-{{--                    <div class="paging grid">--}}
-{{--                        <span>--}}
-{{--                            Page--}}
-{{--                            <input type="number" value="1">--}}
-{{--                            of 13--}}
-{{--                        </span>--}}
-{{--                        <div class="button icon">--}}
-{{--                            <i class="fa-solid fa-angle-left"></i>--}}
-{{--                        </div>--}}
-{{--                        <div class="button icon">--}}
-{{--                            <i class="fa-solid fa-angle-right"></i>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </section>--}}
+
+                {{--                <section class="table-footer grid">--}}
+                {{--                    <span>Displaying 1-10 of 123 items</span>--}}
+                {{--                    <div class="paging grid">--}}
+                {{--                        <span>--}}
+                {{--                            Page--}}
+                {{--                            <input type="number" value="1">--}}
+                {{--                            of 13--}}
+                {{--                        </span>--}}
+                {{--                        <div class="button icon">--}}
+                {{--                            <i class="fa-solid fa-angle-left"></i>--}}
+                {{--                        </div>--}}
+                {{--                        <div class="button icon">--}}
+                {{--                            <i class="fa-solid fa-angle-right"></i>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                {{--                </section>--}}
             </div>
         </main>
 
