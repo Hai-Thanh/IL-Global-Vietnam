@@ -10,44 +10,50 @@
             <div class="row align-items-center">
                 <div class="col-6">
                     <div class="title-about-us">
-                        About us
+                        @if(locationHelper() == 'kr')
+                            {{ $aboutUs->title_about_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $aboutUs->title_about_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $aboutUs->title_about_zh_cn ?? ''}}
+                        @else
+                            {{ $aboutUs->title_about_vi ?? ''}}
+                        @endif
                     </div>
                     <div class="describe-about-us">
-                        IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung
-                        cấp nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối
-                        nội địa và hỗ trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và
-                        đúng thời gian trên toàn thế giới.
+                        @if(locationHelper() == 'kr')
+                            {{ $aboutUs->describe_about_ko ?? ''}}
+                        @elseif(locationHelper() == 'en')
+                            {{ $aboutUs->describe_about_en ?? ''}}
+                        @elseif(locationHelper() == 'cn')
+                            {{ $aboutUs->describe_about_zh_cn ?? ''}}
+                        @else
+                            {{ $aboutUs->describe_about_vi ?? ''}}
+                        @endif
                     </div>
                 </div>
                 <div class="col-6">
-                    <img class="w-100 h-100" src="{{asset('ui/img/img-demo/img-demo-about-us.png')}}" alt="about us">
+                    <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about}}" alt="about us">
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="container">
+    <div class="container mb-5">
         <div class="text-container">
-            <span class="small-text">IL VIETNAM CO, LTD</span>
-            <span class="big-text">IL VIETNAM CO, LTD</span>
+            <span class="small-text">{{$aboutUs->name_us}}</span>
+            <span class="big-text">{{$aboutUs->name_us}}</span>
         </div>
         <div class="mo-ta-about-us">
-            IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung cấp nhiều
-            giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu
-            cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế
-            giới.
-        </div>
-        <div class="mo-ta-about-us mb-5">
-            IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung cấp nhiều
-            giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu
-            cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế
-            giới.IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung cấp
-            nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ
-            trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn
-            thế giới.IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung cấp
-            nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ
-            trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn
-            thế giới.
+            @if(locationHelper() == 'kr')
+                {!!  $aboutUs->describe_us_ko ?? '' !!}
+            @elseif(locationHelper() == 'en')
+                {!!  $aboutUs->describe_us_en ?? '' !!}
+            @elseif(locationHelper() == 'cn')
+                {!! $aboutUs->describe_us_zh_cn ?? '' !!}
+            @else
+                {!!  $aboutUs->describe_us_vi ?? '' !!}
+            @endif
         </div>
     </div>
 @endsection

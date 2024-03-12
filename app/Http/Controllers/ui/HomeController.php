@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ui;
 
 use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
 use App\Models\BookingForm;
 use App\Models\ClientReview;
 use App\Models\HeaderSetting;
@@ -60,7 +61,8 @@ class HomeController extends Controller
     }
     public function aboutUs()
     {
-        return view('front-end.about-us');
+        $aboutUs = AboutUs::first();
+        return view('front-end.about-us',compact('aboutUs'));
     }
     public function contact()
     {
