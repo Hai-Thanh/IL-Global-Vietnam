@@ -51,7 +51,7 @@ class AdminService extends Controller
             }
 
             toast('Update success!', 'success', 'top-left');
-            return back();
+            return redirect()->route('admin-service');
         } catch (\Exception $exception) {
             return $exception;
         }
