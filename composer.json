@@ -6,15 +6,18 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "bensampo/laravel-enum": "^6.7",
+        "bensampo/laravel-enum": "^6.10",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/socialite": "*",
         "laravel/tinker": "^2.8",
-        "realrashid/sweet-alert": "*",
+        "patrickschur/language-detection": "^5.3",
+        "realrashid/sweet-alert": "^7.1",
         "socialiteproviders/manager": "^4.4",
-        "tymon/jwt-auth": "*"
+        "stichoza/google-translate-php": "^5.1",
+        "tinymce/tinymce": "^6.8",
+        "tymon/jwt-auth": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

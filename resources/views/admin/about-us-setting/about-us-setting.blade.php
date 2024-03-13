@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
 @extends('admin.layouts.master')
 @section('title')
     Admin IL Global
 @endsection
 @section('content')
+    <link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
     <div class="pagetitle">
         <h1>Cài Đặt About Us</h1>
 
@@ -34,7 +34,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <label for="describe_about">Describe about us</label>
-                            <textarea name="describe_about" id="describe_about">{{$aboutUs->title_about_vi}}</textarea>
+                            <textarea class="textarea" name="describe_about" id="describe_about">{{$aboutUs->describe_about_vi}}</textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -62,4 +62,6 @@
             </form>
         </div>
     </section>
+
+
 @endsection
