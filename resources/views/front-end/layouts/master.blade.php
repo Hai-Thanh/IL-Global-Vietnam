@@ -57,6 +57,7 @@
 @include('front-end.layouts.footer')
 <!-- End Footer -->
 
+@include('admin.component.tinymce-config')
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
@@ -67,7 +68,7 @@
 <script src="{{ asset('ui/vendor/echarts/echarts.min.js') }}"></script>
 <script src="{{ asset('ui/vendor/quill/quill.min.js') }}"></script>
 <script src="{{ asset('ui/vendor/simple-datatables/simple-datatables.js') }}"></script>
-<script src="{{ asset('ui/vendor/tinymce/tinymce.min.js') }}"></script>
+{{--<script src="{{ asset('ui/vendor/tinymce/tinymce.min.js') }}"></script>--}}
 <script src="{{ asset('ui/vendor/php-email-form/validate.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

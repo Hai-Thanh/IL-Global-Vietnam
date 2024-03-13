@@ -69,38 +69,40 @@
                         </thead>
 
                         <tbody>
-                        @foreach($reviews as $review)
-                            <tr id="review_{{$review->id}}" class="selected border">
-                                <td>
-                                    <div class="checkbox">
-                                        <input type="checkbox" checked/>
-                                        <span class="checkmark"></span>
-                                    </div>
-                                </td>
-                                <td>{{$review->id ?? ''}}</td>
-                                <td>{{$review->name ?? ''}}</td>
-                                <td><img class="thumbnail-review" src="{{$review->Thumbnail ?? ''}}" alt="Thumbnail">
-                                </td>
-                                <td>{{$review->position}}</td>
-                                <td>
-                                    @if(locationHelper() == 'kr')
-                                        {{ $review->describe_ko ?? ''}}
-                                    @elseif(locationHelper() == 'en')
-                                        {{ $review->describe_en ?? ''}}
-                                    @elseif(locationHelper() == 'cn')
-                                        {{ $review->describe_zh_cn ?? ''}}
-                                    @else
-                                        {{ $review->describe_vi ?? ''}}
-                                    @endif
-                                </td>
-                                <td>{{$review->star_rate}}</td>
-                                <td>
-                                    <a href="#" onclick="toggleStatus({{$review->id}})"><i
-                                            class="fas fa-trash color-red p-3"></i></a> |
-                                    <a href="{{route('admin-update-client-review',$review->id)}}"><i class="fa-solid fa-screwdriver-wrench p-3"></i></a>
-                                </td>
-                            </tr>
-                        @endforeach
+                        @if($reviews)
+                            @foreach($reviews as $review)
+                                <tr id="review_{{$review->id}}" class="selected border">
+                                    <td>
+                                        <div class="checkbox">
+                                            <input type="checkbox" checked/>
+                                            <span class="checkmark"></span>
+                                        </div>
+                                    </td>
+                                    <td>{{$review->id ?? ''}}</td>
+                                    <td>{{$review->name ?? ''}}</td>
+                                    <td><img class="thumbnail-review" src="{{$review->Thumbnail ?? ''}}" alt="Thumbnail">
+                                    </td>
+                                    <td>{{$review->position}}</td>
+                                    <td>
+                                        @if(locationHelper() == 'kr')
+                                            {{ $review->describe_ko ?? ''}}
+                                        @elseif(locationHelper() == 'en')
+                                            {{ $review->describe_en ?? ''}}
+                                        @elseif(locationHelper() == 'cn')
+                                            {{ $review->describe_zh_cn ?? ''}}
+                                        @else
+                                            {{ $review->describe_vi ?? ''}}
+                                        @endif
+                                    </td>
+                                    <td>{{$review->star_rate}}</td>
+                                    <td>
+                                        <a href="#" onclick="toggleStatus({{$review->id}})"><i
+                                                class="fas fa-trash color-red p-3"></i></a> |
+                                        <a href="{{route('admin-update-client-review',$review->id)}}"><i class="fa-solid fa-screwdriver-wrench p-3"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
 
 
                         </tbody>

@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="{{asset('ui/scss/style-service.css')}}">
 @extends('front-end.layouts.master')
 @section('title')
     Service Sea Transport
 @endsection
 @section('content')
+    <link rel="stylesheet" href="{{asset('ui/scss/style-service.css')}}">
     @include('front-end.layouts.header-service.header-service-air-transport')
     <div class="container main-service">
         <div class="row">
