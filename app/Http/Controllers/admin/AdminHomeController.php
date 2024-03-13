@@ -141,7 +141,7 @@ class AdminHomeController extends Controller
 
     public function adminClientReview()
     {
-        $reviews = ClientReview::where('status', ReviewStatus::ACTIVE)->get();
+        $reviews = ClientReview::where('status', ReviewStatus::ACTIVE)->get() ?? '';
         return view('admin.home-page-setting.client-review.client-review', compact('reviews'));
     }
 

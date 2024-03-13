@@ -22,13 +22,13 @@
                     </div>
                     <div class="describe-about-us">
                         @if(locationHelper() == 'kr')
-                            {{ $aboutUs->describe_about_ko ?? ''}}
+                            {!! $aboutUs->describe_about_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $aboutUs->describe_about_en ?? ''}}
+                            {!! $aboutUs->describe_about_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $aboutUs->describe_about_zh_cn ?? ''}}
+                            {!! $aboutUs->describe_about_zh_cn ?? '' !!}
                         @else
-                            {{ $aboutUs->describe_about_vi ?? ''}}
+                            {!!  $aboutUs->describe_about_vi ?? '' !!}
                         @endif
                     </div>
                 </div>

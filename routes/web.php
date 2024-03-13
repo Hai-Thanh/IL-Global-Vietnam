@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminAboutUsController;
 use App\Http\Controllers\admin\AdminHomeController;
+use App\Http\Controllers\admin\AdminService;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
@@ -50,6 +51,15 @@ Route::group(['prefix' => 'admin'], function () {
 
     Route::get('about-us', [AdminAboutUsController::class, 'adminAboutUs'])->name('admin-about-us');
     Route::post('about-us-update', [AdminAboutUsController::class, 'adminAboutUsUpdate'])->name('admin-about-us-update');
+
+    /* service */
+
+    Route::get('create-service', [AdminService::class, 'adminServiceCreate'])->name('admin-service-create');
+    Route::post('service-update', [AdminService::class, 'adminServiceUpdate'])->name('admin-service-update');
+    Route::get('service', [AdminService::class, 'adminService'])->name('admin-service');
+    Route::get('service-edit/{type}', [AdminService::class, 'adminServiceEdit'])->name('admin-service-edit');
+    Route::post('service-delete/{id}', [AdminService::class, 'adminServiceDelete'])->name('admin-service-delete');
+
 
 
 });
