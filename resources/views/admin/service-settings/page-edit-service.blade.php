@@ -48,19 +48,19 @@
                         <div class="col-md-12">
                             <label for="describe">Describe center</label>
                             <textarea class="textarea" name="describe"
-                                      id="describe">{{$service->title_vi}}</textarea>
+                                      id="describe">{{$service->describe_vi}}</textarea>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-6">
                             <label for="title2">Title footer</label>
-                            <input type="text" name="title2" id="title2" value="{{$service->title_vi}}">
+                            <input type="text" name="title2" id="title2" value="{{$service->title_sub_vi}}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <label for="describe2">Describe footer</label>
-                            <textarea name="describe2" id="describe2">{{$service->title_vi}}</textarea>
+                            <textarea name="describe2" id="describe2">{{$service->describe_sub_vi}}</textarea>
                         </div>
                     </div>
 

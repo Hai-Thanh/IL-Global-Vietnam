@@ -7,7 +7,7 @@
 
     <div class="row-full-width select-background">
         <div class="container d-flex align-items-center justify-content-center position-relative h-100">
-            <div class="content-about-us">Air Transport</div>
+            <div class="content-about"></div>
             <div id="trapezoid" class="container">
 
             </div>
@@ -46,6 +46,15 @@
             "{{route('customs.services')}}": `background-customs-services`
         };
 
+        var titleHeader = {
+            "{{route('service.ari.transport')}}": `<div class="content-about-us">Air Transport</div>`,
+            "{{route('service.sea.transport')}}": `<div class="content-about-us">Sea transport</div>`,
+            "{{route('service.road.transport')}}": `<div class="content-about-us">Road transport</div>`,
+            "{{route('service.rail.transport')}}": `<div class="content-about-us">Rail transport</div>`,
+            "{{route('service.express.delivery')}}": `<div class="content-about-us">Express delivery</div>`,
+            "{{route('customs.services')}}": `<div class="content-about-us">Customs services</div>`
+        };
+
         // Lặp qua từng URL và kiểm tra
         urls.forEach(function(url){
             if(window.location.href.indexOf(url) > -1){
@@ -58,6 +67,11 @@
 
                 // Thêm lớp nền cho phần tử .select-background
                 $('.select-background').addClass(backgroundClass);
+
+                var titleClass = titleHeader[url];
+                console.log(titleClass,titleHeader);
+                // Thêm lớp nền cho phần tử .select-title
+                $('.content-about').append(titleClass);
             }
         });
     });

@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminAboutUsController;
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\admin\AdminService;
+use App\Http\Controllers\AdminBlog;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
@@ -60,6 +61,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('service-edit/{type}', [AdminService::class, 'adminServiceEdit'])->name('admin-service-edit');
     Route::post('service-delete/{id}', [AdminService::class, 'adminServiceDelete'])->name('admin-service-delete');
 
+    /* blog */
+    Route::get('blog', [AdminBlog::class, 'adminBlog'])->name('admin-blog');
+    Route::get('create-blog', [AdminBlog::class, 'adminCreateBlog'])->name('admin-create-blog');
+    Route::get('edit-blog/{id}', [AdminBlog::class, 'adminEditBlog'])->name('admin-edit-blog');
+
+    Route::post('create-blog-up', [AdminBlog::class, 'adminCreateBlogUp'])->name('admin-create-blog-up');
+    Route::post('edit-blog-up/{id}', [AdminBlog::class, 'adminEditBlogUp'])->name('admin-edit-blog-up');
+
 
 
 });
@@ -81,6 +90,9 @@ Route::group(['prefix' => ''], function () {
     Route::get('express-delivery', [HomeController::class, 'expressDelivery'])->name('service.express.delivery');
     Route::get('customs-services', [HomeController::class, 'customsServices'])->name('customs.services');
     Route::post('booking-form', [HomeController::class, 'BookingForm'])->name('booking.form');
+
+    Route::get('blog', [HomeController::class, 'Blog'])->name('blog');
+    Route::get('detail-blog/{id}', [HomeController::class, 'DetailBlog'])->name('detail.blog');
 
 });
 

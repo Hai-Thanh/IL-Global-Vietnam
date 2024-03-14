@@ -22,10 +22,10 @@
             <div class="content w-100">
                 <section class="main-header grid">
                     <h1>List Service</h1>
-                    <a href="{{route('admin-service-create')}}">
+                    <a href="{{route('admin-create-blog')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
-                            <span>Add new Service</span>
+                            <span>Add new Blog</span>
                         </button>
                     </a>
 
@@ -45,40 +45,41 @@
                             <th>ID</th>
                             <th>Service Transport</th>
                             <th>Image</th>
-{{--                            <th>Describe</th>--}}
+                            {{--                            <th>Describe</th>--}}
                             <th>Edit</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        @if($services)
-                            @foreach($services as $service)
-                                <tr id="review_{{$service->id}}" class="selected border">
+                        @if($blogs ?? '')
+                            @foreach($blogs as $blog)
+                                <tr id="blog_{{$blog->id}}" class="selected border">
                                     <td>
                                         <div class="checkbox">
                                             <input type="checkbox" checked/>
                                             <span class="checkmark"></span>
                                         </div>
                                     </td>
-                                    <td>{{$service->id ?? ''}}</td>
-                                    <td>{{$service->type ?? ''}}</td>
-                                    <td><img class="thumbnail-review" src="{{$service->img_main ?? ''}}" alt="Thumbnail">
-                                    </td>
-{{--                                    <td>--}}
-{{--                                        @if(locationHelper() == 'kr')--}}
-{{--                                            {!! $service->describe_ko ?? '' !!}--}}
-{{--                                        @elseif(locationHelper() == 'en')--}}
-{{--                                            {!! $service->describe_en ?? '' !!}--}}
-{{--                                        @elseif(locationHelper() == 'cn')--}}
-{{--                                            {!! $service->describe_zh_cn ?? '' !!}--}}
-{{--                                        @else--}}
-{{--                                            {!! $service->describe_vi ?? '' !!}--}}
-{{--                                        @endif--}}
-{{--                                    </td>--}}
+                                    <td>{{$blog->id ?? ''}}</td>
                                     <td>
-                                        <a href="#" onclick="toggleStatusDelete({{$service->id}})"><i
+                                        @if(locationHelper() == 'kr')
+                                            {{ $blog->title_blog_ko ?? ''}}
+                                        @elseif(locationHelper() == 'en')
+                                            {{ $blog->title_blog_en ?? ''}}
+                                        @elseif(locationHelper() == 'cn')
+                                            {{ $blog->title_blog_zh_cn ?? ''}}
+                                        @else
+                                            {{ $blog->title_blog_vi ?? ''}}
+                                        @endif
+                                    </td>
+                                    <td><img class="thumbnail-review" src="{{$blog->img_main_blog ?? ''}}"
+                                             alt="Thumbnail">
+                                    </td>
+                                    <td>
+                                        <a href="#" onclick="toggleDeleteBlog({{$blog->id}})"><i
                                                 class="fas fa-trash color-red p-3"></i></a> |
-                                        <a href="{{route('admin-service-edit',$service->type)}}"><i class="fa-solid fa-screwdriver-wrench p-3"></i></a>
+                                        <a href="{{route('admin-edit-blog',$blog->id)}}"><i
+                                                class="fa-solid fa-screwdriver-wrench p-3"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -89,8 +90,9 @@
                     </table>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                     <script>
-                        async function toggleStatusDelete(id) {
-                            let url = `{{ route('admin-service-delete', ['id' => ':id']) }}`;
+                        async function toggleDeleteBlog(id) {
+                            let status = `{{\App\Enums\ReviewStatus::DELETED}}`;
+                            let url = `{{ route('admin-edit-blog-up', ['id' => ':id']) }}`;
                             url = url.replace(':id', id);
                             try {
                                 await $.ajax({
@@ -99,16 +101,16 @@
                                     headers: {
                                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                                     },
-                                    data: { id: id},
-                                    success: function(response) {
-                                        $(`#review_${id}`).addClass('d-none');
+                                    data: {status: status, id: id},
+                                    success: function (response) {
+                                        $(`#blog_${id}`).addClass('d-none');
                                         alert('Delete successfully!');
-                                        toast('Delete success!', 'success', 'top-left');
                                     },
                                 });
                                 // toast('Delete successfully!', 'success', 'top-left');
                             } catch (error) {
                                 console.error(error);
+                                alert('Delete error!');
                             }
                         }
                     </script>
