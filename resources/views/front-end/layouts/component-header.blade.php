@@ -104,23 +104,23 @@
                     </div>
                 </div>
             </div>
-{{--            <div class="col il-blog">--}}
-{{--                <div class="box">--}}
-{{--                        <span class="d-flex align-items-center">Blog--}}
-{{--                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"--}}
-{{--                                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                            </svg>--}}
-{{--                        </span>--}}
-{{--                    <div class="box-child">--}}
-{{--                        <ul>--}}
-{{--                            <li><a href="#">Tin IL</a></li>--}}
-{{--                            <li><a href="#">Tin nội bộ IL</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="col il-blog">
+                <div class="box">
+                        <span class="d-flex align-items-center">Blog
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"
+                                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    <div class="box-child">
+                        <ul>
+                            <li><a href="#">Tin IL</a></li>
+                            <li><a href="#">Tin nội bộ IL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="col il-contact"><a href="{{route('contact')}}">Contact</a></div>
             <a href="" style="height: 48px;">
                 <div class="col il-track-order">

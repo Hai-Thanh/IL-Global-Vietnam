@@ -85,7 +85,7 @@
                 </div>
                 <div class="il-tab-header d-md-flex">
                     <div class="col il-home pl-0"><a href="{{route('home')}}">Home</a></div>
-                    <div class="col il-about-us"><a href="{{route('about.us')}}">About us</a></div>
+                    <div class="col il-about-us p-0"><a href="{{route('about.us')}}">About us</a></div>
                     <div class="col il-service">
                         <div class="box">
                         <span class="d-flex align-items-center">Service
@@ -107,23 +107,23 @@
                             </div>
                         </div>
                     </div>
-{{--                    <div class="col il-blog">--}}
-{{--                        <div class="box">--}}
-{{--                        <span class="d-flex align-items-center">Blog--}}
-{{--                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"--}}
-{{--                                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                            </svg>--}}
-{{--                        </span>--}}
-{{--                            <div class="box-child">--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="#">Tin IL</a></li>--}}
-{{--                                    <li><a href="#">Tin nội bộ IL</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="col il-blog">
+                        <div class="box">
+                        <span class="d-flex align-items-center">Blog
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"
+                                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                            <div class="box-child">
+                                <ul>
+                                    <li><a href="#">Tin IL</a></li>
+                                    <li><a href="#">Tin nội bộ IL</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col il-contact"><a href="{{route('contact')}}">Contact</a></div>
                     <div class="col il-language">
                         <div class="dropdown float-right ">
