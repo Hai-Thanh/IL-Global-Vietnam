@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminAboutUsController;
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\admin\AdminService;
+use App\Http\Controllers\AdminBlog;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
@@ -59,6 +60,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('service', [AdminService::class, 'adminService'])->name('admin-service');
     Route::get('service-edit/{type}', [AdminService::class, 'adminServiceEdit'])->name('admin-service-edit');
     Route::post('service-delete/{id}', [AdminService::class, 'adminServiceDelete'])->name('admin-service-delete');
+
+    /* blog */
+    Route::get('blog', [AdminBlog::class, 'adminBlog'])->name('admin-blog');
+    Route::get('create-blog', [AdminBlog::class, 'adminCreateBlog'])->name('admin-create-blog');
+    Route::get('edit-blog/{id}', [AdminBlog::class, 'adminEditBlog'])->name('admin-edit-blog');
+
+    Route::post('create-blog-up', [AdminBlog::class, 'adminCreateBlogUp'])->name('admin-create-blog-up');
+    Route::post('edit-blog-up/{id}', [AdminBlog::class, 'adminEditBlogUp'])->name('admin-edit-blog-up');
 
 
 
