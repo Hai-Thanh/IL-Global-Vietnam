@@ -9,6 +9,7 @@ use App\Models\BookingForm;
 use App\Models\ClientReview;
 use App\Models\HeaderSetting;
 use App\Models\OrderForm;
+use App\Models\Service;
 use App\Models\TransportCompanySetting;
 use App\Models\WhyChooseUsSetting;
 use Carbon\Carbon;
@@ -70,26 +71,32 @@ class HomeController extends Controller
     }
     public function ariTransport()
     {
-        return view('front-end.service.air-transport');
+        $service = Service::where('type', \App\Enums\Service::Air)->first();
+        return view('front-end.service.air-transport',compact('service'));
     }
     public function seaTransport()
     {
-        return view('front-end.service.sea-transport');
+        $service = Service::where('type', \App\Enums\Service::Sea)->first();
+        return view('front-end.service.sea-transport',compact('service'));
     }
     public function roadTransport()
     {
-        return view('front-end.service.road-transport');
+        $service = Service::where('type', \App\Enums\Service::Road)->first();
+        return view('front-end.service.road-transport',compact('service'));
     }
     public function railTransport()
     {
-        return view('front-end.service.rail-transport');
+        $service = Service::where('type', \App\Enums\Service::Rail)->first();
+        return view('front-end.service.rail-transport',compact('service'));
     }
     public function expressDelivery()
     {
-        return view('front-end.service.express-delivery');
+        $service = Service::where('type', \App\Enums\Service::Express)->first();
+        return view('front-end.service.express-delivery',compact('service'));
     }
     public function customsServices()
     {
-        return view('front-end.service.customs-services');
+        $service = Service::where('type', \App\Enums\Service::Customs)->first();
+        return view('front-end.service.customs-services',compact('service'));
     }
 }

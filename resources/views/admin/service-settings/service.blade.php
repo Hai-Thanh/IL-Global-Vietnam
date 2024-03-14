@@ -45,7 +45,7 @@
                             <th>ID</th>
                             <th>Service Transport</th>
                             <th>Image</th>
-                            <th>Describe</th>
+{{--                            <th>Describe</th>--}}
                             <th>Edit</th>
                         </tr>
                         </thead>
@@ -64,17 +64,17 @@
                                     <td>{{$service->type ?? ''}}</td>
                                     <td><img class="thumbnail-review" src="{{$service->img_main ?? ''}}" alt="Thumbnail">
                                     </td>
-                                    <td>
-                                        @if(locationHelper() == 'kr')
-                                            {!! $service->describe_ko ?? '' !!}
-                                        @elseif(locationHelper() == 'en')
-                                            {!! $service->describe_en ?? '' !!}
-                                        @elseif(locationHelper() == 'cn')
-                                            {!! $service->describe_zh_cn ?? '' !!}
-                                        @else
-                                            {!! $service->describe_vi ?? '' !!}
-                                        @endif
-                                    </td>
+{{--                                    <td>--}}
+{{--                                        @if(locationHelper() == 'kr')--}}
+{{--                                            {!! $service->describe_ko ?? '' !!}--}}
+{{--                                        @elseif(locationHelper() == 'en')--}}
+{{--                                            {!! $service->describe_en ?? '' !!}--}}
+{{--                                        @elseif(locationHelper() == 'cn')--}}
+{{--                                            {!! $service->describe_zh_cn ?? '' !!}--}}
+{{--                                        @else--}}
+{{--                                            {!! $service->describe_vi ?? '' !!}--}}
+{{--                                        @endif--}}
+{{--                                    </td>--}}
                                     <td>
                                         <a href="#" onclick="toggleStatusDelete({{$service->id}})"><i
                                                 class="fas fa-trash color-red p-3"></i></a> |
