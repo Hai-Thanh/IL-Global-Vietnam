@@ -316,6 +316,11 @@
     height: 700px;
   }
   /* end background header contact*/
+  .background-blog {
+    background: url(../img/banner-services/blog.png) no-repeat 100% 100%;
+    background-size: cover;
+    height: 700px;
+  }
   .background-service-air-transport {
     background: url(../img/banner-services/service-air.png) no-repeat 100% 100%;
     background-size: cover;

@@ -99,4 +99,13 @@ class HomeController extends Controller
         $service = Service::where('type', \App\Enums\Service::Customs)->first();
         return view('front-end.service.customs-services',compact('service'));
     }
+
+    public function Blog()
+    {
+        return view('front-end.blog');
+    }
+    public function DetailBlog()
+    {
+        return view('front-end.detail-blog');
+    }
 }

@@ -115,8 +115,8 @@
                         </span>
                     <div class="box-child">
                         <ul>
-                            <li><a href="#">Tin IL</a></li>
-                            <li><a href="#">Tin nội bộ IL</a></li>
+                            <li><a href="{{route('blog')}}">Tin IL</a></li>
+                            <li><a href="{{route('blog')}}">Tin nội bộ IL</a></li>
                         </ul>
                     </div>
                 </div>

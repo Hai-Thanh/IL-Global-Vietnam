@@ -82,6 +82,9 @@ Route::group(['prefix' => ''], function () {
     Route::get('customs-services', [HomeController::class, 'customsServices'])->name('customs.services');
     Route::post('booking-form', [HomeController::class, 'BookingForm'])->name('booking.form');
 
+    Route::get('blog', [HomeController::class, 'Blog'])->name('blog');
+    Route::get('detail-blog/{id}', [HomeController::class, 'DetailBlog'])->name('detail.blog');
+
 });
 
 Route::middleware(['auth'])->group(function () {
