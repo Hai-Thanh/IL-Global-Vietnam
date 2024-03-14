@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\ui;
 
+use App\Enums\BlogStatus;
 use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\Blog;
 use App\Models\BookingForm;
 use App\Models\ClientReview;
 use App\Models\HeaderSetting;
@@ -102,7 +104,8 @@ class HomeController extends Controller
 
     public function Blog()
     {
-        return view('front-end.blog');
+        $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
+        return view('front-end.blog',compact('listBlogs'));
     }
     public function DetailBlog()
     {
