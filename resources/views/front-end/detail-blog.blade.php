@@ -60,44 +60,7 @@
                     </div>
                 </div>
                 {{-- tags --}}
-                <style>
-                    .btn-comment-tags {
-                        /*margin-top: 12px;*/
-                        border: 1px solid #EC5938;
-                        height: 33px;
-                        padding: 8px 16px 8px 16px;
-                        gap: 10px;
-                        color: #EC5938;
-                        font-size: 14px;
-                        font-weight: 700;
-                        line-height: 17px;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        &:hover {
-                            background-color: #EC5938;
-                            color: #FFFFFF;
-                        }
-                    }
-                    .tags-content {
-                        margin-right: 24px;
-                        align-items: center;
-                        display: flex;
-                        font-size: 24px;
-                        font-weight: 700;
-                        line-height: 29px;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: #000000;
 
-
-                    }
-                    .border-top-bottom {
-                        border-top: 1px solid;
-                        border-bottom: 1px solid;
-                        padding: 16px 0;
-                        border-color: #D6D6D6;
-                    }
-                </style>
                 <div class="border-top-bottom">
                     <div class="row d-md-flex justify-content-between align-items-center">
                         <div class="col d-md-flex">
@@ -247,7 +210,7 @@
             </div>
 
             <div class="col-4">
-                @include('front-end.service.tab-nhan-bao-gia-va-dich-vu')
+                @include('front-end.pages.tab-blog-category')
             </div>
         </div>
     </div>
