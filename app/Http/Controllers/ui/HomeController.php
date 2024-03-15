@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\ui;
 
+use App\Enums\BlogStatus;
 use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\Blog;
 use App\Models\BookingForm;
 use App\Models\ClientReview;
 use App\Models\HeaderSetting;
@@ -32,9 +34,10 @@ class HomeController extends Controller
             $time_out = '5 PM';
         }
         $reviews = ClientReview::where('status',ReviewStatus::ACTIVE)->get();
+        $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
 
 
-        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews'));
+        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs'));
     }
 
     public function BookingForm(Request $request)
@@ -102,7 +105,8 @@ class HomeController extends Controller
 
     public function Blog()
     {
-        return view('front-end.blog');
+        $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
+        return view('front-end.blog',compact('listBlogs'));
     }
     public function DetailBlog()
     {

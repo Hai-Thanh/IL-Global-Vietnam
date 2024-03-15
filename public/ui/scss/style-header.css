@@ -437,9 +437,8 @@
     transition: background 0.4s, border-color 0.4s, color 0.4s;
     z-index: 0;
     overflow: hidden;
-    min-width: 200px;
-    padding: 17px 33px 15px;
-    border: 2px solid;
+    min-width: 160px;
+    padding: 10px 30px 10px;
     letter-spacing: normal;
     white-space: nowrap;
     text-overflow: ellipsis;
