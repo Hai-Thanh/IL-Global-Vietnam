@@ -7,12 +7,12 @@
 @section('content')
 
     <div class="pagetitle">
-        <h1>List Service</h1>
+        <h1>List Blogs</h1>
 
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('admin-home')}}">Home</a></li>
-                <li class="breadcrumb-item active">Cài Đặt List Service</li>
+                <li class="breadcrumb-item active">Cài Đặt List Blogs</li>
             </ol>
         </nav>
     </div>
@@ -21,7 +21,7 @@
         <main>
             <div class="content w-100">
                 <section class="main-header grid">
-                    <h1>List Service</h1>
+                    <h1>List Blogs</h1>
                     <a href="{{route('admin-create-blog')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
@@ -43,7 +43,7 @@
                                 </div>
                             </th>
                             <th>ID</th>
-                            <th>Service Transport</th>
+                            <th>Title Blog</th>
                             <th>Image</th>
                             {{--                            <th>Describe</th>--}}
                             <th>Edit</th>
