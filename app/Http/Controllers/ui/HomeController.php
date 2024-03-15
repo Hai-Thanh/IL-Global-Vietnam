@@ -108,8 +108,9 @@ class HomeController extends Controller
         $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
         return view('front-end.blog',compact('listBlogs'));
     }
-    public function DetailBlog()
+    public function DetailBlog($blogId)
     {
-        return view('front-end.detail-blog');
+        $blog = Blog::find($blogId);
+        return view('front-end.detail-blog',compact('blog'));
     }
 }
