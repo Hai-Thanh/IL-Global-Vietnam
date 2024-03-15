@@ -183,3 +183,131 @@
 
     }
 }
+.btn-comment-tags {
+    /*margin-top: 12px;*/
+    border: 1px solid #EC5938;
+    height: 33px;
+    padding: 8px 16px 8px 16px;
+    gap: 10px;
+    color: #EC5938;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    &:hover {
+        background-color: #EC5938;
+        color: #FFFFFF;
+    }
+}
+.tags-content {
+    margin-right: 24px;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+
+
+}
+.border-top-bottom {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 16px 0;
+    border-color: #D6D6D6;
+}
+.name-blog-search {
+    width: 100%;
+    height: 48px;
+    padding: 14px 16px;
+    border: 1px solid #D4D4D4;
+    background: #FFFFFF;
+    outline: none;
+}
+.svg-search {
+    background: red;
+    width: 45px;
+    height: 48px;
+    padding: 11px;
+}
+.label-search {
+    position: absolute;
+    right: 39px;
+}
+.cmt-blog {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 8px;
+
+}
+.sub-color {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #424242;
+}
+.hover-category {
+    .view-category {
+        padding: 10px;
+        background: white;
+        border-radius: 54px;
+        align-items: center;
+        display: flex;
+        height: 30px;
+        width: 30px;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #EC5938;
+    }
+    .category-title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+    }
+    &:hover {
+        .view-category {
+            color: #FFFFFF;
+            background-color: #EC5938;
+        }
+        .category-title {
+            color: #EC5938;
+        }
+    }
+}
+
+.border-bottom-category {
+    border-bottom: 1px solid #AFAFAF;
+}
+.btn-category {
+    background: #FFFFFF;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    &:hover {
+        background-color: #EC5938;
+        color: #FFFFFF;
+    }
+
+}
+.comments-top {
+    margin-top: 32px !important;
+}
