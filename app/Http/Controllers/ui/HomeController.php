@@ -34,9 +34,10 @@ class HomeController extends Controller
             $time_out = '5 PM';
         }
         $reviews = ClientReview::where('status',ReviewStatus::ACTIVE)->get();
+        $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
 
 
-        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews'));
+        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs'));
     }
 
     public function BookingForm(Request $request)

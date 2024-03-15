@@ -39,8 +39,13 @@
             line-height: 29px;
             letter-spacing: 0;
             text-align: left;
+            font-style: normal;
+            -webkit-line-clamp: 2;
+            height: 60px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
-
         .shot-describe-news {
             font-size: 16px;
             font-weight: 500;
@@ -49,6 +54,12 @@
             text-align: left;
             color: #606060;
             margin-top: 8px;
+            font-style: normal;
+            -webkit-line-clamp: 2;
+            height: 40px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .news-read-more {
