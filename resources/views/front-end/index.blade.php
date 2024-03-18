@@ -706,10 +706,25 @@
                                             </div>
                                             <div class="col-6">
                                                 <label for="air-phone">Your phone:</label>
-                                                <input type="number" id="air-phone" name="air-phone" required
-                                                       placeholder="Phone">
+                                                <input type="tel" id="air-phone" name="air-phone" required placeholder="Phone">
                                                 <small>Please fill out this field</small>
                                             </div>
+
+                                            <script>
+                                                document.getElementById("air-phone").addEventListener("input", function() {
+                                                    // Lấy giá trị của trường số điện thoại
+                                                    let phone = this.value;
+                                                    // Giới hạn độ dài tối đa là 10 ký tự
+                                                    let maxLength = 10;
+                                                    if (phone.length > maxLength) {
+                                                        // Hiển thị cảnh báo nếu độ dài vượt quá giới hạn
+                                                        alert("Phone number must be at most 10 characters long.");
+                                                        // Xóa các ký tự vượt quá giới hạn
+                                                        this.value = phone.slice(0, maxLength);
+                                                    }
+                                                });
+                                            </script>
+
                                         </div>
                                         <div class="row">
                                             <div class="col-6">

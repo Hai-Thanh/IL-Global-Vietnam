@@ -6,6 +6,7 @@ use App\Enums\BlogStatus;
 use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
 use App\Mail\sendMail;
+use App\Mail\sendMailToAdmin;
 use App\Models\AboutUs;
 use App\Models\Blog;
 use App\Models\BookingForm;
@@ -60,6 +61,8 @@ class HomeController extends Controller
 
             if ($success) {
                 Mail::to($bookingForm->email)->send(new sendMail($bookingForm));
+                Mail::to('hairthanhh@gmail.com')->send(new sendMailToAdmin($bookingForm));
+
                 toast('Booking success!', 'success', 'top-left');
                 return back();
             }
