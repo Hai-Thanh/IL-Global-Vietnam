@@ -5,6 +5,8 @@ namespace App\Http\Controllers\ui;
 use App\Enums\BlogStatus;
 use App\Enums\ReviewStatus;
 use App\Http\Controllers\Controller;
+use App\Mail\sendMail;
+use App\Mail\sendMailToAdmin;
 use App\Models\AboutUs;
 use App\Models\Blog;
 use App\Models\BookingForm;
@@ -16,6 +18,7 @@ use App\Models\TransportCompanySetting;
 use App\Models\WhyChooseUsSetting;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Mockery\Exception;
 
 class HomeController extends Controller
@@ -40,6 +43,8 @@ class HomeController extends Controller
         return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs'));
     }
 
+
+
     public function BookingForm(Request $request)
     {
         try {
@@ -53,16 +58,22 @@ class HomeController extends Controller
             $bookingForm->diem_di = $request->input('air-departure') ?? '';
             $bookingForm->shipping_method = $request->input('shipping_method') ?? '';
             $success = $bookingForm->save();
+
             if ($success) {
+                Mail::to($bookingForm->email)->send(new sendMail($bookingForm));
+                Mail::to('hairthanhh@gmail.com')->send(new sendMailToAdmin($bookingForm));
+
                 toast('Booking success!', 'success', 'top-left');
                 return back();
             }
+
             toast('Booking fail!', 'error', 'top-left');
             return back();
         } catch (\Exception $exception) {
             return $exception;
         }
     }
+
     public function aboutUs()
     {
         $aboutUs = AboutUs::first();

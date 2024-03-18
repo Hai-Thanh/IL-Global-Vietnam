@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminBlog;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\ui\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -93,6 +94,15 @@ Route::group(['prefix' => ''], function () {
 
     Route::get('blog', [HomeController::class, 'Blog'])->name('blog');
     Route::get('detail-blog/{id}', [HomeController::class, 'DetailBlog'])->name('detail.blog');
+
+
+    /* send mail */
+
+//    Route::post('send-mail', [SendMailController::class, 'sendMail'])->name('send-mail');
+//    Route::get("/noty", function(Illuminate\Http\Request $request){
+//        $tb = $request->session()->get('noty');
+//        return view('admin.pages.noty-email',['noty'=> $tb]);
+//    });
 
 });
 
