@@ -97,7 +97,7 @@
                         </span>
                             <div class="box-child">
                                 <ul>
-                                    <li><a href="{{route('service.ari.transport')}}">Air Transport</a></li>
+                                    <li><a href="{{route('service.air.transport')}}">Air Transport</a></li>
                                     <li><a href="{{route('service.sea.transport')}}">Sea transport</a></li>
                                     <li><a href="{{route('service.road.transport')}}">Road transport</a></li>
                                     <li><a href="{{route('service.rail.transport')}}">Rail transport</a></li>
@@ -982,7 +982,7 @@
                 <a class="nav-link" href="{{route('about.us')}}">{{ __('trans.About us') }}</a>
             </li>
             <li class="nav-item button-nav-header mb-3">
-                <a class="nav-link" href="{{route('service.ari.transport')}}">{{ __('trans.Service') }}</a>
+                <a class="nav-link" href="{{route('service.air.transport')}}">{{ __('trans.Service') }}</a>
             </li>
             <li class="nav-item button-nav-header mb-3">
                 <a class="nav-link" href="{{route('blog')}}">{{ __('trans.Blog') }}</a>

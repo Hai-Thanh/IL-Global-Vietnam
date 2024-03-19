@@ -20,7 +20,7 @@
     $(document).ready(function(){
         // Mảng chứa các URL cần kiểm tra
         var urls = [
-            "{{route('service.ari.transport')}}",
+            "{{route('service.air.transport')}}",
             "{{route('service.sea.transport')}}",
             "{{route('service.road.transport')}}",
             "{{route('service.rail.transport')}}",
@@ -30,7 +30,7 @@
 
         // Đối ứng với mỗi URL, bạn có thể sử dụng một biến chứa HTML tương ứng
         var servicesHTML = {
-            "{{route('service.ari.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Air Transport </div>`,
+            "{{route('service.air.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Air Transport </div>`,
             "{{route('service.sea.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Sea Transport </div>`,
             "{{route('service.road.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Road Transport </div>`,
             "{{route('service.rail.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Rail Transport </div>`,
@@ -38,7 +38,7 @@
             "{{route('customs.services')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Customs services </div>`
         };
         var backgroundHeader = {
-            "{{route('service.ari.transport')}}": `background-service-air-transport`,
+            "{{route('service.air.transport')}}": `background-service-air-transport`,
             "{{route('service.sea.transport')}}": `background-service-sea-transport`,
             "{{route('service.road.transport')}}": `background-service-road-transport`,
             "{{route('service.rail.transport')}}": `background-service-rail-transport`,
@@ -47,7 +47,7 @@
         };
 
         var titleHeader = {
-            "{{route('service.ari.transport')}}": `<div class="content-about-us">Air Transport</div>`,
+            "{{route('service.air.transport')}}": `<div class="content-about-us">Air Transport</div>`,
             "{{route('service.sea.transport')}}": `<div class="content-about-us">Sea transport</div>`,
             "{{route('service.road.transport')}}": `<div class="content-about-us">Road transport</div>`,
             "{{route('service.rail.transport')}}": `<div class="content-about-us">Rail transport</div>`,

@@ -83,7 +83,7 @@ class HomeController extends Controller
     {
         return view('front-end.contact');
     }
-    public function ariTransport()
+    public function airTransport()
     {
         $service = Service::where('type', \App\Enums\Service::Air)->first();
         return view('front-end.service.air-transport',compact('service'));
