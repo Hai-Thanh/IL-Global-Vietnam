@@ -8,6 +8,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ui\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -70,6 +71,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('create-blog-up', [AdminBlog::class, 'adminCreateBlogUp'])->name('admin-create-blog-up');
     Route::post('edit-blog-up/{id}', [AdminBlog::class, 'adminEditBlogUp'])->name('admin-edit-blog-up');
 
+    /* setting page */
+
+    Route::get('setting', [SettingController::class, 'setting'])->name('admin-setting');
+    Route::post('setting-up', [SettingController::class, 'settingUp'])->name('admin-setting-up');
 
 
 });

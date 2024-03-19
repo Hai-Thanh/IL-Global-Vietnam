@@ -707,7 +707,7 @@
                                             </div>
                                             <div class="col-6">
                                                 <label for="air-phone">{{ __('trans.Your phone') }}:</label>
-                                                <input type="tel" id="air-phone" name="air-phone" required
+                                                <input type="number" id="air-phone" name="air-phone" required
                                                        placeholder="{{ __('trans.Your phone') }}:">
                                                 <small>{{ __('trans.Please fill out this field') }}</small>
                                             </div>
