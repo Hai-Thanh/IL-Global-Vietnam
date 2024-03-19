@@ -75,7 +75,7 @@
     }
 </style>
 <div class="il-img-background-shipping">
-    <div class="title-hang-tau" style="text-align: center">Danh sách hãng tàu</div>
+    <div class="title-hang-tau" style="text-align: center">{{ __('trans.Danh sách hãng tàu') }}</div>
 
     <div class="scroller" data-speed="fast">
         <ul class="tag-list scroller__inner">

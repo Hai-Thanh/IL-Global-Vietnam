@@ -6,9 +6,9 @@
 </div>
 <div class="row-full-width background-contact">
     <div class="container d-flex align-items-center justify-content-center position-relative h-100">
-        <div class="content-about-us">Contact</div>
+        <div class="content-about-us">{{ __('trans.Contact') }}</div>
         <div id="trapezoid" class="container">
-            <div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Contact</div>
+            <div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Contact') }}</div>
         </div>
     </div>
 </div>

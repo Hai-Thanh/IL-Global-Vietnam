@@ -14,7 +14,7 @@ class TranslateController extends Controller
     public function __construct()
     {
         $this->translate = new GoogleTranslate();
-        $this->languageDetect = new Language(['en', 'vi', 'zh-CN','ko']);
+        $this->languageDetect = new Language(['en', 'vi', 'zh-CN','kr']);
     }
 
     public function translateText($str, $target)

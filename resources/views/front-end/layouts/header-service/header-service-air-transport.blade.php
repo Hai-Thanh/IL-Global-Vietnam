@@ -30,12 +30,12 @@
 
         // Đối ứng với mỗi URL, bạn có thể sử dụng một biến chứa HTML tương ứng
         var servicesHTML = {
-            "{{route('service.air.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Air Transport </div>`,
-            "{{route('service.sea.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Sea Transport </div>`,
-            "{{route('service.road.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Road Transport </div>`,
-            "{{route('service.rail.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Rail Transport </div>`,
-            "{{route('service.express.delivery')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Express delivery </div>`,
-            "{{route('customs.services')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ Service / Customs services </div>`
+            "{{route('service.air.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Service') }} / {{ __('trans.Air Transport') }} </div>`,
+            "{{route('service.sea.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Service') }} / {{ __('trans.Sea transport') }} </div>`,
+            "{{route('service.road.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Service') }} / {{ __('trans.Road transport') }} </div>`,
+            "{{route('service.rail.transport')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Service') }} / {{ __('trans.Rail transport') }} </div>`,
+            "{{route('service.express.delivery')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Service') }} / {{ __('trans.Express delivery') }} </div>`,
+            "{{route('customs.services')}}": `<div class="address-about-us"><a href="{{route('home')}}">IL Logistics </a>/ {{ __('trans.Service') }} / {{ __('trans.Customs services') }} </div>`
         };
         var backgroundHeader = {
             "{{route('service.air.transport')}}": `background-service-air-transport`,
@@ -47,12 +47,12 @@
         };
 
         var titleHeader = {
-            "{{route('service.air.transport')}}": `<div class="content-about-us">Air Transport</div>`,
-            "{{route('service.sea.transport')}}": `<div class="content-about-us">Sea transport</div>`,
-            "{{route('service.road.transport')}}": `<div class="content-about-us">Road transport</div>`,
-            "{{route('service.rail.transport')}}": `<div class="content-about-us">Rail transport</div>`,
-            "{{route('service.express.delivery')}}": `<div class="content-about-us">Express delivery</div>`,
-            "{{route('customs.services')}}": `<div class="content-about-us">Customs services</div>`
+            "{{route('service.air.transport')}}": `<div class="content-about-us">{{ __('trans.Air Transport') }}</div>`,
+            "{{route('service.sea.transport')}}": `<div class="content-about-us">{{ __('trans.Sea transport') }}</div>`,
+            "{{route('service.road.transport')}}": `<div class="content-about-us">{{ __('trans.Road transport') }}</div>`,
+            "{{route('service.rail.transport')}}": `<div class="content-about-us">{{ __('trans.Rail transport') }}</div>`,
+            "{{route('service.express.delivery')}}": `<div class="content-about-us">{{ __('trans.Express delivery') }}</div>`,
+            "{{route('customs.services')}}": `<div class="content-about-us">{{ __('trans.Customs services') }}</div>`
         };
 
         // Lặp qua từng URL và kiểm tra

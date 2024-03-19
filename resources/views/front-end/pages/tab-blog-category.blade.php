@@ -10,7 +10,7 @@
     </label><input type="search" class="name-blog-search m-0" name="search" id="search" placeholder="Search">
 </div>
 <div class="all-service mt-3">
-    <div class="all-service-title">Get a Quote
+    <div class="all-service-title">{{ __('trans.Get a Quote') }}
         <div class="border-bottom-service"></div>
     </div>
     <div class="d-flex flex-column mt-4">
@@ -111,7 +111,7 @@
     </div>
 </div>
 <div class="all-service mt-3">
-    <div class="all-service-title">All Category
+    <div class="all-service-title">{{ __('trans.All Category') }}
         <div class="border-bottom-service"></div>
     </div>
     <div class="d-flex flex-column mt-4">
@@ -164,7 +164,7 @@
     </div>
 </div>
 <div class="all-service mt-3">
-    <div class="all-service-title">All Category
+    <div class="all-service-title">{{ __('trans.All Category') }}
         <div class="border-bottom-service"></div>
     </div>
     <div class="d-flex mt-4 flex-wrap gap-2">

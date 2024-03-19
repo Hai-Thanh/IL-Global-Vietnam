@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset('ui/scss/style-contact.css')}}">
 @extends('front-end.layouts.master')
 @section('title')
-    Contact
+    {{ __('trans.Contact') }}
 @endsection
 @section('content')
     @include('front-end.layouts.header-contact')
@@ -11,27 +11,27 @@
             width="100%" height="600" style="border:0;border-radius: 8px;margin: 80px 0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div>
-            <div class="title-contact">Liên hệ chúng tôi</div>
+            <div class="title-contact">{{ __('trans.Liên hệ chúng tôi') }}</div>
             <div class="form-input-contact">
                 <form action="">
                     <div class="row">
                         <div class="col-md-6 d-flex flex-column">
                             <label for="name"></label>
-                            <input type="text" name="name" id="name" placeholder="Tên của bạn" required>
+                            <input type="text" name="name" id="name" placeholder="{{ __('trans.Your name') }}" required>
                             <label for="email"></label>
-                            <input type="email" name="email" id="email" placeholder="Email của bạn" required>
+                            <input type="email" name="email" id="email" placeholder="{{ __('trans.Your email') }}" required>
                             <label for="phone"></label>
-                            <input type="number" name="phone" id="phone" placeholder="Số điện thoại của bạn" required>
+                            <input type="number" name="phone" id="phone" placeholder="{{ __('trans.Your phone') }}" required>
                         </div>
                         <div class="col-md-6">
                             <label for="message"></label>
-                            <textarea name="message" id="message" rows="8" placeholder="Tin nhắn của bạn" required></textarea>
+                            <textarea name="message" id="message" rows="8" placeholder="{{ __('trans.Your message') }}" required></textarea>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
                         <button class="il-btn-read-more-black" type="submit">
                             <div class="triangle-bottom-right"></div>
-                            Submit
+                            {{ __('trans.Submit') }}
                         </button>
                     </div>
 

@@ -166,7 +166,7 @@
                             <div class="border-top p-3 mt-3"></div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="news-read-more">
-                                    Read more
+                                    {{ __('trans.Read more') }}
                                 </div>
                                 <div>
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"

@@ -84,11 +84,11 @@
                     </div>
                 </div>
                 <div class="il-tab-header d-md-flex">
-                    <div class="col il-home pl-0"><a href="{{route('home')}}">Home</a></div>
-                    <div class="col il-about-us p-0"><a href="{{route('about.us')}}">About us</a></div>
+                    <div class="col il-home pl-0"><a href="{{route('home')}}">{{ __('trans.Home') }}</a></div>
+                    <div class="col il-about-us p-0"><a href="{{route('about.us')}}">{{ __('trans.About us') }}</a></div>
                     <div class="col il-service">
                         <div class="box">
-                        <span class="d-flex align-items-center">Service
+                        <span class="d-flex align-items-center">{{ __('trans.Service') }}
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"
@@ -97,19 +97,19 @@
                         </span>
                             <div class="box-child">
                                 <ul>
-                                    <li><a href="{{route('service.air.transport')}}">Air Transport</a></li>
-                                    <li><a href="{{route('service.sea.transport')}}">Sea transport</a></li>
-                                    <li><a href="{{route('service.road.transport')}}">Road transport</a></li>
-                                    <li><a href="{{route('service.rail.transport')}}">Rail transport</a></li>
-                                    <li><a href="{{route('service.express.delivery')}}">Express delivery</a></li>
-                                    <li><a href="{{route('customs.services')}}">Customs services</a></li>
+                                    <li><a href="{{route('service.air.transport')}}">{{ __('trans.Air Transport') }}</a></li>
+                                    <li><a href="{{route('service.sea.transport')}}">{{ __('trans.Sea transport') }}</a></li>
+                                    <li><a href="{{route('service.road.transport')}}">{{ __('trans.Road transport') }}</a></li>
+                                    <li><a href="{{route('service.rail.transport')}}">{{ __('trans.Rail transport') }}</a></li>
+                                    <li><a href="{{route('service.express.delivery')}}">{{ __('trans.Express delivery') }}</a></li>
+                                    <li><a href="{{route('customs.services')}}">{{ __('trans.Customs services') }}</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col il-blog">
                         <div class="box">
-                        <span class="d-flex align-items-center">Blog
+                        <span class="d-flex align-items-center">{{ __('trans.Blog') }}
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"
@@ -118,13 +118,13 @@
                         </span>
                             <div class="box-child">
                                 <ul>
-                                    <li><a href="{{route('blog')}}">Tin IL</a></li>
-                                    <li><a href="{{route('blog')}}">Tin nội bộ IL</a></li>
+                                    <li><a href="{{route('blog')}}">{{ __('trans.Tin IL') }}</a></li>
+                                    <li><a href="{{route('blog')}}">{{ __('trans.Tin nội bộ IL') }}</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col il-contact"><a href="{{route('contact')}}">Contact</a></div>
+                    <div class="col il-contact"><a href="{{route('contact')}}">{{ __('trans.Contact') }}</a></div>
                     <div class="col il-language">
                         <div class="dropdown float-right ">
                             <button class="btn krm-select-national dropdown-toggle btn-outline-dark" type="button"
@@ -365,7 +365,7 @@
                     <a href="">
                         <div class="col il-track-order">
                             <div class="triangle-bottom-right"></div>
-                            Track order
+                            {{ __('trans.Track order') }}
                         </div>
                     </a>
                 </div>
@@ -635,15 +635,13 @@
         <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/may-bay.png')}}" alt="may-bay">
         <div class="slide-content">
             <div class="container">
-                <h1 class="slide-title text-start">Air Transport</h1>
+                <h1 class="slide-title text-start">{{ __('trans.Air Transport') }}</h1>
                 <p class="slide-desc text-start">
-                    Our freight services are founded on commitment, dedication and professionalism. Our professional
-                    team adheres to all standards of quality and excellence.
+                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
                 </p>
                 <a href="" class="slide-btn">
                     <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>
-                        Read more
+                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
                     </div>
                 </a>
             </div>
@@ -655,15 +653,13 @@
         <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/tau-thuy.png')}}" alt="tau-thuy">
         <div class="slide-content">
             <div class="container">
-                <h1 class="slide-title text-start">Sea transport</h1>
+                <h1 class="slide-title text-start">{{ __('trans.Sea transport') }}</h1>
                 <p class="slide-desc text-start">
-                    Our freight services are founded on commitment, dedication and professionalism. Our professional
-                    team adheres to all standards of quality and excellence.
+                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
                 </p>
                 <a href="" class="slide-btn">
                     <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>
-                        Read more
+                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
                     </div>
                 </a>
             </div>
@@ -674,15 +670,13 @@
         <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}" alt="xe tai">
         <div class="slide-content">
             <div class="container">
-                <h1 class="slide-title text-start">Rail transport</h1>
+                <h1 class="slide-title text-start">{{ __('trans.Rail transport') }}</h1>
                 <p class="slide-desc text-start">
-                    Our freight services are founded on commitment, dedication and professionalism. Our professional
-                    team adheres to all standards of quality and excellence.
+                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
                 </p>
                 <a href="" class="slide-btn">
                     <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>
-                        Read more
+                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
                     </div>
                 </a>
             </div>
@@ -693,15 +687,14 @@
         <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/tau-hoa.png')}}" alt="tau-hoa">
         <div class="slide-content">
             <div class="container">
-                <h1 class="slide-title text-start">Road transport</h1>
+                <h1 class="slide-title text-start">{{ __('trans.Road transport') }}</h1>
                 <p class="slide-desc text-start">
-                    Our freight services are founded on commitment, dedication and professionalism. Our professional
-                    team adheres to all standards of quality and excellence.
+                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
+
                 </p>
                 <a href="" class="slide-btn">
                     <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>
-                        Read more
+                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
                     </div>
                 </a>
             </div>
@@ -761,7 +754,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="il-title-shipping-method">Air Transport</div>
+                    <div class="il-title-shipping-method">{{ __('trans.Air Transport') }}</div>
                 </div>
                 <div class="il-show-shipping-method position-absolute">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -809,7 +802,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="il-title-shipping-method">Sea transport</div>
+                    <div class="il-title-shipping-method">{{ __('trans.Sea transport') }}</div>
                 </div>
                 <div class="il-show-shipping-method position-absolute">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -887,7 +880,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <div class="il-title-shipping-method">Road transport</div>
+                    <div class="il-title-shipping-method">{{ __('trans.Road transport') }}</div>
                 </div>
                 <div class="il-show-shipping-method position-absolute">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -934,7 +927,7 @@
                             d="M53.6287 33.7046C54.1465 34.9362 55.3442 35.732 56.68 35.732H57.7144C58.4518 35.732 59.1358 35.3652 59.544 34.751C59.9522 34.1367 60.0253 33.3641 59.7395 32.6842L59.2314 31.4752C58.4469 29.6086 56.6318 28.4026 54.6072 28.4026H54.0852C53.4863 28.4026 52.9309 28.7003 52.5994 29.1991C52.268 29.6978 52.2085 30.3253 52.4405 30.8777L53.6287 33.7046ZM54.607 30.2777C55.8749 30.2776 57.0114 31.0328 57.5028 32.2018L58.0109 33.4108C58.069 33.5492 58.0179 33.6597 57.9823 33.7133C57.9467 33.7671 57.8645 33.857 57.7144 33.857H56.68C56.1009 33.857 55.5817 33.512 55.3572 32.9781L54.2222 30.2777H54.607Z"
                             fill="#EC5938"/>
                     </svg>
-                    <div class="il-title-shipping-method">Rail transport</div>
+                    <div class="il-title-shipping-method">{{ __('trans.Rail transport') }}</div>
                 </div>
                 <div class="il-show-shipping-method position-absolute">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

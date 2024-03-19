@@ -19,7 +19,7 @@
                         </span>
                     </li>
                     <li class="il-footer-describe mt-md-3">
-                        IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung cấp nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế giới.
+                        {{ __('trans.IL Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. IL cung cấp nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế giới.') }}
                     </li>
                     <li>
                         <ul class="list-inline social-buttons">
@@ -51,45 +51,45 @@
                 <div class="col footer-column">
                     <ul class="nav flex-column">
                         <li class="nav-item mb-md-4">
-                            <span class="footer-title">Dịch vụ</span>
+                            <span class="footer-title">{{ __('trans.Service') }}</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Vận chyển hàng không</a>
+                            <a class="nav-link" href="#">{{ __('trans.Air Transport') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Vận chyển đường thuỷ</a>
+                            <a class="nav-link" href="#">{{ __('trans.Sea transport') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Vận chyển đường sắt</a>
+                            <a class="nav-link" href="#">{{ __('trans.Rail transport') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Vận chyển nội địa</a>
+                            <a class="nav-link" href="#">{{ __('trans.Vận chyển nội địa') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Vận chyển quốc tế</a>
+                            <a class="nav-link" href="#">{{ __('trans.Vận chyển quốc tế') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dịch vụ kho bãi và phân phối</a>
+                            <a class="nav-link" href="#">{{ __('trans.Dịch vụ kho bãi và phân phối') }}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col footer-column">
                     <ul class="nav flex-column">
                         <li class="nav-item mb-md-4">
-                            <span class="footer-title">Bài viết</span>
+                            <span class="footer-title">{{ __('trans.Bài viết') }}</span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini</a>
+                            <a class="nav-link" href="#">{{ __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cậu học trò bữa ăn chỉ rau, mì gói san sẻ 1 tỉ đồng tiền hỗ trợ</a>
+                            <a class="nav-link" href="#">{{ __('trans.Cậu học trò bữa ăn chỉ rau, mì gói san sẻ 1 tỉ đồng tiền hỗ trợ') }}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col footer-column">
                     <ul class="nav flex-column">
                         <li class="nav-item mb-md-4">
-                            <span class="footer-title">Liên hệ</span>
+                            <span class="footer-title">{{ __('trans.Contact') }}</span>
                         </li>
                         <li class="nav-item">
                             <span class="nav-link">V7-B07 Shophouse Terra An Hưng, Đường Nguyễn Thanh Bình, Hà Đông, Hà Nội</span>
@@ -108,7 +108,7 @@
         <div class="row container">
             <div class="il-border-top p-2"></div>
             <div class="box p-0">
-                <span class="copyright quick-links">©2022 Company Name. All rights reserved</span>
+                <span class="copyright quick-links">{{ __('trans.©2022 IL Việt Nam. All rights reserved') }}</span>
             </div>
         </div>
     </div>
