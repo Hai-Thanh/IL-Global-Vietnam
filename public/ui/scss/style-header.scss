@@ -1,4 +1,18 @@
 @media all {
+    .il-language {
+        .dropdown {
+            #dropdownMenuButton {
+                background: #EBEBEB;
+                border: 0;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: black;
+            }
+        }
+    }
     .dropdown-toggle::after {
         color: black;
     }
@@ -390,7 +404,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .il-header {
         background: #FFFFFF;
         height: 100px;
@@ -632,5 +646,11 @@
             }
         }
 
+    }
+}
+@media (max-width: 991px) {
+    .bg-lights {
+        background-color: white;
+        padding: 16px;
     }
 }

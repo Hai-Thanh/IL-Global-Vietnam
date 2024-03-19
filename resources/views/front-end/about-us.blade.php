@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about}}" alt="about us">
+                    <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about ?? ''}}" alt="about us">
                 </div>
             </div>
 
@@ -41,8 +41,8 @@
     </div>
     <div class="container mb-5">
         <div class="text-container">
-            <span class="small-text">{{$aboutUs->name_us}}</span>
-            <span class="big-text">{{$aboutUs->name_us}}</span>
+            <span class="small-text">{{$aboutUs->name_us ?? ''}}</span>
+            <span class="big-text">{{$aboutUs->name_us ?? ''}}</span>
         </div>
         <div class="mo-ta-about-us">
             @if(locationHelper() == 'kr')
