@@ -28,7 +28,7 @@
                         <div class="col-md-6">
                             <label for="img_about">Image</label>
                             <input type="file" name="img_about" id="img_about">
-                            <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about ?? ''}}" alt="{{$aboutUs->img_about}}">
+                            <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about ?? ''}}" alt="{{$aboutUs->img_about ?? ''}}">
                         </div>
                     </div>
                     <div class="row">
