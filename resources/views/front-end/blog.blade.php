@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset('ui/scss/style-service.css')}}">
 @extends('front-end.layouts.master')
 @section('title')
-    Service Air Transport
+    {{ __('trans.Blog') }}
 @endsection
 @section('content')
     @include('front-end.layouts.header-blog')
