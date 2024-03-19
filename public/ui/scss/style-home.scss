@@ -31,6 +31,123 @@
         }
 
     }
+    .il-title-what-we-do {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .title-what-we-do {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #EC5938;
+
+            &--2 {
+                margin-top: 16px;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 49px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: black;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .il-card-what-we-do {
+        gap: 12px;
+        .card-what-we-do {
+            &--1 {
+                background: url(../img/card-what-we-do/card-may-bay.png) no-repeat 100% 100%;
+                background-size: cover;
+            }
+
+            &--2 {
+                background: url(../img/card-what-we-do/card-tau-thuy.png) no-repeat 100% 100%;
+                background-size: cover;
+            }
+
+            &--3 {
+                background: url(../img/card-what-we-do/card-xe-tai.png) no-repeat 100% 100%;
+                background-size: cover;
+            }
+
+            &--4 {
+                background: url(../img/card-what-we-do/card-tau-hoa.png) no-repeat 100% 100%;
+                background-size: cover;
+            }
+        }
+
+        .card-height {
+            height: 250px;
+            width: 100%;
+            border-radius: 8px;
+            color: #FFFFFF;
+
+            .title-card {
+                font-size: 18px;
+                font-weight: 800;
+                line-height: 22px;
+                letter-spacing: 0;
+                text-align: left;
+            }
+
+            .describe-card {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 17px;
+                letter-spacing: 0;
+                text-align: left;
+                margin-top: 8px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                height: 16px;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .icon-card {
+                right: 0;
+
+                svg {
+                    .circle-hover {
+                        transition: transform .5s, fill .5s;
+                        transform: scale(0);
+                        position: absolute;
+                        transform-origin: 50% 50%;
+                    }
+                }
+            }
+
+            .title-hover {
+                transition: transform 0.5s;
+            }
+
+            &:hover {
+                .icon-card {
+                    svg {
+                        .circle-hover {
+                            fill: #EC5938;
+                            transform: scale(1);
+                        }
+
+                        path {
+                            fill: #FFFFFF;
+                        }
+                    }
+                }
+
+                .title-hover {
+                    transform: translateY(-15px);
+                }
+            }
+        }
+
+    }
     .background-ban-do {
         background: url(../img/img-demo/technology-network-background.png) no-repeat 100% 100%;
         background-size: cover;
@@ -45,7 +162,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .il-title-left {
         .title-left {
             font-size: 24px;
@@ -220,6 +337,9 @@
     .il-transportation-company {
         margin-top: 80px;
         display: flex;
+        a {
+            position: absolute;
+        }
 
         .il-content-tran-company {
             font-size: 24px;
@@ -250,6 +370,7 @@
             letter-spacing: 0;
             text-align: left;
             margin-top: 32px;
+
 
             .worldwide-service {
                 svg {
@@ -593,4 +714,437 @@
 
     }
 
+}
+
+@media (max-width: 991px) {
+    .il-banner-best-services {
+        background: url(../img/banner-services/banner-bao-gia.png) no-repeat 100% 100%;
+        background-size: cover;
+        height: 37%;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0;
+        text-align: left;
+
+        .btn-banner-best-service {
+            height: 48px;
+            right: 0;
+        }
+    }
+    .il-transportation-company {
+        margin-top: 80px;
+        display: block;
+
+        .il-content-tran-company {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 29px;
+            letter-spacing: 0;
+            text-align: left;
+            color: #EC5938;
+
+        }
+
+        .il-title-tran-company {
+            .title-tran-company {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                letter-spacing: 0;
+                text-align: left;
+                margin-top: 16px;
+
+            }
+        }
+
+        .il-worldwide-service {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 32px;
+
+            .worldwide-service {
+                svg {
+                    margin-right: 16px;
+                }
+            }
+
+        }
+
+        .il-certified {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 24px;
+            margin-bottom: 70px;
+
+            .certified {
+                svg {
+                    margin-right: 16px;
+                }
+            }
+        }
+
+        .il-describe-tran-company {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 24px;
+
+        }
+
+        .btn-tran-company {
+            height: 48px;
+            width: 168px;
+
+        }
+
+        .il-satisfied-client {
+            position: relative;
+
+            .il-satisfied {
+                border-top: 5px solid #EC5938;
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                box-shadow: 0 3px 11px 0 #00000059;
+                padding: 30px 10px;
+
+                .satisfied-quality {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0;
+                    text-align: left;
+                    padding: 4px;
+                }
+
+                .Satisfied-Client {
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 15px;
+                    letter-spacing: 0;
+                    text-align: left;
+                    color: #858585;
+
+                }
+            }
+
+            .img-satisfied {
+                &--1 {
+                    background: url(../img/transportation-company/hinh-trong-suot.png) no-repeat 100% 100%;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    height: 450px;
+                    width: 310px;
+                    z-index: 0;
+                }
+
+                &--2 {
+                    img {
+                        position: absolute;
+                        width: 230px;
+                        height: 348px;
+                        top: 0;
+                        right: 0;
+                        object-fit: cover;
+                        border-radius: 4px;
+                    }
+
+
+                }
+
+                &--3 {
+                    height: 444px;
+
+                    img {
+                        position: absolute;
+                        width: 281px;
+                        height: 405px;
+                        bottom: 0;
+                        left: 0;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+
+    }
+    .il-why-choose-us {
+        margin-top: 80px;
+        background: url(../img/banner-services/background-choose-us.png) no-repeat 100% 100%;
+        background-size: cover;
+        min-height: 100%;
+        display: flex;
+        .il-title-left {
+            margin-top: 20px;
+            .title-left {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 29px;
+                letter-spacing: 0;
+                text-align: left;
+                margin-left: 24px;
+                color: #EC5938;
+            }
+
+            .title-left-des {
+                margin-top: 16px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #FFFFFF;
+
+            }
+
+
+        }
+        .il-title-left-mo-ta {
+            margin-top: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0;
+            text-align: left;
+            color: #FFFFFF;
+
+        }
+
+        .btn-choose-us {
+            margin-top: 64px;
+            border: 1px solid #EC5938;
+            border-radius: 4px;
+            padding: 16px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0;
+            color: white;
+            background: #122E38;
+
+            &:hover {
+                background: #EC5938;
+
+                svg {
+                    path {
+                        fill: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+        .il-form-submit-transport {
+            background: #EC5938;
+            padding: 16px;
+            border-radius: 4px;
+
+            .tab-buttons {
+                display: flex;
+                border-bottom: 1px solid #122E38
+            }
+
+            .tab-btn {
+                width: 100%;
+                border: none;
+                background-color: #EC5938;
+                border-radius: 8px 8px 0 0;
+                font-weight: 500;
+                padding: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                font-size: 11px;
+                line-height: 15px;
+                letter-spacing: 0;
+                text-align: left;
+                color: #FFFFFF;
+
+            }
+
+            .tab-btn:hover {
+                background-color: #ffffff;
+                color: #EC5938;
+
+                svg {
+                    path {
+                        fill: #EC5938;
+                    }
+                }
+            }
+
+            .tab-btn.active {
+                background-color: #122E38;
+                color: #FFFFFF;
+
+                svg {
+                    path {
+                        fill: #ffffff;
+                    }
+                }
+            }
+
+            .content {
+                display: none;
+            }
+
+            .content.show {
+                display: flex;
+                gap: 14px;
+                background-color: #EC5938;
+                border-radius: 0 0 8px 8px;
+                padding: 16px;
+            }
+
+            .content-info {
+                form {
+                    label {
+                        margin-top: 24px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        letter-spacing: 0;
+                        text-align: left;
+                        color: #FFFFFF;
+                    }
+
+                    small {
+
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 15px;
+                        letter-spacing: 0;
+                        text-align: left;
+                        color: #FFD600;
+                    }
+
+                    input {
+                        padding: 14px 16px 14px 16px;
+                        border-radius: 4px;
+                        gap: 10px;
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        margin: 8px 0;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        letter-spacing: 0;
+                        text-align: left;
+                    }
+
+                    .btn-form-transport {
+                        margin-top: 40px;
+                        position: relative;
+                        align-items: center;
+                        display: flex;
+                        background: #122E38;
+                        justify-content: center;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-align: left;
+                        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                        transition: background .4s, border-color .4s, color .4s;
+                        z-index: 0;
+                        overflow: hidden;
+                        padding: 17px 33px 15px;
+                        letter-spacing: normal;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        vertical-align: middle;
+                        user-select: none;
+                        border: none;
+
+                        .submit-now {
+                            display: block;
+                        }
+
+                        .track-order {
+                            display: none;
+                        }
+
+                        &:hover {
+                            transition: background .4s .4s, border-color .4s 0s, color .2s 0s;
+                            font-weight: 600;
+                            color: black;
+
+                            .track-order {
+                                display: block;
+                            }
+
+                            .submit-now {
+                                display: none;
+                            }
+
+                            &::before {
+                                opacity: 1;
+                                transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                            }
+
+                            .triangle-bottom-right {
+                                border-color: transparent transparent transparent #8F8F8F33;;
+                            }
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 101%;
+                            height: 101%;
+                            background: #ffffff;
+                            color: black;
+                            z-index: -1;
+                            opacity: 0;
+                            transform: translateX(-200px);
+                            transition: transform 0.42s, opacity 1.42s;
+                            border-radius: inherit;
+                            transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                        }
+
+                        a {
+                            color: #FFFFFF;
+                        }
+
+                        .triangle-bottom-right {
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 16px 0 0 16px;
+                            border-color: transparent transparent transparent #ffffff;
+                            left: 2px;
+                            bottom: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }

@@ -7,7 +7,7 @@
     @include('front-end.layouts.header-blog')
     <div class="container main-service">
         <div class="row">
-            <div class="col-8">
+            <div class="col-lg-8">
                 <div class="row">
                     <div>
                         <img style="object-fit: cover;height: 478px;" class="w-100"
@@ -67,18 +67,18 @@
                             <div class="tags-content">Tags</div>
                             <div class="d-md-flex gap-2">
                                 <a href="">
-                                    <div class="btn-comment-tags">Transport</div>
+                                    <div class="btn-comment-tags mt-3 mt-md-0">Transport</div>
                                 </a>
                                 <a href="">
-                                    <div class="btn-comment-tags">Delivery</div>
+                                    <div class="btn-comment-tags mt-3 mt-md-0">Delivery</div>
                                 </a>
                                 <a href="">
-                                    <div class="btn-comment-tags">Reply</div>
+                                    <div class="btn-comment-tags mt-3 mt-md-0">Reply</div>
                                 </a>
                             </div>
 
                         </div>
-                        <div class="col d-md-flex gap-3 justify-content-end">
+                        <div class="col d-flex gap-3 justify-content-end">
                             <div><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#EC5938"/>
                                     <g clip-path="url(#clip0_853_1617)">
@@ -209,7 +209,7 @@
 
             </div>
 
-            <div class="col-4">
+            <div class="col-lg-4">
                 @include('front-end.pages.tab-blog-category')
             </div>
         </div>

@@ -17,11 +17,11 @@
                 <div class="d-flex align-items-center title-what-we-do">What we do</div>
             </div>
 
-            <div class="d-flex align-items-center title-what-we-do--2">Logistic & Transport</div>
+            <div class="d-flex align-items-center justify-content-center title-what-we-do--2">Logistic & Transport</div>
         </div>
-        <div class="il-card-what-we-do d-flex mt-md-5">
+        <div class="il-card-what-we-do d-flex flex-column flex-md-row d-block mt-md-5">
             <div class="col-md-3">
-                <a href="{{route('service.ari.transport')}}">
+                <a href="{{route('service.air.transport')}}">
                     <div class="card-what-we-do--1 card-height position-relative">
                         <div class="m-3 position-absolute bottom-0 title-hover">
                             <div class="title-card">Air Transport</div>
@@ -198,10 +198,10 @@
     </div>
 
     <div class="il-banner-best-services">
-        <div class="container d-flex justify-content-center align-items-center position-relative">
-            <div class="col-6">Would you Like to get The Best Transport Services?</div>
+        <div class="container d-flex flex-column flex-md-row justify-content-md-center justify-content-start align-items-center position-relative">
+            <div class="col-lg-6">Would you Like to get The Best Transport Services?</div>
             <a href="{{route('customs.services')}}">
-                <div class="il-btn-read-more position-absolute btn-banner-best-service">
+                <div class="il-btn-read-more position-md-absolute btn-banner-best-service mt-3 mt-md-0">
                     <div class="triangle-bottom-right"></div>
                     Get a Quote
                 </div>
@@ -215,7 +215,7 @@
     </div>
 
     <div class="container">
-        <div class="il-transportation-company">
+        <div class="il-transportation-company d-md-flex d-block">
             <div class="col-md-6 position-relative">
                 <div class="il-content-tran-company">
                     <div class="d-flex justify-content-start align-content-center">
@@ -343,14 +343,14 @@
                         @endif
                     </div>
                 </div>
-                <a href="#" class="position-absolute bottom-0">
-                    <div class="il-btn-read-more btn-banner-best-service btn-tran-company">
+                <a href="#" class=" bottom-0">
+                    <div class="il-btn-read-more btn-banner-best-service btn-tran-company mt-3 mt-md-0">
                         <div class="triangle-bottom-right"></div>
                         Read more
                     </div>
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-3 mt-md-0">
                 <div class="il-satisfied-client">
                     <div class="il-satisfied">
                         <div>
@@ -431,7 +431,7 @@
                         {{ $why_setting->describeWhy_vi ?? ''}}
                     @endif
                 </div>
-                <div class="d-flex w-100">
+                <div class="d-md-flex d-none w-100">
                     <div class="col-md-4">
                         <div class="btn-choose-us">
                             <svg width="33" height="33" viewBox="0 0 33 33" fill="none"

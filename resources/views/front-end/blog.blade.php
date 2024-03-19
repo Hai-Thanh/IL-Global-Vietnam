@@ -110,7 +110,7 @@
         <div class="row">
             @if($listBlogs ?? '')
                 @foreach($listBlogs as $Blog)
-                    <a class="col-md-4 h-100 mb-5" href="{{route('detail.blog',$Blog->id)}}">
+                    <a class="col-md-4 col-sm-6 h-100 mb-5" href="{{route('detail.blog',$Blog->id)}}">
                         <div class="border-blog uk-card uk-card-primary uk-card-hover uk-light">
                             <div class="position-relative">
                                 <img style="height: 231px; object-fit: cover;border-radius: 8px 8px 0 0" src="{{$Blog->img_main_blog}}" alt="11">
