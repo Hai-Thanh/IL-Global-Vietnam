@@ -82,11 +82,11 @@
                 </div>
             </div>
             <div class="il-tab-header d-md-flex">
-                <div class="col il-home pl-0"><a href="{{route('home')}}">Home</a></div>
-                <div class="col il-about-us"><a href="{{route('about.us')}}">About us</a></div>
+                <div class="col il-home pl-0"><a href="{{route('home')}}">{{ __('trans.Home') }}</a></div>
+                <div class="col il-about-us"><a href="{{route('about.us')}}">{{ __('trans.About us') }}</a></div>
                 <div class="col il-service">
                     <div class="box">
-                        <span class="d-flex align-items-center">Service
+                        <span class="d-flex align-items-center">{{ __('trans.Service') }}
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"
@@ -95,19 +95,19 @@
                         </span>
                         <div class="box-child">
                             <ul>
-                                <li><a href="{{route('service.air.transport')}}">Air Transport</a></li>
-                                <li><a href="{{route('service.sea.transport')}}">Sea transport</a></li>
-                                <li><a href="{{route('service.road.transport')}}">Road transport</a></li>
-                                <li><a href="{{route('service.rail.transport')}}">Rail transport</a></li>
-                                <li><a href="{{route('service.express.delivery')}}">Express delivery</a></li>
-                                <li><a href="{{route('customs.services')}}">Customs services</a></li>
+                                <li><a href="{{route('service.air.transport')}}">{{ __('trans.Air Transport') }}</a></li>
+                                <li><a href="{{route('service.sea.transport')}}">{{ __('trans.Sea transport') }}</a></li>
+                                <li><a href="{{route('service.road.transport')}}">{{ __('trans.Road transport') }}</a></li>
+                                <li><a href="{{route('service.rail.transport')}}">{{ __('trans.Rail transport') }}</a></li>
+                                <li><a href="{{route('service.express.delivery')}}">{{ __('trans.Express delivery') }}</a></li>
+                                <li><a href="{{route('customs.services')}}">{{ __('trans.Customs services') }}</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col il-blog">
                     <div class="box">
-                        <span class="d-flex align-items-center">Blog
+                        <span class="d-flex align-items-center">{{ __('trans.Blog') }}
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8.00065 3.3335V12.6668M3.33398 8.00016H12.6673" stroke="black"
@@ -116,17 +116,17 @@
                         </span>
                         <div class="box-child">
                             <ul>
-                                <li><a href="{{route('blog')}}">Tin IL</a></li>
-                                <li><a href="{{route('blog')}}">Tin nội bộ IL</a></li>
+                                <li><a href="{{route('blog')}}">{{ __('trans.Tin IL') }}</a></li>
+                                <li><a href="{{route('blog')}}">{{ __('trans.Tin nội bộ IL') }}</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col il-contact"><a href="{{route('contact')}}">Contact</a></div>
+                <div class="col il-contact"><a href="{{route('contact')}}">{{ __('trans.Contact') }}</a></div>
                 <a href="" style="height: 48px;">
                     <div class="col il-track-order">
                         <div class="triangle-bottom-right"></div>
-                        Track order
+                        {{ __('trans.Track order') }}
                     </div>
                 </a>
             </div>

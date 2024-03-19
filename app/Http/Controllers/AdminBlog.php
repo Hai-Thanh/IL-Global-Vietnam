@@ -34,7 +34,7 @@ class AdminBlog extends Controller
 
             $blogs = [];
             $translate = new TranslateController();
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
             foreach ($fields as $key => $value) {
                 foreach ($languages as $lang) {
                     $blogs[$key . '_' . $lang] = $translate->translateText($value, $lang);
@@ -76,7 +76,7 @@ class AdminBlog extends Controller
 
             $translate = new TranslateController();
 
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
 
             foreach ($fields as $key => $value) {
                 foreach ($languages as $lang) {

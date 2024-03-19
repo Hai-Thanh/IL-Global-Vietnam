@@ -87,7 +87,7 @@ class AdminHomeController extends Controller
 
             $translations = [];
             $translate = new TranslateController();
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
             foreach ($fields as $key => $value) {
                 foreach ($languages as $lang) {
                     $translations[$key . '_' . $lang] = $translate->translateText($value, $lang);
@@ -118,7 +118,7 @@ class AdminHomeController extends Controller
 
             $why = [];
             $translate = new TranslateController();
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
             foreach ($fields as $key => $value) {
                 foreach ($languages as $lang) {
                     $why[$key . '_' . $lang] = $translate->translateText($value, $lang);
@@ -156,7 +156,7 @@ class AdminHomeController extends Controller
         try {
 
             $translate = new TranslateController();
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
 
             $review = new ClientReview();
             $review->name = $request->input('nameClient') ?? '';
@@ -199,7 +199,7 @@ class AdminHomeController extends Controller
     {
         try {
             $translate = new TranslateController();
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
             $clReview = ClientReview::find($id);
             if ($request->status == ReviewStatus::DELETED) {
                 $clReview->status = 0;

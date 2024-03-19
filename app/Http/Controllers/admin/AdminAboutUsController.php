@@ -27,7 +27,7 @@ class AdminAboutUsController extends Controller
 
             $aboutUs = [];
             $translate = new TranslateController();
-            $languages = ['vi', 'en', 'zh_cn', 'ko'];
+            $languages = ['vi', 'en', 'zh_cn', 'kr'];
             foreach ($fields as $key => $value) {
                 foreach ($languages as $lang) {
                     $aboutUs[$key . '_' . $lang] = $translate->translateText($value, $lang);

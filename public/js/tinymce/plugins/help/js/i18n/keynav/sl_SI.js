@@ -24,7 +24,7 @@ tinymce.Resource.add('tinymce.html-i18n.help-keynav.sl_SI',
   '\n' +
   '<p>Če se želite pomakniti z enega dela uporabniškega vmesnika na prejšnjega, pritisnite <strong>shift + tabulatorko</strong>.</p>\n' +
   '\n' +
-  '<p>Zaporedje teh razdelkov uporabniškega vmesnika, ko pritiskate <strong>tabulatorko</strong>, je:\n' +
+  '<p>Zaporedje teh razdelkov uporabniškega vmesnika, kr pritiskate <strong>tabulatorko</strong>, je:\n' +
   '\n' +
   '<ol>\n' +
   '  <li>Menijska vrstica</li>\n' +

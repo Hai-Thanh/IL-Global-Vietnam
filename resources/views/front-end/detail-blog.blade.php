@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset('ui/scss/style-service.css')}}">
 @extends('front-end.layouts.master')
 @section('title')
-    Service Air Transport
+    {{ __('trans.Detail blog') }}
 @endsection
 @section('content')
     @include('front-end.layouts.header-blog')
@@ -64,16 +64,16 @@
                 <div class="border-top-bottom">
                     <div class="row d-md-flex justify-content-between align-items-center">
                         <div class="col d-md-flex">
-                            <div class="tags-content">Tags</div>
+                            <div class="tags-content">{{ __('trans.Tags') }}</div>
                             <div class="d-md-flex gap-2">
                                 <a href="">
-                                    <div class="btn-comment-tags mt-3 mt-md-0">Transport</div>
+                                    <div class="btn-comment-tags mt-3 mt-md-0">{{ __('trans.Transport') }}</div>
                                 </a>
                                 <a href="">
-                                    <div class="btn-comment-tags mt-3 mt-md-0">Delivery</div>
+                                    <div class="btn-comment-tags mt-3 mt-md-0">{{ __('trans.Delivery') }}</div>
                                 </a>
                                 <a href="">
-                                    <div class="btn-comment-tags mt-3 mt-md-0">Reply</div>
+                                    <div class="btn-comment-tags mt-3 mt-md-0">{{ __('trans.Reply') }}</div>
                                 </a>
                             </div>
 
@@ -125,7 +125,7 @@
                 {{-- comments --}}
                 <div>
                     <div class="row">
-                        <div class="comments-top">Comments (2)</div>
+                        <div class="comments-top">{{ __('trans.Comments') }} (2)</div>
                     </div>
                     <div class="border-bottom-comment"></div>
                     <div class="row">
@@ -143,7 +143,7 @@
                                     ullamco laboris nisi ut aliquip cepteur
                                 </div>
                                 <a href="">
-                                    <div class="btn-comment">Reply</div>
+                                    <div class="btn-comment d-flex justify-content-center align-items-center">{{ __('trans.Reply') }}</div>
                                 </a>
                             </div>
 
@@ -162,14 +162,14 @@
                                     ullamco laboris nisi ut aliquip cepteur
                                 </div>
                                 <a href="">
-                                    <div class="btn-comment">Reply</div>
+                                    <div class="btn-comment d-flex justify-content-center align-items-center">{{ __('trans.Reply') }}</div>
                                 </a>
                             </div>
 
                         </div>
                     </div>
                     <div class="row">
-                        <div class="comments-top">Comments (2)</div>
+                        <div class="comments-top">{{ __('trans.Comments') }} (2)</div>
                     </div>
                     <div class="border-bottom-comment"></div>
                     <div class="row">
@@ -177,30 +177,30 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="name"></label><input type="text" name="name" id="name"
-                                                                     placeholder="Tên của bạn" required>
+                                                                     placeholder="{{ __('trans.Your name') }}" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="email"></label><input type="email" name="email" id="email"
-                                                                      placeholder="Email của bạn" required>
+                                                                      placeholder="{{ __('trans.Your email') }}" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="phone"></label><input type="number" name="phone" id="phone"
-                                                                      placeholder="Số điện thoại của bạn" required>
+                                                                      placeholder="{{ __('trans.Your phone') }}" required>
                                 </div>
 
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="message"></label><textarea name="message" id="message"
-                                                                           placeholder="Tin nhắn của bạn" required></textarea>
+                                                                           placeholder="{{ __('trans.Your message') }}" required></textarea>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-start align-items-center mt-3">
                                 <button class="il-btn-read-more-black" type="submit">
                                     <div class="triangle-bottom-right"></div>
-                                    Post Comment
+                                    {{ __('trans.Post Comment') }}
                                 </button>
                             </div>
                         </form>
