@@ -7,7 +7,7 @@
     @include('front-end.layouts.header-service.header-service-air-transport')
     <div class="container main-service">
         <div class="row">
-            <div class="col-8">
+            <div class="col-md-8">
                 <div class="row">
                     <div>
                         <img style="object-fit: cover;height: 478px;" class="w-100"
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 @include('front-end.service.tab-nhan-bao-gia-va-dich-vu')
             </div>
         </div>

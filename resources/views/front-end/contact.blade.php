@@ -15,7 +15,7 @@
             <div class="form-input-contact">
                 <form action="">
                     <div class="row">
-                        <div class="col-6 d-flex flex-column">
+                        <div class="col-md-6 d-flex flex-column">
                             <label for="name"></label>
                             <input type="text" name="name" id="name" placeholder="Tên của bạn" required>
                             <label for="email"></label>
@@ -23,7 +23,7 @@
                             <label for="phone"></label>
                             <input type="number" name="phone" id="phone" placeholder="Số điện thoại của bạn" required>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label for="message"></label>
                             <textarea name="message" id="message" rows="8" placeholder="Tin nhắn của bạn" required></textarea>
                         </div>

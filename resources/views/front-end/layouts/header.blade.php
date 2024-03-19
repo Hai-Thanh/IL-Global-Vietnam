@@ -979,16 +979,19 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item button-nav-header mb-3">
-                <a class="nav-link" href="{{route('about.us')}}">{{ __('trans.About us') }}</a>
+                <a class="nav-link text-nav-header" href="{{route('home')}}">{{ __('trans.Home') }}</a>
             </li>
             <li class="nav-item button-nav-header mb-3">
-                <a class="nav-link" href="{{route('service.air.transport')}}">{{ __('trans.Service') }}</a>
+                <a class="nav-link text-nav-header" href="{{route('about.us')}}">{{ __('trans.About us') }}</a>
             </li>
             <li class="nav-item button-nav-header mb-3">
-                <a class="nav-link" href="{{route('blog')}}">{{ __('trans.Blog') }}</a>
+                <a class="nav-link text-nav-header" href="{{route('service.air.transport')}}">{{ __('trans.Service') }}</a>
             </li>
             <li class="nav-item button-nav-header mb-3">
-                <a class="nav-link" href="#">{{ __('trans.Contact') }}</a>
+                <a class="nav-link text-nav-header" href="{{route('blog')}}">{{ __('trans.Blog') }}</a>
+            </li>
+            <li class="nav-item button-nav-header mb-3">
+                <a class="nav-link text-nav-header" href="{{route('contact')}}">{{ __('trans.Contact') }}</a>
             </li>
         </ul>
     </div>

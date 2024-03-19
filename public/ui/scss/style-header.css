@@ -1,4 +1,26 @@
 @media all {
+  .offcanvas-header {
+    font-size: 30px;
+    font-weight: 800;
+    border-bottom: 1px solid #A9A9A9;
+  }
+  .text-nav-header {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .button-nav-header {
+    border-radius: 8px;
+    background: #F3F3F3;
+    display: flex;
+    width: 300px;
+    padding: 10px 12px;
+    align-items: center;
+    color: #424242;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
   .il-language .dropdown #dropdownMenuButton {
     background: #EBEBEB;
     border: 0;
