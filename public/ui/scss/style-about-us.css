@@ -4,20 +4,22 @@
   background-size: cover;
   margin-top: 80px;
 }
-.background-content-about-us .title-about-us {
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 49px;
-  letter-spacing: 0;
-  text-align: start;
-}
-.background-content-about-us .describe-about-us {
-  margin-top: 24px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 29px;
-  letter-spacing: 0;
-  text-align: left;
+@media (min-width: 991px) {
+  .background-content-about-us .title-about-us {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 49px;
+    letter-spacing: 0;
+    text-align: start;
+  }
+  .background-content-about-us .describe-about-us {
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
+  }
 }
 
 .text-container {
@@ -53,6 +55,52 @@
   letter-spacing: 0;
   text-align: left;
   color: black;
+}
+
+@media (max-width: 991px) {
+  .text-container {
+    margin-top: 40px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .text-container .small-text {
+    position: absolute;
+    z-index: 1;
+    font-size: 29px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .text-container .big-text {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 105px;
+    letter-spacing: 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.0509803922);
+    overflow: hidden;
+  }
+  .title-about-us {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 49px;
+    letter-spacing: 0;
+    text-align: start;
+  }
+  .describe-about-us {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .mo-ta-about-us {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style-about-us.css.map */

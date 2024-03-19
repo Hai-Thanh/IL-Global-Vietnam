@@ -8,7 +8,7 @@
     <div class="background-content-about-us d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="title-about-us">
                         @if(locationHelper() == 'kr')
                             {{ $aboutUs->title_about_ko ?? ''}}
@@ -32,8 +32,8 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-6">
-                    <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about ?? ''}}" alt="about us">
+                <div class="col-md-6">
+                    <img style="width: 100%;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about ?? ''}}" alt="about us">
                 </div>
             </div>
 
