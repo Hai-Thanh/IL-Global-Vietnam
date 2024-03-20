@@ -674,12 +674,12 @@
                 <p class="slide-desc text-start">
                     {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
                 </p>
-                <a href="" class="slide-btn">
+                <a href="{{route('service.rail.transport')}}" class="slide-btn">
                     <div class="il-btn-read-more">
                         <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
                     </div>
                 </a>
-            </div>{{route('service.rail.transport')}}
+            </div>
         </div>
     </div>
 
