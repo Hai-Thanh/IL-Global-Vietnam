@@ -2,6 +2,7 @@
 @extends('front-end.layouts.master')
 @section('title')
     {{ __('trans.IL Global Việt Nam') }}
+    
 @endsection
 @section('content')
     @include('front-end.layouts.header')
