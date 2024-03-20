@@ -33,7 +33,7 @@
                         </div>
                         <div class="position-absolute icon-card">
                             <div>
-                                <svg width="106" height="106" viewBox="0 0 106 106" fill="none"
+                                <svg style="border-radius: 0 6px 0 0;" width="106" height="106" viewBox="0 0 106 106" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="69" cy="37" r="68.5" fill="white" stroke="#EC5938"/>
                                     <circle class="circle-hover" cx="69" cy="37" r="68.5" fill="white"
@@ -84,7 +84,7 @@
                         </div>
                         <div class="position-absolute icon-card">
                             <div>
-                                <svg width="106" height="106" viewBox="0 0 106 106" fill="none"
+                                <svg style="border-radius: 0 6px 0 0;" width="106" height="106" viewBox="0 0 106 106" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="69" cy="37" r="68.5" fill="white" stroke="#EC5938"/>
                                     <circle class="circle-hover" cx="69" cy="37" r="68.5" fill="white"
@@ -118,7 +118,7 @@
                         </div>
                         <div class="position-absolute icon-card">
                             <div>
-                                <svg width="106" height="106" viewBox="0 0 106 106" fill="none"
+                                <svg style="border-radius: 0 6px 0 0;" width="106" height="106" viewBox="0 0 106 106" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="69" cy="37" r="68.5" fill="white" stroke="#EC5938"/>
                                     <circle class="circle-hover" cx="69" cy="37" r="68.5" fill="white"
@@ -174,7 +174,7 @@
                         </div>
                         <div class="position-absolute icon-card">
                             <div>
-                                <svg width="106" height="106" viewBox="0 0 106 106" fill="none"
+                                <svg style="border-radius: 0 6px 0 0;" width="106" height="106" viewBox="0 0 106 106" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="69" cy="37" r="68.5" fill="white" stroke="#EC5938"/>
                                     <circle class="circle-hover" cx="69" cy="37" r="68.5" fill="white"

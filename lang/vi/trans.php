@@ -1,6 +1,6 @@
 <?php
 return [
-    'About us' => 'Về chúng tôi',
+    'About us' => 'Chúng tôi',
     'Contact' => 'Liên hệ',
     'Blog' => 'Tin tức',
     'Service' => 'Dịch vụ',

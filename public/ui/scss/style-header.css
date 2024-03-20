@@ -447,8 +447,17 @@
     line-height: 23px;
     letter-spacing: 0;
   }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-home, .il-header .il-header-main .il-sub-header .il-tab-header .il-about-us, .il-header .il-header-main .il-sub-header .il-tab-header .il-blog, .il-header .il-header-main .il-sub-header .il-tab-header .il-contact {
+    font-size: 16px;
+  }
   .il-header .il-header-main .il-sub-header .il-tab-header .il-home a:hover, .il-header .il-header-main .il-sub-header .il-tab-header .il-about-us a:hover, .il-header .il-header-main .il-sub-header .il-tab-header .il-blog a:hover, .il-header .il-header-main .il-sub-header .il-tab-header .il-contact a:hover {
     color: #EC5938;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-service {
+    font-size: 16px;
+  }
+  .il-header .il-header-main .il-sub-header .il-tab-header .il-blog {
+    font-size: 16px;
   }
   .il-header .il-header-main .il-sub-header .il-tab-header .il-language .dropdown #dropdownMenuButton {
     background: #EBEBEB;
