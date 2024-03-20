@@ -17,36 +17,40 @@
 
     <section class="section dashboard">
         <div class="row">
-            <form action="{{route('admin-about-us-update')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('admin-setting-up')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="title_about">About us</label>
-                            <input type="text" name="title_about" id="title_about" value="{{$aboutUs->title_about_vi ?? ''}}">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" value="{{$setting->email ?? ''}}">
                         </div>
                         <div class="col-md-6">
-                            <label for="img_about">Image</label>
-                            <input type="file" name="img_about" id="img_about">
-                            <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$aboutUs->img_about ?? ''}}" alt="{{$aboutUs->img_about ?? ''}}">
+                            <label for="logo">Logo</label>
+                            <input type="file" name="logo" id="logo">
+                            <img style="width: 570px;height: 368px;object-fit: cover;border-radius: 8px;" src="{{$setting->logo ?? ''}}" alt="{{$setting->logo ?? ''}}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="describe_about">Describe about us</label>
-                            <textarea class="textarea" name="describe_about" id="describe_about">{{$aboutUs->describe_about_vi ?? ''}}</textarea>
+                            <label for="address">Address</label>
+                            <textarea class="textarea" name="address" id="address">{{$setting->address ?? ''}}</textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="name_us">Title IL VIETNAM CO, LTD</label>
-                            <input type="text" name="name_us" id="name_us" value="{{$aboutUs->name_us ?? ''}}">
+                            <label for="link_map">link map</label>
+                            <input type="text" name="link_map" id="link_map" value="{{$setting->link_map ?? ''}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone">phone</label>
+                            <input type="number" name="phone" id="phone" value="{{$setting->phone ?? ''}}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="describe_us">Describe IL VIETNAM CO, LTD</label>
-                            <textarea name="describe_us" id="describe_us">{{$aboutUs->describe_us_vi ?? ''}}</textarea>
+                            <label for="describe">mo ta cong ty</label>
+                            <textarea name="describe" id="describe">{{$setting->describe_vi ?? ''}}</textarea>
                         </div>
                     </div>
 
