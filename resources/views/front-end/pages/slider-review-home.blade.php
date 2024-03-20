@@ -6,6 +6,129 @@
 <div class="uk-margin"></div>
 <div class="uk-section">
     <div class="owl-carousel owl-theme">
+        @if($reviews->isEmpty())
+            <div class="item">
+                <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light position-relative">
+                    <div class="img-cus-review"><img style="height: 80px; width: 80px;"
+                                                     src="{{asset('ui/img/transportation-company/the-boy-shipper.png')}}"
+                                                     alt=""></div>
+                    <div class="d-flex star-cus-review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="cmt-cus-review">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.
+                    </div>
+                    <div class="name-cus-review">
+                        <div class="name-cus">Lê Hải Thành</div>
+                        <div class="position-cus">Founder & CEO</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light position-relative">
+                    <div class="img-cus-review"><img style="height: 80px; width: 80px;"
+                                                     src="{{asset('ui/img/transportation-company/the-boy-shipper.png')}}"
+                                                     alt=""></div>
+                    <div class="d-flex star-cus-review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="cmt-cus-review">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.
+                    </div>
+                    <div class="name-cus-review">
+                        <div class="name-cus">Lê Hải Thành</div>
+                        <div class="position-cus">Founder & CEO</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light position-relative">
+                    <div class="img-cus-review"><img style="height: 80px; width: 80px;"
+                                                     src="{{asset('ui/img/transportation-company/the-boy-shipper.png')}}"
+                                                     alt=""></div>
+                    <div class="d-flex star-cus-review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="cmt-cus-review">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.
+                    </div>
+                    <div class="name-cus-review">
+                        <div class="name-cus">Lê Hải Thành</div>
+                        <div class="position-cus">Founder & CEO</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light position-relative">
+                    <div class="img-cus-review"><img style="height: 80px; width: 80px;"
+                                                     src="{{asset('ui/img/transportation-company/the-boy-shipper.png')}}"
+                                                     alt=""></div>
+                    <div class="d-flex star-cus-review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="cmt-cus-review">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.
+                    </div>
+                    <div class="name-cus-review">
+                        <div class="name-cus">Lê Hải Thành</div>
+                        <div class="position-cus">Founder & CEO</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light position-relative">
+                    <div class="img-cus-review"><img style="height: 80px; width: 80px;"
+                                                     src="{{asset('ui/img/transportation-company/the-boy-shipper.png')}}"
+                                                     alt=""></div>
+                    <div class="d-flex star-cus-review">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="cmt-cus-review">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book.
+                    </div>
+                    <div class="name-cus-review">
+                        <div class="name-cus">Lê Hải Thành</div>
+                        <div class="position-cus">Founder & CEO</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    @else
         @foreach($reviews as $review)
             <div class="item">
                 <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light position-relative">
@@ -52,8 +175,10 @@
                 </div>
             </div>
         @endforeach
+    @endif
 
-    </div>
+
+</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>

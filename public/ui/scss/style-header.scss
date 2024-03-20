@@ -293,6 +293,10 @@
             border-right: 1px solid #FFFFFF;
 
             .il-transaction {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 transition: transform 0.5s;
 
                 svg {
