@@ -2,7 +2,7 @@
 @extends('front-end.layouts.master')
 @section('title')
     {{ __('trans.IL Global Việt Nam') }}
-    
+
 @endsection
 @section('content')
     @include('front-end.layouts.header')
@@ -957,6 +957,8 @@
                 {{ __('trans.Our Client Reviews') }}
             </div>
         </div>
+
+
         <div class="container">
             @include('front-end.pages.slider-review-home')
         </div>
