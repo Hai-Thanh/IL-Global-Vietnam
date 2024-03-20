@@ -273,6 +273,10 @@
     border-right: 1px solid #FFFFFF;
   }
   .il-form-shipping-method .il-btn-shipping-method .il-transaction {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transition: transform 0.5s;
   }
   .il-form-shipping-method .il-btn-shipping-method .il-transaction svg {
