@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="pagetitle">
-        <h1>{{ __('trans.List Blogs') }}</h1>
+        <h1></h1>
 
         <nav>
             <ol class="breadcrumb">
@@ -21,7 +21,7 @@
         <main>
             <div class="content w-100">
                 <section class="main-header grid">
-                    <h1>List Blogs</h1>
+                    <h1>{{ __('trans.List Blogs') }}</h1>
                     <a href="{{route('admin-create-blog')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
