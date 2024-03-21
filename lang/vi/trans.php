@@ -64,7 +64,100 @@ return [
     'Liên hệ chúng tôi' => 'Liên hệ chúng tôi',
     'Tin IL' => 'Tin IL',
     'Tin nội bộ IL' => 'Tin nội bộ IL',
-    'Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.' => 'Dịch vụ vận chuyển hàng hóa của chúng tôi được thành lập dựa trên sự cam kết, cống hiến và tính chuyên nghiệp. Đội ngũ chuyên nghiệp của chúng tôi tuân thủ tất cả các tiêu chuẩn về chất lượng và sự xuất sắc.'
+    'Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.' => 'Dịch vụ vận chuyển hàng hóa của chúng tôi được thành lập dựa trên sự cam kết, cống hiến và tính chuyên nghiệp. Đội ngũ chuyên nghiệp của chúng tôi tuân thủ tất cả các tiêu chuẩn về chất lượng và sự xuất sắc.',
+
+
+
+
+
+    'Dashboard' => 'Trang chủ admin',
+    'Cài Đặt Header' => 'Cài Đặt Header',
+    'Create Service' => 'Tạo mới dịch vụ',
+    'Edit Service' => 'Chỉnh Sửa dịch vụ',
+    'List blog' => 'Danh sách tin tức',
+    'Pages' => 'Trang',
+    'Setting' => 'Cài đặt',
+    'Cài Đặt Trang Chủ' => 'Cài Đặt Trang Chủ',
+    'Admin IL Global' => 'Admin IL Global',
+    'Chọn giờ vào' => 'Chọn giờ vào',
+    'Chọn giờ ra' => 'Chọn giờ ra',
+    'Chọn ngày nghỉ trong tuần' => 'Chọn ngày nghỉ trong tuần',
+    'Link social LinkedIn' => 'Liên kết mạng xã hội LinkedIn',
+    'Link social FaceBook' => 'Liên kết mạng xã hội FaceBook',
+    'Link social Twitter' => 'Liên kết mạng xã hội Twitter',
+    'Link social Instagram' => 'Liên kết mạng xã hội Instagram',
+    'Link social Youtube' => 'Liên kết mạng xã hội Youtube',
+    'Cài Đặt Transportation company' => 'Cài Đặt công ty vận tải',
+    'Title Transportation company' => 'Tiêu đề công ty vận tải',
+    'Describe Transportation company' => 'Mô tả công ty vận tải',
+    'Title Worldwide Service' => 'Dịch vụ toàn cầu',
+    'Describe Worldwide Service' => 'Mô tả dịch vụ toàn cầu',
+    'Title Certified & Award Winner' => 'Danh hiệu được chứng nhận và người chiến thắng giải thưởng',
+    'Describe Certified & Award Winner' => 'Mô tả người chiến thắng được chứng nhận và giải thưởng',
+    'Cài Đặt why choose us' => 'Cài đặt tại sao chọn chúng tôi',
+    'Title Why choose us' => 'Tiêu đề tại sao chọn chúng tôi',
+    'Describe Why choose us' => 'Mô tả tại sao chọn chúng tôi',
+    'Cài Đặt Our Client Reviews' => 'Cài Đặt đánh giá của khách hàng của chúng tôi',
+    'Client Review' => 'Đánh giá của khách hàng',
+    'Add new review' => 'Thêm đánh giá mới',
+    'Name' => 'Tên',
+    'Thumbnail' => 'Hình nhỏ',
+    'Position' => 'Chức vụ',
+    'Describe' => 'Mô Tả',
+    'Star rating' => 'Số sao đánh giá',
+    'Custom' => 'Tùy biến',
+    'Tên khách hàng' => 'Tên khách hàng',
+    'Chọn ảnh đại diện' => 'Chọn ảnh đại diện',
+    'Create' => 'Tạo',
+    'Cài Đặt About Us' => 'Cài Đặt Cài Đặt vê chúng tôi',
+    'Image' => 'Hình ảnh',
+    'Tên Công Ty' => 'Tên Công Ty',
+    'Mô Tả Công Ty' => 'Mô Tả Công Ty',
+    'List Service' => 'Danh sách dịch vụ',
+    'Add new Service' => 'Thêm dịch vụ mới',
+    'Service Transport' => 'Dịch vụ Vận tải',
+    'Edit' => 'Chỉnh sửa',
+    'Cài đặt dịch vụ' => 'Cài đặt dịch vụ',
+    'Choose Transport Service' => 'Chọn dịch vụ vận chuyển',
+    'Title' => 'Tiêu đề',
+    'Describe more' => 'Mô tả thêm',
+    'Title more' => 'Tiêu đề thêm',
+    'Sửa dịch vụ' => 'Sửa dịch vụ',
+    'Tạo mới dịch vụ' => 'Tạo mới dịch vụ',
+    'List Blogs' => 'Danh sách tin tức',
+    'Cài Đặt List Blogs' => 'Cài Đặt List Blogs',
+    'Add new Blog' => 'Thêm tin tức mới',
+    'Title Blog' => 'Tiêu đề tin tức',
+    'Tạo Mới Blog' => 'Tạo Mới Blog',
+    'Cài Đặt Blog' => 'Cài Đặt Blog',
+    'Title center' => 'Tiêu đề chính',
+    'Describe center' => 'Bài viết chính',
+    'Title sub' => 'Tiêu đề phụ',
+    'Describe sub' => 'Bài viết phụ',
+    'Sửa Blog' => 'Sửa Blog',
+    'Email' => 'Email',
+    'Address' => 'Địa chỉ',
+    'link map' => 'link map (vào gg maps chọn đúng địa chỉ sau đó ấn chia sẻ và chọn phần nhúng HTML)',
+    'phone' => 'Số điện thoại',
+    'mo ta cong ty' => 'Mô tả công ty',
+    'Logo' => 'Logo',
+    'Update' => 'Cập nhật',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,28 +5,28 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('admin-home')}}">
                 <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
+                <span>{{ __('trans.Dashboard') }}</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Cài Đặt Trang Chủ</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-menu-button-wide"></i><span>{{ __('trans.Cài Đặt Trang Chủ') }}</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{route('admin-header-setting')}}">
-                        <i class="bi bi-circle"></i><span>Cài Đặt Header</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.Cài Đặt Header') }}</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{route('admin-transportation-company-settings')}}">
-                        <i class="bi bi-circle"></i><span>Transportation company</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.Transportation company') }}</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{route('admin-client-review')}}">
-                        <i class="bi bi-circle"></i><span>Our Client Reviews</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.Our Client Reviews') }}</span>
                     </a>
                 </li>
             </ul>
@@ -34,12 +34,12 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-journal-text"></i><span>About Us</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-journal-text"></i><span>{{ __('trans.About us') }}</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{route('admin-about-us')}}">
-                        <i class="bi bi-circle"></i><span>About Us</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.About us') }}</span>
                     </a>
                 </li>
             </ul>
@@ -47,17 +47,17 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-layout-text-window-reverse"></i><span>Service</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-layout-text-window-reverse"></i><span>{{ __('trans.Service') }}</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{route('admin-service-create')}}">
-                        <i class="bi bi-circle"></i><span>Create Service</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.Create Service') }}</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{route('admin-service')}}">
-                        <i class="bi bi-circle"></i><span>Edit Service</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.Edit Service') }}</span>
                     </a>
                 </li>
             </ul>
@@ -65,12 +65,12 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-bar-chart"></i><span>Blog</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-bar-chart"></i><span>{{ __('trans.Blog') }}</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{route('admin-blog')}}">
-                        <i class="bi bi-circle"></i><span>List blog</span>
+                        <i class="bi bi-circle"></i><span>{{ __('trans.List blog') }}</span>
                     </a>
                 </li>
             </ul>
@@ -100,12 +100,12 @@
 {{--            </ul>--}}
 {{--        </li><!-- End Icons Nav -->--}}
 
-        <li class="nav-heading">Pages</li>
+        <li class="nav-heading">{{ __('trans.Pages') }}</li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('admin-setting')}}">
                 <i class="bi bi-person"></i>
-                <span>Setting</span>
+                <span>{{ __('trans.Setting') }}</span>
             </a>
         </li><!-- End Profile Page Nav -->
 

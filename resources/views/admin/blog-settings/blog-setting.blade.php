@@ -2,17 +2,17 @@
 <link rel="stylesheet" href="{{asset('ui/scss/client-review.css')}}">
 @extends('admin.layouts.master')
 @section('title')
-    Admin IL Global
+    {{ __('trans.Admin IL Global') }}
 @endsection
 @section('content')
 
     <div class="pagetitle">
-        <h1>List Blogs</h1>
+        <h1>{{ __('trans.List Blogs') }}</h1>
 
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">Home</a></li>
-                <li class="breadcrumb-item active">Cài Đặt List Blogs</li>
+                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">{{ __('trans.Home') }}</a></li>
+                <li class="breadcrumb-item active">{{ __('trans.Cài Đặt List Blogs') }}</li>
             </ol>
         </nav>
     </div>
@@ -25,7 +25,7 @@
                     <a href="{{route('admin-create-blog')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
-                            <span>Add new Blog</span>
+                            <span>{{ __('trans.Add new Blog') }}</span>
                         </button>
                     </a>
 
@@ -43,10 +43,10 @@
                                 </div>
                             </th>
                             <th>ID</th>
-                            <th>Title Blog</th>
-                            <th>Image</th>
+                            <th>{{ __('trans.Title Blog') }}</th>
+                            <th>{{ __('trans.Image') }}</th>
                             {{--                            <th>Describe</th>--}}
-                            <th>Edit</th>
+                            <th>{{ __('trans.Edit') }}</th>
                         </tr>
                         </thead>
 

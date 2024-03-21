@@ -2,17 +2,17 @@
 <link rel="stylesheet" href="{{asset('ui/scss/client-review.css')}}">
 @extends('admin.layouts.master')
 @section('title')
-    Admin IL Global
+    {{ __('trans.Admin IL Global') }}
 @endsection
 @section('content')
 
     <div class="pagetitle">
-        <h1>Our Client Reviews</h1>
+        <h1>{{ __('trans.Our Client Reviews') }}</h1>
 
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">Home</a></li>
-                <li class="breadcrumb-item active">Cài Đặt Our Client Reviews</li>
+                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">{{ __('trans.Home') }}</a></li>
+                <li class="breadcrumb-item active">{{ __('trans.Cài Đặt Our Client Reviews') }}</li>
             </ol>
         </nav>
     </div>
@@ -21,11 +21,11 @@
         <main>
             <div class="content w-100">
                 <section class="main-header grid">
-                    <h1>Client Review</h1>
+                    <h1>{{ __('trans.Client Review') }}</h1>
                     <a href="{{route('admin-creat-client-review')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
-                            <span>Add new review</span>
+                            <span>{{ __('trans.Add new review') }}</span>
                         </button>
                     </a>
 
@@ -59,12 +59,12 @@
                                 </div>
                             </th>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Thumbnail</th>
-                            <th>Position</th>
-                            <th>Describe</th>
-                            <th>Star rating</th>
-                            <th>Custom</th>
+                            <th>{{ __('trans.Name') }}</th>
+                            <th>{{ __('trans.Thumbnail') }}</th>
+                            <th>{{ __('trans.Position') }}</th>
+                            <th>{{ __('trans.Describe') }}</th>
+                            <th>{{ __('trans.Star rating') }}</th>
+                            <th>{{ __('trans.Custom') }}</th>
                         </tr>
                         </thead>
 
