@@ -1,16 +1,16 @@
 @extends('admin.layouts.master')
 @section('title')
-    Admin IL Global
+    {{ __('trans.Admin IL Global') }}
 @endsection
 @section('content')
     <link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
     <div class="pagetitle">
-        <h1>Cài Đặt About Us</h1>
+        <h1>{{ __('trans.Sửa dịch vụ') }}</h1>
 
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">Home</a></li>
-                <li class="breadcrumb-item active">Cài Đặt About Us</li>
+                <li class="breadcrumb-item"><a href="{{route('admin-home')}}">{{ __('trans.Home') }}</a></li>
+                <li class="breadcrumb-item active">{{ __('trans.Sửa dịch vụ') }}</li>
             </ol>
         </nav>
     </div>
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="row d-flex">
                         <div class="col-md-6 " hidden="">
-                            <label for="type">Choose Transport Service</label>
+                            <label for="type">{{ __('trans.Choose Transport Service') }}</label>
                             <select name="type" id="type" class="h-auto">
                                 <option {{$service->type == \App\Enums\Service::Air ? 'selected' : ''}} value="{{\App\Enums\Service::Air}}">{{\App\Enums\Service::Air}}</option>
                                 <option {{$service->type == \App\Enums\Service::Sea ? 'selected' : ''}} value="{{\App\Enums\Service::Sea}}">{{\App\Enums\Service::Sea}}</option>
@@ -35,31 +35,31 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="title">Title center</label>
+                            <label for="title">{{ __('trans.Title') }}</label>
                             <input type="text" name="title" id="title" value="{{$service->title_vi}}">
                         </div>
                         <div class="col-md-6">
-                            <label for="img_main">Image</label>
+                            <label for="img_main">{{ __('trans.Image') }}</label>
                             <input type="file" name="img_main" id="img_main">
                             <img style="width: 100px;height: 100px;object-fit: cover" src="{{$service->img_main}}" alt="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="describe">Describe center</label>
+                            <label for="describe">{{ __('trans.Describe') }}</label>
                             <textarea class="textarea" name="describe"
                                       id="describe">{{$service->describe_vi}}</textarea>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-6">
-                            <label for="title2">Title footer</label>
+                            <label for="title2">{{ __('trans.Title more') }}</label>
                             <input type="text" name="title2" id="title2" value="{{$service->title_sub_vi}}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="describe2">Describe footer</label>
+                            <label for="describe2">{{ __('trans.Describe more') }}</label>
                             <textarea name="describe2" id="describe2">{{$service->describe_sub_vi}}</textarea>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                     <div class="d-flex justify-content-start align-items-center">
                         <button class="il-btn-read-more-black" type="submit">
                             <div class="triangle-bottom-right"></div>
-                            Submit
+                            {{ __('trans.Update') }}
                         </button>
                     </div>
                 </div>
