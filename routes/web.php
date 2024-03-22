@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\AdminAboutUsController;
 use App\Http\Controllers\admin\AdminHomeController;
 use App\Http\Controllers\admin\AdminService;
 use App\Http\Controllers\AdminBlog;
+use App\Http\Controllers\AdminSlide;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
@@ -76,6 +77,13 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('setting', [SettingController::class, 'setting'])->name('admin-setting');
     Route::post('setting-up', [SettingController::class, 'settingUp'])->name('admin-setting-up');
 
+    /* slide service header */
+    Route::get('slide', [AdminSlide::class, 'adminSlide'])->name('admin-slide');
+    Route::get('create-slide', [AdminSlide::class, 'adminCreateSlide'])->name('admin-create-slide');
+    Route::get('edit-slide/{id}', [AdminSlide::class, 'adminEditSlide'])->name('admin-edit-slide');
+
+    Route::post('create-slide-up', [AdminSlide::class, 'adminCreateSlideUp'])->name('admin-create-slide-up');
+    Route::post('edit-slide-up/{id}', [AdminSlide::class, 'adminEditSlideUp'])->name('admin-edit-slide-up');
 
 });
 
