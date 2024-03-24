@@ -22,6 +22,7 @@ class AdminService extends Controller
                 'describe' => $request->input('describe'),
                 'title_sub' => $request->input('title2'),
                 'describe_sub' => $request->input('describe2'),
+                'type_name' => $request->input('type')
             ];
 
             $services = [];
@@ -42,7 +43,6 @@ class AdminService extends Controller
 
             // Lấy tên cột thay vì id
             $typeColumn = 'type';
-
             $existingService = Service::where($typeColumn, $services['type'])->first();
             if ($existingService) {
                 Service::where($typeColumn, $services['type'])->update($services);

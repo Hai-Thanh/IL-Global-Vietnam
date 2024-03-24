@@ -10,6 +10,7 @@ use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ShippingServices;
 use App\Http\Controllers\ui\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -104,6 +105,11 @@ Route::group(['prefix' => ''], function () {
     Route::get('express-delivery', [HomeController::class, 'expressDelivery'])->name('service.express.delivery');
     Route::get('customs-services', [HomeController::class, 'customsServices'])->name('customs.services');
     Route::post('booking-form', [HomeController::class, 'BookingForm'])->name('booking.form');
+
+
+    Route::get('shipping-services/{id}', [ShippingServices::class, 'index'])->name('shipping.services.index');
+
+
 
     Route::get('blog', [HomeController::class, 'Blog'])->name('blog');
     Route::get('detail-blog/{id}', [HomeController::class, 'DetailBlog'])->name('detail.blog');

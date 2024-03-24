@@ -23,14 +23,15 @@
                     <div class="row d-flex">
                         <div class="col-md-6">
                             <label for="type">{{ __('trans.Choose Transport Service') }}</label>
-                            <select name="type" id="type" class="h-auto">
-                                <option value="{{\App\Enums\Service::Air}}">{{\App\Enums\Service::Air}}</option>
-                                <option value="{{\App\Enums\Service::Sea}}">{{\App\Enums\Service::Sea}}</option>
-                                <option value="{{\App\Enums\Service::Road}}">{{\App\Enums\Service::Road}}</option>
-                                <option value="{{\App\Enums\Service::Rail}}">{{\App\Enums\Service::Rail}}</option>
-                                <option value="{{\App\Enums\Service::Express}}">{{\App\Enums\Service::Express}}</option>
-                                <option value="{{\App\Enums\Service::Customs}}">{{\App\Enums\Service::Customs}}</option>
-                            </select>
+                            <input type="text" name="type" id="type">
+{{--                            <select name="type" id="type" class="h-auto">--}}
+{{--                                <option value="{{\App\Enums\Service::Air}}">{{\App\Enums\Service::Air}}</option>--}}
+{{--                                <option value="{{\App\Enums\Service::Sea}}">{{\App\Enums\Service::Sea}}</option>--}}
+{{--                                <option value="{{\App\Enums\Service::Road}}">{{\App\Enums\Service::Road}}</option>--}}
+{{--                                <option value="{{\App\Enums\Service::Rail}}">{{\App\Enums\Service::Rail}}</option>--}}
+{{--                                <option value="{{\App\Enums\Service::Express}}">{{\App\Enums\Service::Express}}</option>--}}
+{{--                                <option value="{{\App\Enums\Service::Customs}}">{{\App\Enums\Service::Customs}}</option>--}}
+{{--                            </select>--}}
                         </div>
 
                     </div>

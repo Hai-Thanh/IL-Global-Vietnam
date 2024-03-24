@@ -27,6 +27,11 @@ class Service extends Model
         'describe_sub_vi',
         'describe_sub_en',
         'describe_sub_zh_cn',
-        'describe_sub_ko'
+        'describe_sub_ko',
+        'type_name_vi',
+        'type_name_en',
+        'type_name_zh_cn',
+        'type_name_ko',
+
     ];
 }

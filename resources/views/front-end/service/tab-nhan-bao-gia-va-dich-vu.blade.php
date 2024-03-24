@@ -4,54 +4,83 @@
         <div class="border-bottom-service"></div>
     </div>
     <div class="d-flex flex-column">
-        <a href="{{route('service.air.transport')}}">
-            <div class="tab-service d-flex justify-content-between align-items-center p-3">
-                <div>{{ __('trans.Air Transport') }}</div>
-                <div>
-                    <i class="fa-solid fa-angle-right"></i>
+        @php
+            $services = \App\Models\Service::all();
+        @endphp
+        @if($services->isEmpty())
+            <a href="{{route('service.air.transport')}}">
+                <div class="tab-service d-flex justify-content-between align-items-center p-3">
+                    <div>{{ __('trans.Air Transport') }}</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{route('service.sea.transport')}}">
-            <div class="tab-service d-flex justify-content-between align-items-center p-3">
-                <div>{{ __('trans.Sea transport') }}</div>
-                <div>
-                    <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="{{route('service.sea.transport')}}">
+                <div class="tab-service d-flex justify-content-between align-items-center p-3">
+                    <div>{{ __('trans.Sea transport') }}</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{route('service.road.transport')}}">
-            <div class="tab-service d-flex justify-content-between align-items-center p-3">
-                <div>{{ __('trans.Road transport') }}</div>
-                <div>
-                    <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="{{route('service.road.transport')}}">
+                <div class="tab-service d-flex justify-content-between align-items-center p-3">
+                    <div>{{ __('trans.Road transport') }}</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{route('service.rail.transport')}}">
-            <div class="tab-service d-flex justify-content-between align-items-center p-3">
-                <div>{{ __('trans.Rail transport') }}</div>
-                <div>
-                    <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="{{route('service.rail.transport')}}">
+                <div class="tab-service d-flex justify-content-between align-items-center p-3">
+                    <div>{{ __('trans.Rail transport') }}</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{route('service.express.delivery')}}">
-            <div class="tab-service d-flex justify-content-between align-items-center p-3">
-                <div>{{ __('trans.Express delivery') }}</div>
-                <div>
-                    <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="{{route('service.express.delivery')}}">
+                <div class="tab-service d-flex justify-content-between align-items-center p-3">
+                    <div>{{ __('trans.Express delivery') }}</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{route('customs.services')}}">
-            <div class="tab-service d-flex justify-content-between align-items-center p-3">
-                <div>{{ __('trans.Customs services') }}</div>
-                <div>
-                    <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="{{route('customs.services')}}">
+                <div class="tab-service d-flex justify-content-between align-items-center p-3">
+                    <div>{{ __('trans.Customs services') }}</div>
+                    <div>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        @else
+            @foreach($services as $service)
+                @php
+                    $currentUrl = url()->current();
+                @endphp
+                <a href="{{route('shipping.services.index',$service->id)}}">
+                    <div class="{{$currentUrl == route('shipping.services.index',$service->id) ? 'tab-service-active' : 'tab-service'}} d-flex justify-content-between align-items-center p-3">
+                        <div>
+                            @if(locationHelper() == 'kr')
+                                {{ $service->type_name_ko ?? '오류'}}
+                            @elseif(locationHelper() == 'en')
+                                {{ $service->type_name_en ?? 'Error'}}
+                            @elseif(locationHelper() == 'cn')
+                                {{ $service->type_name_zh_cn ?? '錯誤'}}
+                            @else
+                                {{ $service->type_name_vi ?? 'Lỗi'}}
+                            @endif
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        @endif
     </div>
 </div>
 <div class="all-service mt-3">
@@ -90,7 +119,12 @@
                 <label for="air-departure">{{ __('trans.Departure point') }} <span>*</span></label>
                 <input type="text" name="air-departure" id="air-departure">
             </div>
-            <input type="hidden" name="shipping_method" id="shipping_method" value="">
+            @php
+                $currentUrl = url()->current();
+               preg_match('/\d+$/', $currentUrl, $matches);
+               $lastNumber = end($matches);
+            @endphp
+            <input type="hidden" name="shipping_method" id="shipping_method" value="{{$lastNumber}}">
             <div class="d-flex justify-content-start align-items-center mt-3">
                 <button class="il-btn-read-more-black" type="submit">
                     <div class="triangle-bottom-right"></div>
@@ -105,6 +139,7 @@
 <script>
 
     $(document).ready(function () {
+        var currentUrl = window.location.href;
         var urls = ["{{route('service.air.transport')}}",
             "{{route('service.sea.transport')}}",
             "{{route('service.road.transport')}}",
@@ -121,27 +156,6 @@
     });
 </script>
 <script>
-    $(document).ready(function () {
-        var urlValueMap = {
-            "{{route('service.air.transport')}}": "air_transport",
-            "{{route('service.sea.transport')}}": "sea_transport",
-            "{{route('service.road.transport')}}": "road_transport",
-            "{{route('service.rail.transport')}}": "rail_transport",
-            "{{route('service.express.delivery')}}": "express_delivery",
-            "{{route('customs.services')}}": "customs_services"
-        };
-
-        // Lặp qua các URL
-        for (var url in urlValueMap) {
-            if (window.location.href.indexOf(url) > -1) {
-                console.log(urlValueMap)
-                $('#shipping_method').val(urlValueMap[url]);
-                break;
-            }
-        }
-    });
-</script>
-<script>
     document.getElementById("air-phone").addEventListener("input", function () {
         // Lấy giá trị của trường số điện thoại
         let phone = this.value;
@@ -155,3 +169,24 @@
         }
     });
 </script>
+{{--<script>--}}
+{{--    $(document).ready(function () {--}}
+{{--        var urlValueMap = {--}}
+{{--            "{{route('service.air.transport')}}": "air_transport",--}}
+{{--            "{{route('service.sea.transport')}}": "sea_transport",--}}
+{{--            "{{route('service.road.transport')}}": "road_transport",--}}
+{{--            "{{route('service.rail.transport')}}": "rail_transport",--}}
+{{--            "{{route('service.express.delivery')}}": "express_delivery",--}}
+{{--            "{{route('customs.services')}}": "customs_services"--}}
+{{--        };--}}
+
+{{--        // Lặp qua các URL--}}
+{{--        for (var url in urlValueMap) {--}}
+{{--            if (window.location.href.indexOf(url) > -1) {--}}
+{{--                $('#shipping_method').val(urlValueMap[url]);--}}
+{{--                break;--}}
+{{--            }--}}
+{{--        }--}}
+{{--    });--}}
+{{--</script>--}}
+
