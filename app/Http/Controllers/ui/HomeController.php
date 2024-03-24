@@ -4,6 +4,7 @@ namespace App\Http\Controllers\ui;
 
 use App\Enums\BlogStatus;
 use App\Enums\ReviewStatus;
+use App\Enums\SlideStatus;
 use App\Http\Controllers\Controller;
 use App\Mail\sendMail;
 use App\Mail\sendMailToAdmin;
@@ -14,6 +15,7 @@ use App\Models\ClientReview;
 use App\Models\HeaderSetting;
 use App\Models\OrderForm;
 use App\Models\Service;
+use App\Models\SlideHeader;
 use App\Models\TransportCompanySetting;
 use App\Models\WhyChooseUsSetting;
 use Carbon\Carbon;
@@ -28,6 +30,7 @@ class HomeController extends Controller
         $header_setting = HeaderSetting::first();
         $transport_setting = TransportCompanySetting::first();
         $why_setting = WhyChooseUsSetting::first();
+        $serviceSlides = SlideHeader::where('status', SlideStatus::Active)->get();
 
         if ($header_setting) {
             $time_in = Carbon::createFromFormat('H:i:s', $header_setting->time_in)->format('h:i A');
@@ -40,7 +43,7 @@ class HomeController extends Controller
         $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
 
 
-        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs'));
+        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs','serviceSlides'));
     }
 
 

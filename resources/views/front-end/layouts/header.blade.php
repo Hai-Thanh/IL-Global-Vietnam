@@ -631,93 +631,146 @@
 
 
 <div class="slider-container">
-    <div class="slide fade">
-        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/may-bay.png')}}" alt="may-bay">
-        <div class="slide-content">
-            <div class="container">
-                <h1 class="slide-title text-start">{{ __('trans.Air Transport') }}</h1>
-                <p class="slide-desc text-start">
-                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
-                </p>
-                <a href="{{route('service.air.transport')}}" class="slide-btn">
-                    <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
+    @if(!$serviceSlides->isEmpty())
+        @foreach($serviceSlides as $slider)
+            <div class="slide fade">
+                <img class="slide-image" src="{{$slider->image_slide ?? asset('ui/img/img-hero-slider-header/may-bay.png')}}" alt="may-bay">
+                <div class="slide-content">
+                    <div class="container">
+                        <h1 class="slide-title text-start">
+                            @if(locationHelper() == 'kr')
+                                {{ $slider->title_slide_ko ?? __('trans.Air Transport') }}
+                            @elseif(locationHelper() == 'en')
+                                {{ $slider->title_slide_en ?? __('trans.Air Transport') }}
+                            @elseif(locationHelper() == 'cn')
+                                {{ $slider->title_slide_zh_cn ?? __('trans.Air Transport') }}
+                            @else
+                                {{ $slider->title_slide_vi ?? __('trans.Air Transport') }}
+                            @endif
+                        </h1>
+                        <p class="slide-desc text-start">
+                            @if(locationHelper() == 'kr')
+                                {!! $slider->describe_slide_ko ?? __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') !!}
+                            @elseif(locationHelper() == 'en')
+                                {!! $slider->describe_slide_en ?? __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') !!}
+                            @elseif(locationHelper() == 'cn')
+                                {!! $slider->describe_slide_zh_cn ?? __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') !!}
+                            @else
+                                {!! $slider->describe_slide_vi ?? __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') !!}
+                            @endif
+                        </p>
+                        @php
+                            $idService = \App\Models\Service::find($slider->id_service);
+
+                        @endphp
+                        <a href="{{route('service.air.transport')}}" class="slide-btn">
+                            <div class="il-btn-read-more">
+                                <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
+            </div>
+        @endforeach
+
+
+
+        <!-- The dots/circles -->
+        <div class="dot-container">
+            @foreach($serviceSlides as $slider)
+                <span class="dot" onclick="currentSlide({{$loop->iteration}})"></span>
+            @endforeach
+        </div>
+    @else
+        <div class="slide fade">
+            <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/may-bay.png')}}" alt="may-bay">
+            <div class="slide-content">
+                <div class="container">
+                    <h1 class="slide-title text-start">{{ __('trans.Air Transport') }}</h1>
+                    <p class="slide-desc text-start">
+                        {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
+                    </p>
+                    <a href="{{route('service.air.transport')}}" class="slide-btn">
+                        <div class="il-btn-read-more">
+                            <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slide fade">
+            <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/tau-thuy.png')}}" alt="tau-thuy">
+            <div class="slide-content">
+                <div class="container">
+                    <h1 class="slide-title text-start">{{ __('trans.Sea transport') }}</h1>
+                    <p class="slide-desc text-start">
+                        {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
+                    </p>
+                    <a href="{{route('service.sea.transport')}}" class="slide-btn">
+                        <div class="il-btn-read-more">
+                            <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 
-    </div>
-
-    <div class="slide fade">
-        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/tau-thuy.png')}}" alt="tau-thuy">
-        <div class="slide-content">
-            <div class="container">
-                <h1 class="slide-title text-start">{{ __('trans.Sea transport') }}</h1>
-                <p class="slide-desc text-start">
-                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
-                </p>
-                <a href="{{route('service.sea.transport')}}" class="slide-btn">
-                    <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
-                    </div>
-                </a>
+        <div class="slide fade">
+            <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}" alt="xe tai">
+            <div class="slide-content">
+                <div class="container">
+                    <h1 class="slide-title text-start">{{ __('trans.Rail transport') }}</h1>
+                    <p class="slide-desc text-start">
+                        {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
+                    </p>
+                    <a href="{{route('service.rail.transport')}}" class="slide-btn">
+                        <div class="il-btn-read-more">
+                            <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="slide fade">
-        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/xe-tai.png')}}" alt="xe tai">
-        <div class="slide-content">
-            <div class="container">
-                <h1 class="slide-title text-start">{{ __('trans.Rail transport') }}</h1>
-                <p class="slide-desc text-start">
-                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
-                </p>
-                <a href="{{route('service.rail.transport')}}" class="slide-btn">
-                    <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
-                    </div>
-                </a>
+        <div class="slide fade">
+            <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/tau-hoa.png')}}" alt="tau-hoa">
+            <div class="slide-content">
+                <div class="container">
+                    <h1 class="slide-title text-start">{{ __('trans.Road transport') }}</h1>
+                    <p class="slide-desc text-start">
+                        {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
+
+                    </p>
+                    <a href="{{route('service.road.transport')}}" class="slide-btn">
+                        <div class="il-btn-read-more">
+                            <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="slide fade">
-        <img class="slide-image" src="{{asset('ui/img/img-hero-slider-header/tau-hoa.png')}}" alt="tau-hoa">
-        <div class="slide-content">
-            <div class="container">
-                <h1 class="slide-title text-start">{{ __('trans.Road transport') }}</h1>
-                <p class="slide-desc text-start">
-                    {{ __('trans.Our freight services are founded on commitment, dedication and professionalism. Our professional team adheres to all standards of quality and excellence.') }}
-
-                </p>
-                <a href="{{route('service.road.transport')}}" class="slide-btn">
-                    <div class="il-btn-read-more">
-                        <div class="triangle-bottom-right"></div>{{ __('trans.Read more') }}
-                    </div>
-                </a>
-            </div>
+        <!-- Next and previous buttons -->
+        <div class="slider-nav d-none">
+            <a class="slider-nav-btn" onclick="plusSlides(-1)">
+                <ion-icon name="caret-back-outline"></ion-icon>
+            </a>
+            <a class="slider-nav-btn" onclick="plusSlides(1)">
+                <ion-icon name="caret-forward-outline"></ion-icon>
+            </a>
         </div>
-    </div>
 
-    <!-- Next and previous buttons -->
-    <div class="slider-nav d-none">
-        <a class="slider-nav-btn" onclick="plusSlides(-1)">
-            <ion-icon name="caret-back-outline"></ion-icon>
-        </a>
-        <a class="slider-nav-btn" onclick="plusSlides(1)">
-            <ion-icon name="caret-forward-outline"></ion-icon>
-        </a>
-    </div>
+        <!-- The dots/circles -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    @endif
 
-    <!-- The dots/circles -->
-    <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-    </div>
 </div>
 <div class="position-relative d-flex justify-content-end align-items-center">
     <div class="d-lg-flex d-none position-absolute container bottom-0 justify-content-center il-form-shipping-method">
