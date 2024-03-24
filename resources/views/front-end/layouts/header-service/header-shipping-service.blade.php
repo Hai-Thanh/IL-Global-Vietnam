@@ -4,15 +4,23 @@
         @include('front-end.layouts.component-header')
     </div>
 </div>
+@php
+    $currentUrl = url()->current();
+    preg_match('/\d+$/', $currentUrl, $matches);
+       $lastNumber = end($matches);
+       $service = \App\Models\Service::find($lastNumber);
+@endphp
+<style>
+    .background-service-transport {
+        background: url({{$service->img_main}}) no-repeat 100% 100%;
+        background-size: cover;
+        height: 550px;
+    }
+</style>
 
-<div class="row-full-width select-background background-service-air-transport">
+<div class="row-full-width select-background background-service-transport">
     <div class="container d-flex align-items-center justify-content-center position-relative h-100">
-        @php
-            $currentUrl = url()->current();
-            preg_match('/\d+$/', $currentUrl, $matches);
-               $lastNumber = end($matches);
-               $service = \App\Models\Service::find($lastNumber);
-        @endphp
+
         <div class="content-about">
             <div class="content-about-us">
                 @if(locationHelper() == 'kr')
