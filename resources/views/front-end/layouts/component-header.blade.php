@@ -95,12 +95,31 @@
                         </span>
                         <div class="box-child">
                             <ul>
-                                <li><a href="{{route('service.air.transport')}}">{{ __('trans.Air Transport') }}</a></li>
-                                <li><a href="{{route('service.sea.transport')}}">{{ __('trans.Sea transport') }}</a></li>
-                                <li><a href="{{route('service.road.transport')}}">{{ __('trans.Road transport') }}</a></li>
-                                <li><a href="{{route('service.rail.transport')}}">{{ __('trans.Rail transport') }}</a></li>
-                                <li><a href="{{route('service.express.delivery')}}">{{ __('trans.Express delivery') }}</a></li>
-                                <li><a href="{{route('customs.services')}}">{{ __('trans.Customs services') }}</a></li>
+                                @php
+                                    $services = \App\Models\Service::all();
+                                @endphp
+                                @if($services->isEmpty())
+                                    <li><a href="{{route('service.air.transport')}}">{{ __('trans.Air Transport') }}</a></li>
+                                    <li><a href="{{route('service.sea.transport')}}">{{ __('trans.Sea transport') }}</a></li>
+                                    <li><a href="{{route('service.road.transport')}}">{{ __('trans.Road transport') }}</a></li>
+                                    <li><a href="{{route('service.rail.transport')}}">{{ __('trans.Rail transport') }}</a></li>
+                                    <li><a href="{{route('service.express.delivery')}}">{{ __('trans.Express delivery') }}</a></li>
+                                    <li><a href="{{route('customs.services')}}">{{ __('trans.Customs services') }}</a></li>
+                                @else
+                                    @foreach($services as $service)
+                                        <li><a href="{{route('shipping.services.index',$service->id)}}">
+                                                @if(locationHelper() == 'kr')
+                                                    {{ $service->type_name_ko ?? '오류'}}
+                                                @elseif(locationHelper() == 'en')
+                                                    {{ $service->type_name_en ?? 'Error'}}
+                                                @elseif(locationHelper() == 'cn')
+                                                    {{ $service->type_name_zh_cn ?? '錯誤'}}
+                                                @else
+                                                    {{ $service->type_name_vi ?? 'Lỗi'}}
+                                                @endif
+                                            </a></li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
                     </div>

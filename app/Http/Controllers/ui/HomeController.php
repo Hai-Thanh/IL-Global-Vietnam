@@ -31,6 +31,7 @@ class HomeController extends Controller
         $transport_setting = TransportCompanySetting::first();
         $why_setting = WhyChooseUsSetting::first();
         $serviceSlides = SlideHeader::where('status', SlideStatus::Active)->get();
+        $services = Service::all();
 
         if ($header_setting) {
             $time_in = Carbon::createFromFormat('H:i:s', $header_setting->time_in)->format('h:i A');
@@ -43,7 +44,7 @@ class HomeController extends Controller
         $listBlogs = Blog::where('status', BlogStatus::ACTIVE)->get();
 
 
-        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs','serviceSlides'));
+        return view('front-end.index',compact('header_setting','time_in','time_out','transport_setting','why_setting','reviews','listBlogs','serviceSlides','services'));
     }
 
 
