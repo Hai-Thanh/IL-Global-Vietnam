@@ -144,6 +144,10 @@ return [
     'Update' => 'Cập nhật',
 
 
+    'Ảnh nền tiêu đề dịch vụ' => 'Ảnh nền tiêu đề dịch vụ( background image header)',
+
+
+
 
 
 

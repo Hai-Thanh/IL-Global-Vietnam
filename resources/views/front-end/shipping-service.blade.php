@@ -15,11 +15,29 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    {!! $shipping_service->describe_vi ?? '' !!}
+
+                    @if(locationHelper() == 'kr')
+                        {!! $shipping_service->describe_ko ?? '' !!}
+                    @elseif(locationHelper() == 'en')
+                        {!! $shipping_service->describe_en ?? '' !!}
+                    @elseif(locationHelper() == 'cn')
+                        {!! $shipping_service->describe_zh_cn ?? '' !!}
+                    @else
+                        {!! $shipping_service->describe_vi ?? '' !!}
+                    @endif
                 </div>
                 <div class="row">
                     <div class="mo-ta-service h-100">
-                        {!! $shipping_service->describe_sub_vi ?? '' !!}
+
+                        @if(locationHelper() == 'kr')
+                            {!! $shipping_service->describe_sub_ko ?? '' !!}
+                        @elseif(locationHelper() == 'en')
+                            {!! $shipping_service->describe_sub_en ?? '' !!}
+                        @elseif(locationHelper() == 'cn')
+                            {!! $shipping_service->describe_sub_zh_cn ?? '' !!}
+                        @else
+                            {!! $shipping_service->describe_sub_vi ?? '' !!}
+                        @endif
                     </div>
                 </div>
             </div>

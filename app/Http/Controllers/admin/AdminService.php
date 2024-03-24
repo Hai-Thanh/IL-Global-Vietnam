@@ -39,6 +39,12 @@ class AdminService extends Controller
                 $thumbnail = asset('storage/' . $itemPath);
                 $services['img_main'] = $thumbnail;
             }
+            if ($request->hasFile('img_background')) {
+                $item = $request->file('img_background');
+                $itemPath = $item->store('img', 'public');
+                $thumbnail = asset('storage/' . $itemPath);
+                $services['img_background'] = $thumbnail;
+            }
             $services['type'] = $request->input('type') ?? '';
 
             // Lấy tên cột thay vì id
