@@ -12,7 +12,7 @@
 @endphp
 <style>
     .background-service-transport {
-        background: url({{$service->img_main}}) no-repeat 100% 100%;
+        background: url({{$service->img_background ?? ''}}) no-repeat 100% 100%;
         background-size: cover;
         height: 550px;
     }

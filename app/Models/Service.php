@@ -32,6 +32,8 @@ class Service extends Model
         'type_name_en',
         'type_name_zh_cn',
         'type_name_ko',
+        'img_background',
+
 
     ];
 }

@@ -21,16 +21,14 @@
                 @csrf
                 <div class="row">
                     <div class="row d-flex">
-                        <div class="col-md-6 " hidden="">
+                        <div class="col-md-6 " >
                             <label for="type">{{ __('trans.Choose Transport Service') }}</label>
-                            <select name="type" id="type" class="h-auto">
-                                <option {{$service->type == \App\Enums\Service::Air ? 'selected' : ''}} value="{{\App\Enums\Service::Air}}">{{\App\Enums\Service::Air}}</option>
-                                <option {{$service->type == \App\Enums\Service::Sea ? 'selected' : ''}} value="{{\App\Enums\Service::Sea}}">{{\App\Enums\Service::Sea}}</option>
-                                <option {{$service->type == \App\Enums\Service::Road ? 'selected' : ''}} value="{{\App\Enums\Service::Road}}">{{\App\Enums\Service::Road}}</option>
-                                <option {{$service->type == \App\Enums\Service::Rail ? 'selected' : ''}} value="{{\App\Enums\Service::Rail}}">{{\App\Enums\Service::Rail}}</option>
-                                <option {{$service->type == \App\Enums\Service::Express ? 'selected' : ''}} value="{{\App\Enums\Service::Express}}">{{\App\Enums\Service::Express}}</option>
-                                <option {{$service->type == \App\Enums\Service::Customs ? 'selected' : ''}} value="{{\App\Enums\Service::Customs}}">{{\App\Enums\Service::Customs}}</option>
-                            </select>
+                            <input type="text" name="type" id="type" value="{{$service->type ?? ''}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="img_background">{{ __('trans.Ảnh nền tiêu đề dịch vụ') }}</label>
+                            <input type="file" name="img_background" id="img_background">
+                            <img style="width: 100px;height: 100px;object-fit: cover" src="{{$service->img_background ?? ''}}" alt="">
                         </div>
                     </div>
                     <div class="row">

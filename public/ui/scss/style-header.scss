@@ -97,16 +97,8 @@
         line-height: 78px;
         letter-spacing: 0em;
     }
-    .slide-desc, p {
-        width: 100%;
-        max-width: 50rem;
-        color: lightgray;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: start;
-        p {
+    .slide {
+        .slide-desc, p {
             width: 100%;
             max-width: 50rem;
             color: lightgray;
@@ -114,8 +106,19 @@
             font-weight: 700;
             line-height: 24px;
             letter-spacing: 0em;
+            text-align: start;
+            p {
+                width: 100%;
+                max-width: 50rem;
+                color: lightgray;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0em;
+            }
         }
     }
+
     .slide-btn {
         display: flex;
         align-items: center;
