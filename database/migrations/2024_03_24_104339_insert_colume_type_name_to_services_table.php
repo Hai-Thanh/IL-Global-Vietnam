@@ -16,6 +16,7 @@ return new class extends Migration
             $table->longText('type_name_en')->nullable();
             $table->longText('type_name_zh_cn')->nullable();
             $table->longText('type_name_ko')->nullable();
+            $table->longText('img_background')->nullable();
         });
     }
 
@@ -29,6 +30,7 @@ return new class extends Migration
             $table->dropColumn('type_name_en');
             $table->dropColumn('type_name_zh_cn');
             $table->dropColumn('type_name_ko');
+            $table->dropColumn('img_background');
         });
     }
 };
