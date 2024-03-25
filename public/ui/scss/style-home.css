@@ -52,24 +52,25 @@
     color: black;
     margin-bottom: 20px;
   }
-  .il-card-what-we-do {
-    gap: 12px;
-  }
   .il-card-what-we-do .card-what-we-do--1 {
     background: url(../img/card-what-we-do/card-may-bay.png) no-repeat 100% 100%;
     background-size: cover;
+    margin-bottom: 12px;
   }
   .il-card-what-we-do .card-what-we-do--2 {
     background: url(../img/card-what-we-do/card-tau-thuy.png) no-repeat 100% 100%;
     background-size: cover;
+    margin-bottom: 12px;
   }
   .il-card-what-we-do .card-what-we-do--3 {
     background: url(../img/card-what-we-do/card-xe-tai.png) no-repeat 100% 100%;
     background-size: cover;
+    margin-bottom: 12px;
   }
   .il-card-what-we-do .card-what-we-do--4 {
     background: url(../img/card-what-we-do/card-tau-hoa.png) no-repeat 100% 100%;
     background-size: cover;
+    margin-bottom: 12px;
   }
   .il-card-what-we-do .card-height {
     height: 250px;

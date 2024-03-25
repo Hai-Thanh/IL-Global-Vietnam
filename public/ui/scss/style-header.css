@@ -315,7 +315,7 @@
     transform: translateY(-35px);
   }
   .il-form-shipping-method .il-btn-shipping-method:hover .il-transaction svg path {
-    fill: #FFFFFF;
+    fill: #FFFFFF !important;
   }
   /* end button header shipping method */
   /* back ground header about us */

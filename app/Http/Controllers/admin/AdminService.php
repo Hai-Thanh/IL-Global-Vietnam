@@ -46,6 +46,8 @@ class AdminService extends Controller
                 $services['img_background'] = $thumbnail;
             }
             $services['type'] = $request->input('type') ?? '';
+            $services['svg_icon'] = $request->input('svg_icon');
+            $services['svg_icon_circle'] = $request->input('svg_icon_circle');
 
             // Lấy tên cột thay vì id
             $typeColumn = 'type';

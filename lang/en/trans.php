@@ -141,6 +141,13 @@ return [
     'Update' => 'Update',
 
 
+    'Ảnh nền tiêu đề dịch vụ' => 'Background image for service header',
+    'Icon SVG circle' => 'SVG circle icon in transportation backend section, copied in HTML format (may need to ask design)',
+    'Icon SVG' => 'SVG icon copied in HTML format (may need to ask design)',
+    'Slide service header' => 'Slide service header',
+    'Add new Slide' => 'Add new slide',
+    'Tạo Mới Slide' => 'Create New Slide',
+    'Sửa Slide' => 'Edit Slide',
 
 
 

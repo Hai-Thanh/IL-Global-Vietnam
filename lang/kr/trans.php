@@ -142,6 +142,13 @@ return [
     'Logo' => '로고',
     'Update' => '업데이트',
 
+    'Ảnh nền tiêu đề dịch vụ' => '서비스 헤더 배경 이미지',
+    'Icon SVG circle' => '트랜스포트 백엔드 섹션의 원형 SVG 아이콘, HTML 형식으로 복사 (디자인에게 문의 필요)',
+    'Icon SVG' => 'HTML 형식으로 복사된 SVG 아이콘 (디자인에게 문의 필요)',
+    'Slide service header' => '서비스 헤더 슬라이드',
+    'Add new Slide' => '새로운 슬라이드 추가',
+    'Tạo Mới Slide' => '새로운 슬라이드 만들기',
+    'Sửa Slide' => '슬라이드 편집',
 
 
 

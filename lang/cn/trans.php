@@ -140,4 +140,14 @@ return [
     'Logo' => '徽标',
     'Update' => '更新',
 
+
+    'Ảnh nền tiêu đề dịch vụ' => '服务标题背景图（background image header）',
+    'Icon SVG circle' => '圆形SVG图标（在主页运输后端部分复制HTML形式）（可以询问设计师）',
+    'Icon SVG' => 'SVG图标（复制HTML形式）（可以询问设计师）',
+    'Slide service header' => '服务幻灯片标题',
+    'Add new Slide' => '添加新幻灯片',
+    'Tạo Mới Slide' => '创建新幻灯片',
+    'Sửa Slide' => '编辑幻灯片',
+
+
 ];
