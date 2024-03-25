@@ -21,14 +21,15 @@
                 @csrf
                 <div class="row">
                     <div class="row d-flex">
-                        <div class="col-md-6 " >
+                        <div class="col-md-6 ">
                             <label for="type">{{ __('trans.Choose Transport Service') }}</label>
                             <input type="text" name="type" id="type" value="{{$service->type ?? ''}}">
                         </div>
                         <div class="col-md-6">
                             <label for="img_background">{{ __('trans.Ảnh nền tiêu đề dịch vụ') }}</label>
                             <input type="file" name="img_background" id="img_background">
-                            <img style="width: 100px;height: 100px;object-fit: cover" src="{{$service->img_background ?? ''}}" alt="">
+                            <img style="width: 100px;height: 100px;object-fit: cover"
+                                 src="{{$service->img_background ?? ''}}" alt="">
                         </div>
                     </div>
                     <div class="row">
@@ -39,7 +40,8 @@
                         <div class="col-md-6">
                             <label for="img_main">{{ __('trans.Image') }}</label>
                             <input type="file" name="img_main" id="img_main">
-                            <img style="width: 100px;height: 100px;object-fit: cover" src="{{$service->img_main}}" alt="">
+                            <img style="width: 100px;height: 100px;object-fit: cover" src="{{$service->img_main}}"
+                                 alt="">
                         </div>
                     </div>
                     <div class="row">
@@ -59,6 +61,20 @@
                         <div class="col-md-12">
                             <label for="describe2">{{ __('trans.Describe more') }}</label>
                             <textarea name="describe2" id="describe2">{{$service->describe_sub_vi}}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <label for="svg_icon_circle">{{ __('trans.Icon SVG circle') }}</label>
+                            <input type="text" name="svg_icon_circle" id="svg_icon_circle"
+                                   value="{{ $service->svg_icon_circle ?? '' }}">
+                            {!! $service->svg_icon_circle ?? '' !!}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="svg_icon">{{ __('trans.Icon SVG') }}</label>
+                            <input type="text" name="svg_icon" id="svg_icon" value="{{ $service->svg_icon ?? '' }}">
+                            {!! $service->svg_icon ?? '' !!}
                         </div>
                     </div>
 

@@ -5,7 +5,7 @@
 @section('content')
     <link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
     <div class="pagetitle">
-        <h1>{{ __('trans.Sửa Blog') }}</h1>
+        <h1>{{ __('trans.Sửa Slide') }}</h1>
 
         <nav>
             <ol class="breadcrumb">

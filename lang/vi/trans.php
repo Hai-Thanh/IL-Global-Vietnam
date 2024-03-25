@@ -145,6 +145,14 @@ return [
 
 
     'Ảnh nền tiêu đề dịch vụ' => 'Ảnh nền tiêu đề dịch vụ( background image header)',
+    'Icon SVG circle' => 'Hình SVG hình tròn trong phần hậu cần vận tải trang chủ copy dạng html (có thể hỏi design)',
+    'Icon SVG' => 'Hình SVG copy dạng html (có thể hỏi design)',
+    'Slide service header' => 'Tiêu đề dịch vụ slide trượt',
+    'Add new Slide' => 'Thêm Slide mới',
+    'Tạo Mới Slide' => 'Tạo Mới Slide',
+    'Sửa Slide' => 'Sửa Slide',
+
+
 
 
 

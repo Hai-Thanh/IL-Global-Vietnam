@@ -43,7 +43,7 @@
                                 </div>
                             </th>
                             <th>ID</th>
-                            <th>{{ __('trans.Title Slide') }}</th>
+                            <th>{{ __('trans.Title') }}</th>
                             <th>{{ __('trans.Image') }}</th>
                                                         <th>{{ __('trans.Service') }}</th>
                             <th>{{ __('trans.Edit') }}</th>

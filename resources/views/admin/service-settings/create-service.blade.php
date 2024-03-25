@@ -60,7 +60,16 @@
                             <textarea name="describe2" id="describe2"></textarea>
                         </div>
                     </div>
-
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <label for="svg_icon_circle">{{ __('trans.Icon SVG circle') }}</label>
+                            <input type="text" name="svg_icon_circle" id="svg_icon_circle">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="svg_icon">{{ __('trans.Icon SVG') }}</label>
+                            <input type="text" name="svg_icon" id="svg_icon">
+                        </div>
+                    </div>
                 </div>
                 <div class="row mt-5">
                     <div class="d-flex justify-content-start align-items-center">

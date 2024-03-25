@@ -33,6 +33,9 @@ class Service extends Model
         'type_name_zh_cn',
         'type_name_ko',
         'img_background',
+        'svg_icon_circle',
+        'svg_icon',
+
 
 
     ];
