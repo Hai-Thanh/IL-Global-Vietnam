@@ -149,6 +149,15 @@ return [
     'Tạo Mới Slide' => 'Create New Slide',
     'Sửa Slide' => 'Edit Slide',
 
+    'Tin mới' => 'New news',
+    'List Categories' => 'Category list',
+    'Cài Đặt List Categories' => 'Category list setup',
+    'Add new Category' => 'Add new category',
+    'Name Category' => 'Category name',
+    'Tạo Mới Category' => 'Create new category',
+    'Cài Đặt Category' => 'Category settings',
+    'Sửa Category' => 'Edit category',
+    'Category' => 'Category',
 
 
 

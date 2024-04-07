@@ -118,7 +118,7 @@ return [
     'Service Transport' => 'Dịch vụ Vận tải',
     'Edit' => 'Chỉnh sửa',
     'Cài đặt dịch vụ' => 'Cài đặt dịch vụ',
-    'Choose Transport Service' => 'Chọn dịch vụ vận chuyển',
+    'Choose Transport Service' => 'Tên dịch vụ vận chuyển',
     'Title' => 'Tiêu đề',
     'Describe more' => 'Mô tả thêm',
     'Title more' => 'Tiêu đề thêm',
@@ -152,6 +152,18 @@ return [
     'Tạo Mới Slide' => 'Tạo Mới Slide',
     'Sửa Slide' => 'Sửa Slide',
     'Hiện tại chưa có tin tức nào!' => 'Hiện tại chưa có tin tức nào!',
+
+
+    'Tin mới' => 'Tin mới',
+    'List Categories' => 'Danh mục',
+    'Cài Đặt List Categories' => 'Cài Đặt Danh mục',
+    'Add new Category' => 'Thêm mới Danh mục',
+    'Name Category' => 'Tên danh mục',
+    'Tạo Mới Category' => 'Tạo Mới Danh Mục',
+    'Cài Đặt Category' => 'Cài Đặt Danh Mục',
+    'Sửa Category' => 'Chỉnh Sửa Danh Mục',
+    'Category' => 'Danh mục',
+
 
 
 

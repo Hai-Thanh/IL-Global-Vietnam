@@ -149,6 +149,16 @@ return [
     'Add new Slide' => '새로운 슬라이드 추가',
     'Tạo Mới Slide' => '새로운 슬라이드 만들기',
     'Sửa Slide' => '슬라이드 편집',
+    'Tin mới' => '새 소식',
+    'List Categories' => '카테고리 목록',
+    'Cài Đặt List Categories' => '카테고리 목록 설정',
+    'Add new Category' => '새 카테고리 추가',
+    'Name Category' => '카테고리 이름',
+    'Tạo Mới Category' => '새 카테고리 생성',
+    'Cài Đặt Category' => '카테고리 설정',
+    'Sửa Category' => '카테고리 수정',
+    'Category' => '분류',
+
 
 
 

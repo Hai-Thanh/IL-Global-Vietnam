@@ -123,53 +123,48 @@
 
 
                 {{-- comments --}}
-                <div>
+                <div class="">
+                    @php
+                        $cmts = \App\Models\ClientReview::where('status',\App\Enums\ReviewStatus::ACTIVE)->get();
+                    @endphp
                     <div class="row">
-                        <div class="comments-top">{{ __('trans.Comments') }} (2)</div>
+                        <div class="comments-top {{$cmts->count() == 0 ? 'd-none' : ''}}">{{ __('trans.Comments') }} {{$cmts->count()}}</div>
                     </div>
-                    <div class="border-bottom-comment"></div>
+                    <div class="border-bottom-comment {{$cmts->count() == 0 ? 'd-none' : ''}}"></div>
                     <div class="row">
-                        <div class="d-flex card-comment">
-                            <div class="">
-                                <img style="width: 100px;height: 100px;"
-                                     src="{{asset('ui/img/img-demo/img-demo-service-1.png')}}" alt="">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title-comment">Isaac Herman</div>
-                                <div class="date-comment">June 14, 2023 / 12:00 AM</div>
-                                <div class="comment">Imperdiet in nulla sed viverraut loremut dapib estetur Lorem ipsum
-                                    dolor sit amet
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eniy minim sed exe
-                                    ullamco laboris nisi ut aliquip cepteur
-                                </div>
-                                <a href="">
-                                    <div class="btn-comment d-flex justify-content-center align-items-center">{{ __('trans.Reply') }}</div>
-                                </a>
-                            </div>
 
-                        </div>
-                        <div class="d-flex card-comment">
-                            <div class="">
-                                <img style="width: 100px;height: 100px;"
-                                     src="{{asset('ui/img/img-demo/img-demo-service-1.png')}}" alt="">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title-comment">Isaac Herman</div>
-                                <div class="date-comment">June 14, 2023 / 12:00 AM</div>
-                                <div class="comment">Imperdiet in nulla sed viverraut loremut dapib estetur Lorem ipsum
-                                    dolor sit amet
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eniy minim sed exe
-                                    ullamco laboris nisi ut aliquip cepteur
+                        @foreach($cmts as $cmt)
+                            <div class="d-flex card-comment">
+                                <div class="">
+                                    <img style="width: 100px;height: 100px;"
+                                         src="{{ $cmt->Thumbnail ?? asset('ui/img/img-demo/img-demo-service-1.png')}}" alt="">
                                 </div>
-                                <a href="">
-                                    <div class="btn-comment d-flex justify-content-center align-items-center">{{ __('trans.Reply') }}</div>
-                                </a>
-                            </div>
+                                <div class="card-body">
+                                    <div class="card-title-comment">
+                                            {!! $cmt->name ?? '' !!}
+                                    </div>
+                                    <div class="date-comment">{{ $cmt->created_at ?? 'June 14, 2023 / 12:00 AM' }}</div>
+                                    <div class="comment">
+                                        @if(locationHelper() == 'kr')
+                                            {!! $cmt->describe_ko ?? '' !!}
+                                        @elseif(locationHelper() == 'en')
+                                            {!! $cmt->describe_en ?? '' !!}
+                                        @elseif(locationHelper() == 'cn')
+                                            {!! $cmt->describe_zh_cn ?? '' !!}
+                                        @else
+                                            {!! $cmt->describe_vi ?? '' !!}
+                                        @endif
+                                    </div>
+                                    <a href="">
+                                        <div class="btn-comment d-flex justify-content-center align-items-center">{{ __('trans.Reply') }}</div>
+                                    </a>
+                                </div>
 
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                     <div class="row">
-                        <div class="comments-top">{{ __('trans.Comments') }} (2)</div>
+                        <div class="comments-top">{{ __('trans.Comments') }} {{$cmts->count()}}</div>
                     </div>
                     <div class="border-bottom-comment"></div>
                     <div class="row">
