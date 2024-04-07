@@ -118,7 +118,7 @@ return [
     'Service Transport' => 'Dịch vụ Vận tải',
     'Edit' => 'Chỉnh sửa',
     'Cài đặt dịch vụ' => 'Cài đặt dịch vụ',
-    'Choose Transport Service' => 'Chọn dịch vụ vận chuyển',
+    'Choose Transport Service' => 'Tên dịch vụ vận chuyển',
     'Title' => 'Tiêu đề',
     'Describe more' => 'Mô tả thêm',
     'Title more' => 'Tiêu đề thêm',
@@ -162,6 +162,8 @@ return [
     'Tạo Mới Category' => 'Tạo Mới Danh Mục',
     'Cài Đặt Category' => 'Cài Đặt Danh Mục',
     'Sửa Category' => 'Chỉnh Sửa Danh Mục',
+    'Category' => 'Danh mục',
+
 
 
 

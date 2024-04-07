@@ -157,6 +157,7 @@ return [
     'Tạo Mới Category' => 'Create new category',
     'Cài Đặt Category' => 'Category settings',
     'Sửa Category' => 'Edit category',
+    'Category' => 'Category',
 
 
 

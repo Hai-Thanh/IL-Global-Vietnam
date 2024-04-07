@@ -156,6 +156,7 @@ return [
     'Tạo Mới Category' => '创建新分类',
     'Cài Đặt Category' => '分类设置',
     'Sửa Category' => '编辑分类',
+    'Category' => '类别',
 
 
 ];

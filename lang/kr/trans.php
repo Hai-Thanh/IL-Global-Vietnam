@@ -157,6 +157,8 @@ return [
     'Tạo Mới Category' => '새 카테고리 생성',
     'Cài Đặt Category' => '카테고리 설정',
     'Sửa Category' => '카테고리 수정',
+    'Category' => '분류',
+
 
 
 
