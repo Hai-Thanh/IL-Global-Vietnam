@@ -151,6 +151,8 @@ return [
     'Add new Slide' => 'Thêm Slide mới',
     'Tạo Mới Slide' => 'Tạo Mới Slide',
     'Sửa Slide' => 'Sửa Slide',
+    'Hiện tại chưa có tin tức nào!' => 'Hiện tại chưa có tin tức nào!',
+
 
 
 

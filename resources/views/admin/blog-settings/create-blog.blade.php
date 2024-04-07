@@ -42,6 +42,28 @@
                             <label for="title_sub_blog">{{ __('trans.Title sub') }}</label>
                             <input type="text" name="title_sub_blog" id="title_sub_blog">
                         </div>
+                        <div class="col-md-6">
+                            <label for="category">{{ __('trans.Category') }}</label>
+                            @php
+                            $categories = \App\Models\Categories::where('status', \App\Enums\CategoriesStatus::ACTIVE)->get();
+
+                            @endphp
+                            <select name="category" id="category">
+                                @foreach($categories as $category)
+                                    <option value="{{$category->id}}">
+                                        @if(locationHelper() == 'kr')
+                                            {{ $category->name_ko ?? ''}}
+                                        @elseif(locationHelper() == 'en')
+                                            {{ $category->name_en ?? ''}}
+                                        @elseif(locationHelper() == 'cn')
+                                            {{ $category->name_zh_cn ?? ''}}
+                                        @else
+                                            {{ $category->name_vi ?? ''}}
+                                        @endif
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">

@@ -69,6 +69,11 @@
             </a>
             <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
+                    <a href="{{route('admin-categories')}}">
+                        <i class="bi bi-circle"></i><span>{{ __('trans.List Categories') }}</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('admin-blog')}}">
                         <i class="bi bi-circle"></i><span>{{ __('trans.List blog') }}</span>
                     </a>

@@ -69,27 +69,48 @@
             <div class="col-md-8 d-md-flex justify-content-between">
                 <div class="col footer-column">
                     <ul class="nav flex-column">
+                        @php
+                            $services = \App\Models\Service::all();
+                        @endphp
                         <li class="nav-item mb-md-4">
                             <span class="footer-title">{{ __('trans.Service') }}</span>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('trans.Air Transport') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('trans.Sea transport') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('trans.Rail transport') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('trans.Vận chyển nội địa') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('trans.Vận chyển quốc tế') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('trans.Dịch vụ kho bãi và phân phối') }}</a>
-                        </li>
+                        @if($services->isEmpty())
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('trans.Air Transport') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('trans.Sea transport') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('trans.Rail transport') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('trans.Vận chyển nội địa') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('trans.Vận chyển quốc tế') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('trans.Dịch vụ kho bãi và phân phối') }}</a>
+                            </li>
+                        @else
+                            @foreach($services as $service)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('shipping.services.index',$service->id)}}">
+                                        @if(locationHelper() == 'kr')
+                                            {{ $service->type_name_ko ?? '오류'}}
+                                        @elseif(locationHelper() == 'en')
+                                            {{ $service->type_name_en ?? 'Error'}}
+                                        @elseif(locationHelper() == 'cn')
+                                            {{ $service->type_name_zh_cn ?? '錯誤'}}
+                                        @else
+                                            {{ $service->type_name_vi ?? 'Lỗi'}}
+                                        @endif
+                                    </a>
+                                </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
                 <div class="col footer-column">
@@ -100,24 +121,28 @@
                         @php
                             $news = \App\Models\Blog::where('status',\App\Enums\BlogStatus::ACTIVE)->orderBy('created_at', 'desc')->limit(2)->get();
                         @endphp
-                        @foreach($news as $blog)
+                        @if($news->isEmpty())
                             <li class="nav-item">
-                                <a class="nav-link"
-                                   href="{{route('detail.blog',$blog->id)}}">
-                                    @if(locationHelper() == 'kr')
-                                        {!! $blog->title_blog_ko ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
-                                    @elseif(locationHelper() == 'en')
-                                        {!!  $blog->title_blog_en ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
-                                    @elseif(locationHelper() == 'cn')
-                                        {!! $blog->title_blog_zh_cn ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
-                                    @else
-                                        {!! $blog->title_blog_vi ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
-                                    @endif
-                                </a>
+                                <a class="nav-link">{{ __('trans.Hiện tại chưa có tin tức nào!') }}</a>
                             </li>
-                        @endforeach
-
-
+                        @else
+                            @foreach($news as $blog)
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                       href="{{route('detail.blog',$blog->id)}}">
+                                        @if(locationHelper() == 'kr')
+                                            {!! $blog->title_blog_ko ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
+                                        @elseif(locationHelper() == 'en')
+                                            {!!  $blog->title_blog_en ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
+                                        @elseif(locationHelper() == 'cn')
+                                            {!! $blog->title_blog_zh_cn ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
+                                        @else
+                                            {!! $blog->title_blog_vi ?? __('trans.Lãnh đạo Chính phủ mặc niệm nạn nhân tử vong vụ cháy chung cư mini') !!}
+                                        @endif
+                                    </a>
+                                </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
                 <div class="col footer-column">

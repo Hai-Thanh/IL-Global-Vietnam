@@ -46,6 +46,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
         .shot-describe-news {
             font-size: 16px;
             font-weight: 500;
@@ -84,7 +85,7 @@
 
                 img {
                     opacity: 1;
-                    transition:all 0.3s;
+                    transition: all 0.3s;
                 }
             }
 
@@ -95,7 +96,7 @@
 
                 img {
                     opacity: 0.7;
-                    transition:all 0.3s;
+                    transition: all 0.3s;
                 }
             }
         }
@@ -108,12 +109,13 @@
     </style>
     <div class="container main-service">
         <div class="row">
-            @if($listBlogs ?? '')
+            @if($listBlogs->isNotEmpty())
                 @foreach($listBlogs as $Blog)
                     <a class="col-md-4 col-sm-6 h-100 mb-5" href="{{route('detail.blog',$Blog->id)}}">
                         <div class="border-blog uk-card uk-card-primary uk-card-hover uk-light">
                             <div class="position-relative">
-                                <img style="height: 231px; object-fit: cover;border-radius: 8px 8px 0 0" src="{{$Blog->img_main_blog}}" alt="11">
+                                <img style="height: 231px; object-fit: cover;border-radius: 8px 8px 0 0"
+                                     src="{{$Blog->img_main_blog}}" alt="11">
                                 <div class="news-content-cmt d-flex position-absolute bottom-0">
                                     <div class="news-date col-2">12</div>
                                     <div class="d-flex justify-content-start col-10 cmt-group">
@@ -185,8 +187,10 @@
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke="black"
                                                   stroke-width="1.5"
-                                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M3.5 12H20.33" stroke="black" stroke-width="1.5" stroke-miterlimit="10"
+                                                  stroke-miterlimit="10" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M3.5 12H20.33" stroke="black" stroke-width="1.5"
+                                                  stroke-miterlimit="10"
                                                   stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
 
@@ -198,6 +202,10 @@
                         </div>
                     </a>
                 @endforeach
+            @else
+                <h3 class="d-flex align-item-center justify-content-center">
+                    {{ __('trans.Hiện tại chưa có tin tức nào!') }}
+                </h3>
             @endif
 
         </div>
