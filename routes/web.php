@@ -69,9 +69,15 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('blog', [AdminBlog::class, 'adminBlog'])->name('admin-blog');
     Route::get('create-blog', [AdminBlog::class, 'adminCreateBlog'])->name('admin-create-blog');
     Route::get('edit-blog/{id}', [AdminBlog::class, 'adminEditBlog'])->name('admin-edit-blog');
-
     Route::post('create-blog-up', [AdminBlog::class, 'adminCreateBlogUp'])->name('admin-create-blog-up');
     Route::post('edit-blog-up/{id}', [AdminBlog::class, 'adminEditBlogUp'])->name('admin-edit-blog-up');
+
+    Route::get('categories', [AdminBlog::class, 'adminCategory'])->name('admin-categories');
+    Route::get('create-category', [AdminBlog::class, 'adminCreateCategory'])->name('admin-create-category');
+    Route::get('edit-category/{id}', [AdminBlog::class, 'adminEditCategory'])->name('admin-edit-category');
+    Route::post('create-category-up', [AdminBlog::class, 'adminCreateCategoryUp'])->name('admin-create-category-up');
+    Route::post('edit-category-up/{id}', [AdminBlog::class, 'adminEditCategoryUp'])->name('admin-edit-category-up');
+
 
     /* setting page */
 

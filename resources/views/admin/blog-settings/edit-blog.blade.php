@@ -44,6 +44,28 @@
                             <input type="text" name="title_sub_blog" id="title_sub_blog" value="{{$blogEdit->title_sub_blog_vi ?? ''}}">
                             <input type="hidden" name="status" value="{{\App\Enums\BlogStatus::ACTIVE}}">
                         </div>
+                        <div class="col-md-6">
+                            <label for="category">{{ __('trans.Category') }}</label>
+                            @php
+                                $categories = \App\Models\Categories::where('status', \App\Enums\CategoriesStatus::ACTIVE)->get();
+
+                            @endphp
+                            <select name="category" id="category">
+                                @foreach($categories as $category)
+                                    <option {{ $category->id == $blogEdit->category_id ? 'selected' : '' }} value="{{$category->id}}">
+                                        @if(locationHelper() == 'kr')
+                                            {{ $category->name_ko ?? ''}}
+                                        @elseif(locationHelper() == 'en')
+                                            {{ $category->name_en ?? ''}}
+                                        @elseif(locationHelper() == 'cn')
+                                            {{ $category->name_zh_cn ?? ''}}
+                                        @else
+                                            {{ $category->name_vi ?? ''}}
+                                        @endif
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">

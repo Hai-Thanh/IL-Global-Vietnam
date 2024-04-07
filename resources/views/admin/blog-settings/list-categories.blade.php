@@ -12,7 +12,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('admin-home')}}">{{ __('trans.Home') }}</a></li>
-                <li class="breadcrumb-item active">{{ __('trans.Cài Đặt List Blogs') }}</li>
+                <li class="breadcrumb-item active">{{ __('trans.Cài Đặt List Categories') }}</li>
             </ol>
         </nav>
     </div>
@@ -21,11 +21,11 @@
         <main>
             <div class="content w-100">
                 <section class="main-header grid">
-                    <h1>{{ __('trans.List Blogs') }}</h1>
-                    <a href="{{route('admin-create-blog')}}">
+                    <h1>{{ __('trans.List Categories') }}</h1>
+                    <a href="{{route('admin-create-category')}}">
                         <button class="button">
                             <i class="fa-solid fa-plus"></i>
-                            <span>{{ __('trans.Add new Blog') }}</span>
+                            <span>{{ __('trans.Add new Category') }}</span>
                         </button>
                     </a>
 
@@ -43,67 +43,50 @@
                                 </div>
                             </th>
                             <th>ID</th>
-                            <th>{{ __('trans.Title Blog') }}</th>
-                            <th>{{ __('trans.Image') }}</th>
-                            <th>{{ __('trans.Category') }}</th>
+                            <th>{{ __('trans.Name Category') }}</th>
                             <th>{{ __('trans.Edit') }}</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        @if($blogs ?? '')
-                            @foreach($blogs as $blog)
-                                <tr id="blog_{{$blog->id}}" class="selected border">
+                        @if($categories ?? '')
+                            @foreach($categories as $category)
+                                <tr id="category_{{$category->id}}" class="selected border">
                                     <td>
                                         <div class="checkbox">
                                             <input type="checkbox" checked/>
                                             <span class="checkmark"></span>
                                         </div>
                                     </td>
-                                    <td>{{$blog->id ?? ''}}</td>
+                                    <td>{{$category->id ?? ''}}</td>
                                     <td>
                                         @if(locationHelper() == 'kr')
-                                            {{ $blog->title_blog_ko ?? ''}}
+                                            {{ $category->name_ko ?? ''}}
                                         @elseif(locationHelper() == 'en')
-                                            {{ $blog->title_blog_en ?? ''}}
+                                            {{ $category->name_en ?? ''}}
                                         @elseif(locationHelper() == 'cn')
-                                            {{ $blog->title_blog_zh_cn ?? ''}}
+                                            {{ $category->name_zh_cn ?? ''}}
                                         @else
-                                            {{ $blog->title_blog_vi ?? ''}}
-                                        @endif
-                                    </td>
-                                    <td><img class="thumbnail-review" src="{{$blog->img_main_blog ?? ''}}"
-                                             alt="Thumbnail">
-                                    </td>
-                                    <td>
-                                        @if(locationHelper() == 'kr')
-                                            {{ \App\Models\Categories::where('id',$blog->category_id)->value('name_ko' ?? '')}}
-                                        @elseif(locationHelper() == 'en')
-                                            {{ \App\Models\Categories::where('id',$blog->category_id)->value('name_en') ?? ''}}
-                                        @elseif(locationHelper() == 'cn')
-                                            {{ \App\Models\Categories::where('id',$blog->category_id)->value('name_zh_cn') ?? ''}}
-                                        @else
-                                            {{ \App\Models\Categories::where('id',$blog->category_id)->value('name_vi') ?? ''}}
+                                            {{ $category->name_vi ?? ''}}
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="#" onclick="toggleDeleteBlog({{$blog->id}})"><i
+                                        <a href="#" onclick="toggleDeleteCategory({{$category->id}})"><i
                                                 class="fas fa-trash color-red p-3"></i></a> |
-                                        <a href="{{route('admin-edit-blog',$blog->id)}}"><i
+                                        <a href="{{route('admin-edit-category',$category->id)}}"><i
                                                 class="fa-solid fa-screwdriver-wrench p-3"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
                         @endif
 
-
                         </tbody>
                     </table>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                     <script>
-                        async function toggleDeleteBlog(id) {
-                            let status = `{{\App\Enums\ReviewStatus::DELETED}}`;
-                            let url = `{{ route('admin-edit-blog-up', ['id' => ':id']) }}`;
+                        async function toggleDeleteCategory(id) {
+                            let status = `{{\App\Enums\CategoriesStatus::DELETED}}`;
+                            let url = `{{ route('admin-edit-category-up', ['id' => ':id']) }}`;
                             url = url.replace(':id', id);
                             try {
                                 await $.ajax({
@@ -114,7 +97,7 @@
                                     },
                                     data: {status: status, id: id},
                                     success: function (response) {
-                                        $(`#blog_${id}`).addClass('d-none');
+                                        $(`#category_${id}`).addClass('d-none');
                                         alert('Delete successfully!');
                                     },
                                 });
