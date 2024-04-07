@@ -154,6 +154,16 @@ return [
     'Hiện tại chưa có tin tức nào!' => 'Hiện tại chưa có tin tức nào!',
 
 
+    'Tin mới' => 'Tin mới',
+    'List Categories' => 'Danh mục',
+    'Cài Đặt List Categories' => 'Cài Đặt Danh mục',
+    'Add new Category' => 'Thêm mới Danh mục',
+    'Name Category' => 'Tên danh mục',
+    'Tạo Mới Category' => 'Tạo Mới Danh Mục',
+    'Cài Đặt Category' => 'Cài Đặt Danh Mục',
+    'Sửa Category' => 'Chỉnh Sửa Danh Mục',
+
+
 
 
 

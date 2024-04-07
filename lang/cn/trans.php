@@ -148,6 +148,14 @@ return [
     'Add new Slide' => '添加新幻灯片',
     'Tạo Mới Slide' => '创建新幻灯片',
     'Sửa Slide' => '编辑幻灯片',
+    'Tin mới' => '新闻',
+    'List Categories' => '分类列表',
+    'Cài Đặt List Categories' => '设置分类列表',
+    'Add new Category' => '添加新分类',
+    'Name Category' => '分类名称',
+    'Tạo Mới Category' => '创建新分类',
+    'Cài Đặt Category' => '分类设置',
+    'Sửa Category' => '编辑分类',
 
 
 ];
