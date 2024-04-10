@@ -479,13 +479,13 @@
                 </div>
                 <div class="il-title-left-mo-ta">
                     @if(locationHelper() == 'kr')
-                        {{ $why_setting->describeWhy_ko ?? ''}}
+                        {!!  $why_setting->describeWhy_ko ?? '' !!}
                     @elseif(locationHelper() == 'en')
-                        {{ $why_setting->describeWhy_en ?? ''}}
+                        {!!  $why_setting->describeWhy_en ?? '' !!}
                     @elseif(locationHelper() == 'cn')
-                        {{ $why_setting->describeWhy_zh_cn ?? ''}}
+                        {!!  $why_setting->describeWhy_zh_cn ?? '' !!}
                     @else
-                        {{ $why_setting->describeWhy_vi ?? ''}}
+                        {!!  $why_setting->describeWhy_vi ?? '' !!}
                     @endif
                 </div>
                 <div class="d-md-flex d-none w-100">
