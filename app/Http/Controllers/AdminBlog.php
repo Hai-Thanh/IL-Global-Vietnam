@@ -56,11 +56,16 @@ class AdminBlog extends Controller
                     $categories[$key . '_' . $lang] = $translate->translateText($value, $lang);
                 }
             }
-            $success = Categories::updateOrcreate([],$categories);
-
-            if ($success) {
-                toast('Create success!', 'success', 'top-left');
-                return redirect()->route('admin-categories');
+            if($categories){
+                $category = new Categories();
+                foreach ($categories as $key => $value) {
+                    $category->$key = $value;
+                }
+                $success =  $category->save();
+                if ($success) {
+                    toast('Create success!', 'success', 'top-left');
+                    return redirect()->route('admin-categories');
+                }
             }
             toast('Create error!', 'error', 'top-left');
             return back()->withInput();
