@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
 @extends('admin.layouts.master')
 @section('title')
     {{ __('trans.Admin IL Global') }}
 @endsection
 @section('content')
+    <link rel="stylesheet" href="{{asset('admin/scss/admin-style-header-setting.css')}}">
     <div class="pagetitle">
         <h1>{{ __('trans.Transportation company') }}</h1>
 
@@ -28,7 +28,7 @@
                         </div>
                         <div>
                             <label for="describe">{{ __('trans.Describe Transportation company') }}</label>
-                            <textarea name="describe" id="describe">{{$transport_setting->describe_vi ?? ''}}</textarea>
+                            <textarea class="textarea" name="describe" id="describe">{{$transport_setting->describe_vi ?? ''}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                         </div>
                         <div>
                             <label for="describe_service">{{ __('trans.Describe Worldwide Service') }}</label>
-                            <textarea name="describe_service" id="describe_service">{{$transport_setting->describe_service_vi ?? ''}}</textarea>
+                            <textarea class="textarea" name="describe_service" id="describe_service">{{$transport_setting->describe_service_vi ?? ''}}</textarea>
                         </div>
                     </div>
 
@@ -52,7 +52,7 @@
                         </div>
                         <div>
                             <label for="describe_cert">{{ __('trans.Describe Certified & Award Winner') }}</label>
-                            <textarea name="describe_cert" id="describe_cert">{{$transport_setting->describe_cert_vi ?? ''}}</textarea>
+                            <textarea class="textarea" name="describe_cert" id="describe_cert">{{$transport_setting->describe_cert_vi ?? ''}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         </div>
                         <div>
                             <label for="describeWhy">{{ __('trans.Describe Why choose us') }}</label>
-                            <textarea name="describeWhy" id="describeWhy">{{$why_setting->describeWhy_vi ?? ''}}</textarea>
+                            <textarea class="textarea" name="describeWhy" id="describeWhy">{{$why_setting->describeWhy_vi ?? ''}}</textarea>
                         </div>
                     </div>
                 </div>

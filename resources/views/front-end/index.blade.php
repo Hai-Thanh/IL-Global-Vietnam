@@ -289,24 +289,24 @@
                 <div class="il-title-tran-company">
                     <div class="title-tran-company">
                         @if(locationHelper() == 'kr')
-                            {{ $transport_setting->title_ko ?? ''}}
+                            {!! $transport_setting->title_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $transport_setting->title_en ?? ''}}
+                            {!! $transport_setting->title_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $transport_setting->title_zh_cn ?? ''}}
+                            {!! $transport_setting->title_zh_cn ?? '' !!}
                         @else
-                            {{ $transport_setting->title_vi ?? ''}}
+                            {!! $transport_setting->title_vi ?? '' !!}
                         @endif
                     </div>
                     <div class="il-describe-tran-company">
                         @if(locationHelper() == 'kr')
-                            {{ $transport_setting->describe_ko ?? ''}}
+                            {!! $transport_setting->describe_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $transport_setting->describe_en ?? ''}}
+                            {!! $transport_setting->describe_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $transport_setting->describe_zh_cn ?? ''}}
+                            {!! $transport_setting->describe_zh_cn ?? '' !!}
                         @else
-                            {{ $transport_setting->describe_vi ?? ''}}
+                            {!! $transport_setting->describe_vi ?? '' !!}
                         @endif
                     </div>
                 </div>
@@ -337,24 +337,24 @@
                             </defs>
                         </svg>
                         @if(locationHelper() == 'kr')
-                            {{ $transport_setting->title_service_ko ?? ''}}
+                            {!! $transport_setting->title_service_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $transport_setting->title_service_en ?? ''}}
+                            {!! $transport_setting->title_service_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $transport_setting->title_service_zh_cn ?? ''}}
+                            {!! $transport_setting->title_service_zh_cn ?? '' !!}
                         @else
-                            {{ $transport_setting->title_service_vi ?? ''}}
+                            {!! $transport_setting->title_service_vi ?? '' !!}
                         @endif
                     </div>
                     <div class="il-describe-tran-company">
                         @if(locationHelper() == 'kr')
-                            {{ $transport_setting->describe_service_ko ?? ''}}
+                            {!! $transport_setting->describe_service_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $transport_setting->describe_service_en ?? ''}}
+                            {!! $transport_setting->describe_service_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $transport_setting->describe_service_zh_cn ?? ''}}
+                            {!! $transport_setting->describe_service_zh_cn ?? '' !!}
                         @else
-                            {{ $transport_setting->describe_service_vi ?? ''}}
+                            {!! $transport_setting->describe_service_vi ?? '' !!}
                         @endif
                     </div>
                 </div>
@@ -379,24 +379,24 @@
                             </defs>
                         </svg>
                         @if(locationHelper() == 'kr')
-                            {{ $transport_setting->title_cert_ko ?? ''}}
+                            {!! $transport_setting->title_cert_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $transport_setting->title_cert_en ?? ''}}
+                            {!! $transport_setting->title_cert_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $transport_setting->title_cert_zh_cn ?? ''}}
+                            {!! $transport_setting->title_cert_zh_cn ?? '' !!}
                         @else
-                            {{ $transport_setting->title_cert_vi ?? ''}}
+                            {!! $transport_setting->title_cert_vi ?? '' !!}
                         @endif
                     </div>
                     <div class="il-describe-tran-company">
                         @if(locationHelper() == 'kr')
-                            {{ $transport_setting->describe_cert_ko ?? ''}}
+                            {!! $transport_setting->describe_cert_ko ?? '' !!}
                         @elseif(locationHelper() == 'en')
-                            {{ $transport_setting->describe_cert_en ?? ''}}
+                            {!! $transport_setting->describe_cert_en ?? '' !!}
                         @elseif(locationHelper() == 'cn')
-                            {{ $transport_setting->describe_cert_zh_cn ?? ''}}
+                            {!! $transport_setting->describe_cert_zh_cn ?? '' !!}
                         @else
-                            {{ $transport_setting->describe_cert_vi ?? ''}}
+                            {!! $transport_setting->describe_cert_vi ?? '' !!}
                         @endif
                     </div>
                 </div>
